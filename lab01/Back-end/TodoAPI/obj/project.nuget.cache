@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "mhriw2u41A0Xqb1pP/NqLxpR2Uscb/2q26iFRa6sTZUc4dQOuVvT2X7Em6qcWEjwNZAZ19v10K0qhRPJ3FdewA==",
+  "dgSpecHash": "Z7nt5WWAtDxxsaLV433pmBILMTUV21LNSMoeohFqnRQpZVlzhO5yLiETKpM58fjZwdWriyBg2RDMmK4bzE4kEA==",
   "success": true,
-  "projectFilePath": "D:\\Project\\.NET\\TodoAPI\\TodoAPI\\TodoAPI.csproj",
+  "projectFilePath": "D:\\Project\\Git\\devops-lab-bancntt\\lab01\\Back-end\\TodoAPI\\TodoAPI.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\hungd\\.nuget\\packages\\microsoft.aspnetcore.openapi\\7.0.2\\microsoft.aspnetcore.openapi.7.0.2.nupkg.sha512",
     "C:\\Users\\hungd\\.nuget\\packages\\microsoft.extensions.apidescription.server\\6.0.5\\microsoft.extensions.apidescription.server.6.0.5.nupkg.sha512",

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Project\\.NET\\TodoAPI\\TodoAPI\\TodoAPI.csproj": {}
+    "D:\\Project\\Git\\devops-lab-bancntt\\lab01\\Back-end\\TodoAPI\\TodoAPI.csproj": {}
   },
   "projects": {
-    "D:\\Project\\.NET\\TodoAPI\\TodoAPI\\TodoAPI.csproj": {
+    "D:\\Project\\Git\\devops-lab-bancntt\\lab01\\Back-end\\TodoAPI\\TodoAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Project\\.NET\\TodoAPI\\TodoAPI\\TodoAPI.csproj",
+        "projectUniqueName": "D:\\Project\\Git\\devops-lab-bancntt\\lab01\\Back-end\\TodoAPI\\TodoAPI.csproj",
         "projectName": "TodoAPI",
-        "projectPath": "D:\\Project\\.NET\\TodoAPI\\TodoAPI\\TodoAPI.csproj",
+        "projectPath": "D:\\Project\\Git\\devops-lab-bancntt\\lab01\\Back-end\\TodoAPI\\TodoAPI.csproj",
         "packagesPath": "C:\\Users\\hungd\\.nuget\\packages\\",
-        "outputPath": "D:\\Project\\.NET\\TodoAPI\\TodoAPI\\obj\\",
+        "outputPath": "D:\\Project\\Git\\devops-lab-bancntt\\lab01\\Back-end\\TodoAPI\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
