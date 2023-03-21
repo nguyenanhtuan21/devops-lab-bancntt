@@ -1,0 +1,3 @@
+is_global = true
+build_property.RootNamespace = DockerFileImage
+build_property.ProjectDir = /Users/vumanhcuong/Downloads/ASPNETCoreVueChecklist-master/DockerFileImage/
