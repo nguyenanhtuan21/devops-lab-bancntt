@@ -1,0 +1,25 @@
+<div 
+  class="datepicker-container bt-flex bt-align-items-center"
+  #datepickerContainer
+>
+  <input
+    type="button"
+    class="btn-datepicker"
+    #picker0
+    ngxDaterangepickerMd
+    [locale]="locateConfig"
+    [(ngModel)]="dateRangeValue"
+    [showCustomRangeLabel]="true"
+    [alwaysShowCalendars]="false"
+    [ranges]="ranges"
+    [showCancel]="true"
+    [linkedCalendars]="false"
+    (datesUpdated)="datesUpdated($event)"
+    [keepCalendarOpeningWithRange]="false"
+    [showRangeLabelOnInput]="true"
+    [minDate]="minDate"
+    [maxDate]="maxDate"
+    [showDropdowns]="true"
+    (click)="rePositionDatePicker(datepickerContainer)"
+  />
+</div>

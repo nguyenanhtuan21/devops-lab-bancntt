@@ -1,0 +1,13 @@
+
+
+:host {
+  ::ng-deep {
+    .pie-chart {
+      .highcharts-root {
+        .highcharts-credits {
+          display: none;
+        }
+      }
+    }
+  }
+}

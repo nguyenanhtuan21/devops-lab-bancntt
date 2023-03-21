@@ -1,0 +1,62 @@
+<div class="add-project-container">
+  <div class="header bt-flex">
+    <div class="title">
+      Invite members
+    </div>
+    <div class="close bt-flex bt-justify-self-end">
+      <i class="fa-solid fa-x" (click)="close()"></i>
+    </div>
+  </div>
+  <div class="content-container">
+    <div class="groupbox-item">
+      <div class="field w-full bt-flex bt-flex-row">
+        <div class="w-3/5">
+          <base-combobox
+            [datas]="employees"
+            [isShowLabel]="true"
+            labelText="Choose members"
+            fieldName="EmployeeID"
+            [isHorizontal]="false"
+            (valueChange)="valueChangeCombo($event)"
+          >
+          </base-combobox>
+        </div>
+      </div>
+    </div>
+    <div class="groupbox-item">
+      <div class="field w-full bt-flex bt-flex-row">
+        <div class="w-3/5">
+          <base-combobox
+            [datas]="project"
+            [value]="param.ProjectID"
+            [isShowLabel]="true"
+            labelText="Project"
+            fieldName="ProjectID"
+            [isHorizontal]="false"
+            [disabled]="true"
+          >
+          </base-combobox>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="feature bt-flex bt-flex-row w-full bt-justify-content-end">
+  <!-- <div class="button-first">
+    <base-button
+      typeButton="secondary"
+      text="Save and Add"
+      [width]="120"
+      (btnClick)="saveAndAddData()"
+    >
+    </base-button>
+  </div> -->
+  <div class="button-seconds">
+    <base-button
+      typeButton="primary"
+      text="Save"
+      (btnClick)="saveData()"
+    >
+    </base-button>
+  </div>
+</div>

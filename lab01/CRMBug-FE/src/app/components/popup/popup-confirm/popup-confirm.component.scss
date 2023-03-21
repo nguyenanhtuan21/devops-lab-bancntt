@@ -1,0 +1,60 @@
+@import "../../../../styles.scss";
+@import "../../../../color.scss";
+@import "../../../../font.scss";
+
+
+:host {
+  ::ng-deep {
+    .content-container {
+      b {
+        font-weight: $font-weight-medium;
+        padding: 0 4px;
+      }
+    }
+  }
+  .popup-confirm-container {
+    padding: 24px 24px 24px 24px;
+    position: relative;
+    .header {
+      height: 40px;
+      .title {
+        width: 100%;
+        font-size: $font-title;
+        font-weight: $font-weight-medium;
+      }
+      .close {
+        position: absolute;
+        top: 12px;
+        right: 12px;
+        i {
+          width: 24px;
+          height: 24px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          cursor: pointer;
+          border-radius: 50%;
+          &:hover {
+            background-color: $color-grey-10;
+          }
+        }
+      }
+    }
+    .content-container {
+      font-size: $font-medium;
+      display: flex;
+      align-items: center;
+      min-height: 50px;
+      .pd-8 {
+        padding: 0 8px;
+      }
+    }
+  }
+  .feature {
+    padding: 12px 24px;
+    background-color: $color-grey-05;
+    .button-seconds {
+      margin-left: 12px;
+    }
+  }
+}

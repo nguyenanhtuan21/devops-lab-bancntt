@@ -1,0 +1,12 @@
+<button
+  class="btn btn-{{typeButton}}"
+  [ngStyle]="{'width.px': width, 'height.px': height}"
+  (click)="click($event)"
+>
+  <div class="bt-flex bt-flex-row bt-align-items-center bt-justify-content-center">
+    <div class="icon" [ngStyle]="{'margin.px': iconMargin}">
+      <i class="{{iconCSS}}"></i>
+    </div>
+    <div class="text">{{text}}</div>
+  </div>
+</button>

@@ -1,0 +1,49 @@
+@import "../../../styles.scss";
+@import "../../../color.scss";
+@import "../../../font.scss";
+
+:host {
+  .add-issue-container {
+    padding: 20px 20px 0 20px;
+    .header {
+      font-size: $font-title;
+      font-weight: $font-weight-bold;
+    }
+    .feature {
+      padding: 12px 0;
+      .button-seconds {
+        margin-left: 12px;
+      }
+    }
+    .groupbox-item {
+      padding-top: 8px;
+      .groupbox-title {
+        padding: 12px;
+        position: relative;
+        font-size: $font-subtitle;
+        font-weight: $font-weight-medium;
+        &::before {
+          display: block;
+          content: "";
+          position: absolute;
+          width: 2px;
+          height: 22px;
+          left: 0;
+          background-color: $default-color-green;
+        }
+      }
+      .field {
+        padding-bottom: 12px;
+        .field-left {
+          margin-right: 50px;
+        }
+        #textarea {
+          outline: none;
+          resize: none;
+          border: 1px solid $fds-gray-30;
+          border-radius: 4px;
+        }
+      }
+    }
+  }
+}

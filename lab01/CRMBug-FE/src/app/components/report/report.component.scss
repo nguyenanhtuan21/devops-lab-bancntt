@@ -1,0 +1,32 @@
+@import "../../../styles.scss";
+@import "../../../font.scss";
+@import "../../../color.scss";
+
+:host {
+  ::ng-deep {
+    .app-no-data {
+      max-height: calc(100vh - 173px);
+    }
+    .toolbar {
+      base-combobox {
+        margin-right: 16px;
+        .GroupBy {
+          width: 120px;
+        }
+      }
+    }
+  }
+  .report {
+    height: calc(100vh - 100px);
+    background-color: $color-white;
+    padding: 16px 16px 0 16px;
+    .toolbar {
+      padding-bottom: 24px;
+    }
+    .report-container {
+      overflow: auto !important;
+      max-height: calc(100vh - 203px);
+      min-height: calc((100vh - 203px));
+    }
+  }
+}

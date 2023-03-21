@@ -1,0 +1,242 @@
+<div class="back-ground">
+  <div class="header bt-flex bt-align-items-center">
+    <div class="title w-1/2">
+      Project tasks
+    </div>
+    <div class="bt-flex bt-justify-content-end w-1/2">
+      <base-button
+        typeButton="primary"
+        text="Add task"
+        (btnClick)="addTask($event)"
+        iconCSS="fa-solid fa-plus"
+        [height]="36"
+        [iconMargin]="6"
+      >
+      </base-button>
+    </div>
+  </div>
+  <div class="tasks-container bt-flex bt-flex-column">
+    <div class="toolbar bt-flex">
+      <div class="left w-3/4 bt-flex bt-align-item-center">
+        <div class="left-item">
+          <base-textbox
+            [placeholder]="'Search task by task code, subject ...'"
+            [type]="typeControl.Search"
+            (searchEvent)="searchTask($event)"
+          >
+          </base-textbox>
+        </div>
+        <div class="left-item">
+          <base-combobox
+            [datas]="assignedUserCbx"
+            [value]="assignedUserIDs"
+            (valueChange)="valueChangeCombo($event)"
+            [isShowLabel]="true"
+            [fieldName]="'AssignedUserID'"
+            [labelWidth]="100"
+            [labelText]="'Assigned to'"
+            [isMultiple]="true"
+          >
+          </base-combobox>
+        </div>
+        <div class="left-item">
+          <base-combobox
+            [datas]="relatedUserCbx"
+            [value]="relatedUserIDs"
+            (valueChange)="valueChangeCombo($event)"
+            [isShowLabel]="true"
+            [fieldName]="'RelatedUserID'"
+            [labelWidth]="100"
+            [labelText]="'Related to'"
+            [isMultiple]="true"
+          >
+          </base-combobox>
+        </div>
+      </div>
+      <div class="right w-1/4 bt-flex bt-align-items-center bt-justify-content-end">
+        <div class="right-item" *ngIf="currentView == taskView.Calendar">
+          <div class="switch-type bt-flex bt-align-items-center bt-justify-content-center">
+            <button 
+              class="btn" 
+              [ngClass]="{'actived': currCalendarType == calendarType.MonthLy}"
+              (click)="switchcalendarType(calendarType.MonthLy)"
+            >
+              Monthly
+            </button>
+            <button 
+              class="btn" 
+              [ngClass]="{'actived': currCalendarType == calendarType.WeekLy}" 
+              (click)="switchcalendarType(calendarType.WeekLy)"
+            >
+              WeekLy
+            </button>
+          </div>
+        </div>
+
+        <div class="right-item">
+          <div class="switch-view bt-flex bt-align-items-center bt-justify-content-center">
+            <button 
+              class="btn" 
+              [ngClass]="{'actived': currentView == taskView.List}"
+              (click)="switchView(taskView.List)"
+            >
+              <i class="fa-solid fa-list"></i> 
+            </button>
+            <button 
+              class="btn" 
+              [ngClass]="{'actived': currentView == taskView.Calendar}" 
+              (click)="switchView(taskView.Calendar)"
+            >
+              <i class="fa-solid fa-calendar"></i>
+            </button>
+          </div>
+        </div>
+        <div class="right-item bt-flex bt-align-items-center">
+          <base-button
+            [iconCSS]="'fa-solid fa-rotate-right'"
+            [typeButton]="'secondary'"
+            [width]="40"
+            [height]="40"
+            (btnClick)="getDataPaging()"
+          >
+          </base-button>
+        </div>
+      </div>
+    </div>
+    <div *ngIf="totalRecord > 0" class="content">
+      <app-calendar
+        *ngIf="currentView == taskView.Calendar"
+        [type]="currCalendarType"
+        [events]="tasks"
+        (eventClick)="editTask($event)"
+      >
+      </app-calendar>
+      <table 
+        class="table-fixed-header"
+        *ngIf="currentView == taskView.List"
+      >
+        <thead>
+          <tr >
+            <th *ngFor="let field of fieldDisplay;">
+              {{ field.displayText }}
+            </th>
+          </tr>
+        </thead>
+        <tbody class="tasks">
+          <tr *ngFor="let item of tasks;" (dblclick)="editTask(item)">
+            <td *ngFor="let field of fieldDisplay;">
+              <ng-container [ngSwitch]="field.typeControl">
+                <div *ngSwitchCase="typeControl.DateTime">
+                  <span>{{ item[field.fieldName] | date: 'dd/MM/yyyy hh:mm'}}</span>
+                </div>
+                <div *ngSwitchCase="typeControl.List" class="task-status">
+                  
+                  <div class="icon" [style.background-color]="item.StatusColor">
+
+                  </div>
+                  <div class="text">{{ item[field.fieldName]}}</div>
+                </div>
+                <div *ngSwitchDefault [ngClass]="{'priority': field.fieldName === 'PriorityIDText'}" [style.background-color]="field.fieldName === 'PriorityIDText' ? item.PriorityColor : 'none'">
+                  <span>{{ item[field.fieldName]}}</span>
+                </div>
+              </ng-container>
+            </td>
+            <div class="action">
+              <div 
+                class="more" 
+                [matMenuTriggerFor]="menuOptions"
+                [matMenuTriggerData]="{task: item}"
+              >
+                <i class="fa-solid fa-ellipsis"></i>
+              </div>
+            </div>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <no-data
+      *ngIf="totalRecord == 0"
+      [height]="'calc(100vh - 288px)'"
+    >
+
+    </no-data>
+  </div>
+  <div class="pagination bt-flex">
+    <div class="total-record bt-flex bt-align-items-center w-1/2">
+      Total Record: <span class="number"> {{totalRecord}} </span>
+    </div>
+    <div class="pager bt-flex bt-align-items-center bt-justify-content-end w-1/2">
+      <div class="page-size">
+        <base-combobox
+          [datas]="pageSizeCbx"
+          [value]="configPaging.PageSize"
+          (valueChange)="valueChangeCombo($event)"
+          [isShowLabel]="false"
+          [width]="'150px'"
+          [fieldName]="'PageSize'"
+        >
+        </base-combobox>
+      </div>
+      <div 
+        class="prev-to-first" 
+        [ngClass]="{'disable': currentPage == 1}"
+        (click)="prevFirst()"
+      >
+        <i class="fa-solid fa-angles-left"></i>
+      </div>
+      <div 
+        class="prev-one" 
+        [ngClass]="{'disable': currentPage == 1}"
+        (click)="prevOne()"
+      >
+        <i class="fa-solid fa-angle-left"></i>
+      </div>
+      <div class="page-info bt-flex bt-justify-content-center">
+        <div class="from">
+          {{ fromRecord }}
+        </div>
+        <div class="text">
+          to
+        </div>
+        <div class="to">
+          {{ toRecord }}
+        </div>
+      </div>
+      <div 
+        class="next-one" 
+        [ngClass]="{'disable': (configPaging.PageIndex + 1) * configPaging.PageSize > totalRecord}"
+        (click)="nextOne()"
+      >
+        <i class="fa-solid fa-angle-right"></i>
+      </div>
+      <div 
+        class="next-to-last" 
+        [ngClass]="{'disable': (configPaging.PageIndex + 1) * configPaging.PageSize > totalRecord}"
+        (click)="nextLast()"
+      >
+        <i class="fa-solid fa-angles-right"></i>
+      </div>
+    </div>
+  </div>
+</div>
+
+<mat-menu #menuOptions="matMenu" xPosition="before">
+  <ng-template matMenuContent let-task="task">
+    <button mat-menu-item class="btn-secondary bt-flex bt-align-items-center" (click)="editTask(task)">
+      <div class="icon">
+        <i class="fa-solid fa-pencil"></i>
+      </div>
+      <div class="text">
+        Edit
+      </div>
+    </button>
+    <button mat-menu-item class="btn-delete bt-flex bt-align-items-center" (click)="deleteTask(task)">
+      <div class="icon">
+        <i class="fa-solid fa-xmark"></i>
+      </div>
+      <div class="text">
+        Delete
+      </div>
+    </button>
+  </ng-template>
+</mat-menu>

@@ -1,0 +1,167 @@
+/* You can add global styles to this file, and also import other style files */
+@import '~font-awesome/scss/font-awesome.scss';
+@import '/src/color';
+@import '/src/font';
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: $bg-page;
+  margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif;
+  overflow: hidden;
+}
+
+::ng-deep {
+  .bold {
+    font-weight: $font-weight-bold;
+  }
+}
+
+.bt-dialog {
+  .mat-dialog-container {
+    background-color: $color-white;
+    color: $color-black;
+    padding: 0;
+  }
+}
+
+.cdk-overlay-container {
+  .no-background {
+    background-color: $color-white !important;
+    background: transparent !important;
+  }
+}
+
+.mat-tooltip-panel {
+  .mat-tooltip {
+    font-size: $font-size-base;
+    background-color: $color-black;
+    color: $color-white;
+  }
+  &.mat-tooltip-panel-above {
+    margin-bottom: 8px;
+  }
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  border-radius: 3px;
+  background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+.bt-flex {
+  display: flex !important;
+}
+
+.bt-flex-row {
+  flex-direction: row;
+}
+
+.bt-flex-column {
+  flex-direction: column;
+}
+
+.bt-justify-content-start {
+  justify-content: flex-start !important;
+}
+
+.bt-justify-content-center {
+  justify-content: center !important;
+}
+
+.bt-justify-content-between {
+  justify-content: space-between !important;
+}
+
+.bt-justify-content-end {
+  justify-content: flex-end !important;
+}
+
+.bt-align-items-start {
+  align-items: flex-start !important;
+}
+
+.bt-align-items-center {
+  align-items: center !important;
+}
+
+.bt-align-items-end {
+  align-items: flex-end !important;
+}
+
+.bt-align-self-center {
+  align-self: center;
+}
+
+.bt-align-self-end {
+  align-self: flex-end;
+}
+
+.bt-justify-self-center {
+  justify-self: center;
+}
+
+.bt-justify-self-end {
+  justify-self: flex-end;
+}
+
+.w-full {
+  width: 100%;
+}
+
+.w-1\/2 {
+  width: 50%;
+}
+
+.w-3\/4 {
+  width: 75%;
+}
+
+.w-1\/4 {
+  width: 25%;
+}
+
+.w-2\/5 {
+  width: 40%;
+}
+
+.w-3\/5 {
+  width: 60%;
+}
+
+.w-4\/5 {
+  width: 80%;
+}
+
+.btn {
+  cursor: pointer;
+  border: none;
+  outline: none;
+  border-radius: 4px;
+  transition: 0.22s;
+}
+
+.toast-top-center {
+  top: 20px !important;
+}
+
+html, body { height: 100%; }

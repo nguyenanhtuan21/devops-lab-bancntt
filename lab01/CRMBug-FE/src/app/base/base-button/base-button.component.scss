@@ -1,0 +1,42 @@
+@import "../../../styles.scss";
+@import "../../../color.scss";
+@import "../../../font.scss";
+
+:host { 
+  
+  
+  .btn-primary {
+    background-color: $default-color-green;
+    color: $color-white;
+    font-weight: $font-weight-bold;
+    border: 2px solid $default-color-green;
+    &:hover {
+      background-color: $color-white;
+      color: $default-color-green;
+    }
+  }
+
+  .btn-secondary {
+    background-color: $color-white;
+    border: 2px solid $border-color-primary;
+    font-weight: $font-weight-bold;
+    color: $default-color-green;
+    &:hover {
+      background-color: $color-green-1;
+      color: $default-color-green;
+      border-color: $default-color-green;
+    }
+  }
+
+  .btn-danger {
+    background-color: $color-white;
+    border: 2px solid $fds-gray-45;
+    font-weight: $font-weight-bold;
+    color: $fds-gray-45;
+    &:hover {
+      background-color: $color-green-1;
+      color: $fds-spectrum-cherry;
+      border-color: $fds-spectrum-cherry;
+    }
+  }
+}

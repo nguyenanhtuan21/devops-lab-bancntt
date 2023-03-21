@@ -1,0 +1,204 @@
+@import "../../../styles.scss";
+@import "../../../color.scss";
+@import "../../../font.scss";
+@import "../../../icon.scss";
+
+
+::ng-deep {
+  .cdk-overlay-container {
+    .cdk-overlay-pane {
+      .mat-menu-panel {
+        background-color: $color-white;
+        .mat-menu-content {
+          .btn-secondary {
+            cursor: pointer;
+            transition: 0.22s;
+            .text {
+              color: $color-black;
+              margin-left: 4px;
+            }
+            .icon {
+              color: $color-black;
+              width: 24px;
+              height: 24px;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+            }
+            &:hover {
+              background-color: $color-grey-05;
+            }
+          }
+          .btn-delete {
+            cursor: pointer;
+            transition: 0.22s;
+            .text {
+              color: $status-color-4;
+              margin-left: 4px;
+            }
+            .icon {
+              color: $status-color-4;
+              width: 24px;
+              height: 24px;
+              font-size: 16px;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+            }
+            &:hover {
+              background-color: $color-grey-05;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+:host {
+  .project-settings {
+    .action {
+      background-color: $color-grey-40;
+      padding-left: 24px;
+      width: 275px;
+      border-right: 1px solid $color-grey-45;
+      height: calc(100vh - 100px);
+      min-width: 200px;
+      .title {
+        align-items: center;
+        padding: 12px 0 12px 0;
+        .icon {
+          color: $color-grey-35;
+          font-size: $font-title;
+        }
+        .text {
+          color: $color-grey-35;
+          font-size: $font-middle;
+          padding-left: 8px;
+        }
+      }
+      .tab {
+        cursor: pointer;
+        padding: 8px 0 8px 20px;
+        border-left: 1px solid $color-grey-40;
+        border-bottom: 1px solid $color-grey-40;
+        border-top: 1px solid $color-grey-40;
+        transition: 0.22s;
+        &.active,&:hover {
+          position: relative;
+          border-right: none;
+          border-left: 1px solid $color-grey-45;
+          border-bottom: 1px solid $color-grey-45;
+          border-top: 1px solid $color-grey-45;
+          background-color: $color-white;
+          border-bottom-left-radius: 4px;
+          border-top-left-radius: 4px;
+          &::after {
+            content: "";
+            position: absolute;
+            width: 1px;
+            display: block;
+            background: $color-white;
+            top: 0;
+            height: 100%;
+            right: -1px;
+          }
+        }
+      }
+    }
+    >.content {
+      width: 100%;
+      background-color: white;
+      padding: 20px 32px 0 32px;
+      .general {
+        width: 100%;
+        .title {
+          font-size: $font-title;
+          font-weight: $font-weight-medium;
+          padding-bottom: 20px;
+        }
+        .groupbox-item {
+          padding-top: 8px;
+          .field {
+            padding-bottom: 12px;
+            min-width: 200px;
+            max-width: 440px;
+            .title {
+              padding-bottom: 12px;
+            }
+            .field-left {
+              margin-right: 50px;
+            }
+          }
+        }
+        .footer {
+          padding-top: 20px;
+        }
+      }
+      .member {
+        width: 100%;
+        .title {
+          font-size: $font-title;
+          font-weight: $font-weight-medium;
+          padding-bottom: 20px;
+        }
+        .content {
+          .table-fixed-header {
+            overflow: auto;
+            border-collapse: collapse;
+            width: 100%;
+            th,
+            td {
+              text-align: center;
+              border-bottom: 1px solid $fds-gray-30;
+              padding: 4px 12px;
+              min-height: 50px;
+              height: 40px;
+            }
+            td {
+              cursor: pointer;
+            }
+            tr:nth-child(even) {
+              background-color: $fds-gray-05;
+            }
+            tbody {
+              tr {
+                position: relative;
+                .action-table {
+                  position: absolute;
+                  right: 12px;
+                  top: 50%;
+                  transform: translateY(-50%);
+                  cursor: pointer;
+                  .more {
+                    display: none;
+                    background-color: $color-white;
+                    width: 30px;
+                    height: 24px;
+                    border-radius: 50%;
+                    align-items: center;
+                    justify-content: center;
+                    box-shadow: 0 0 10px $fds-gray-25;
+                  }
+                  &:hover {
+                    .more {
+                      background-color: $fds-gray-05;
+                    }
+                  }
+                }
+                &:hover {
+                  background-color: $dataviz-primary-2 !important;
+                  .action-table { 
+                    .more {
+                      display: flex;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

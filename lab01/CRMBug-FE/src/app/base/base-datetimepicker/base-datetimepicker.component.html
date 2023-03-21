@@ -1,0 +1,16 @@
+<div class="bt-flex" [ngStyle]="{'width': width}">
+  <div class="label bt-flex bt-align-items-center" *ngIf="isShowLabel"
+    [ngStyle]="{'min-width.px': labelWidth, 'max-width.px': labelWidth}"
+  >
+    {{label}}
+  </div>  
+  <mat-form-field [ngStyle]="{'width': width}" (click)="picker.open()" [ngClass]="{'color-disabled': disabled}">
+    <input matInput [ngxMatDatetimePicker]="picker" placeholder="Choose a date" [formControl]="dateControl"
+      [min]="minDate" [max]="maxDate" [disabled]="disabled" [(ngModel)]="value">
+    <mat-datepicker-toggle matSuffix [for]="$any(picker)"></mat-datepicker-toggle>
+    <ngx-mat-datetime-picker #picker [showSpinners]="showSpinners" [showSeconds]="showSeconds"
+      [stepHour]="stepHour" [stepMinute]="stepMinute" [stepSecond]="stepSecond" [touchUi]="touchUi"
+      [color]="color" [enableMeridian]="enableMeridian" (closed)="onChange()">
+    </ngx-mat-datetime-picker>
+  </mat-form-field>
+</div>

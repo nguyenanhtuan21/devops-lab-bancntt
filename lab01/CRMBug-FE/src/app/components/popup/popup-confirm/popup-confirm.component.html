@@ -1,0 +1,32 @@
+<div class="popup-confirm-container">
+  <div class="header bt-flex">
+    <div class="title" *ngIf="title">
+      {{title}}
+    </div>
+    <div class="close bt-flex bt-justify-self-end">
+      <i class="fa-solid fa-x" (click)="close()"></i>
+    </div>
+  </div>
+  <div class="content-container bt-flex" [innerHTML]="content">
+  </div>
+</div>
+<div class="feature bt-flex bt-flex-row w-full bt-justify-content-end">
+  <div class="button-first">
+    <base-button
+      typeButton="primary"
+      text="Accept"
+      [width]="80"
+      (btnClick)="accept()"
+    >
+    </base-button>
+  </div>
+  <div class="button-seconds">
+    <base-button
+      typeButton="danger"
+      text="Cancel"
+      [width]="80"
+      (btnClick)="close()"
+    >
+    </base-button>
+  </div>
+</div>

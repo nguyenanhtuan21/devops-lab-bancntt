@@ -1,0 +1,68 @@
+<div class="add-project-container">
+  <div class="header bt-flex">
+    <div class="title">
+      Add Project
+    </div>
+    <div class="close bt-flex bt-justify-self-end">
+      <i class="fa-solid fa-x" (click)="close()"></i>
+    </div>
+  </div>
+  <div class="content-container">
+    <div class="groupbox-item">
+      <div class="field w-full bt-flex bt-flex-row">
+        <div class="w-3/5">
+          <base-textbox
+            text="Project Name"
+            [titleWidth]="120"
+            [type]="typeControl.Textbox"
+            [required]="true"
+            placeholder=""
+            [isHorizontal]="false"
+            [maxLength]="255"
+            [(value)]="data.ProjectName"
+          >
+          </base-textbox>
+        </div>
+      </div>
+    </div>
+    <div class="groupbox-item">
+      <div class="field w-full bt-flex bt-flex-row">
+        <div class="w-3/5">
+          <base-textbox
+            text="Project Code"
+            [titleWidth]="120"
+            [type]="typeControl.Textbox"
+            [required]="true"
+            placeholder=""
+            [isHorizontal]="false"
+            [(value)]="data.ProjectCode"
+          >
+          </base-textbox>
+        </div>
+      </div>
+    </div>
+    <div class="recommendation">
+      <div>The project code is a unique identifier for a project. A short, concise key is recommended.</div>
+      <div>(e.g. Project name Bug Tracking System has project key BLG_2) Uppercase letters (A-Z), numbers (0-9) and underscore (_) can be used.</div>
+    </div>
+  </div>
+</div>
+<div class="feature bt-flex bt-flex-row w-full bt-justify-content-end">
+  <div class="button-first">
+    <!-- <base-button
+      typeButton="secondary"
+      text="Save and Add"
+      [width]="120"
+      (btnClick)="saveAndAddData()"
+    >
+    </base-button> -->
+  </div>
+  <div class="button-seconds">
+    <base-button
+      typeButton="primary"
+      text="Save"
+      (btnClick)="saveData()"
+    >
+    </base-button>
+  </div>
+</div>

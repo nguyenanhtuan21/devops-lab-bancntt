@@ -1,0 +1,45 @@
+<div class="contact-container bt-flex">
+  <div class="close">
+    <i class="fa-solid fa-x" (click)="close()"></i>
+  </div>
+  <div class="contact-info bt-flex">
+    <div class="avatar">
+      <div class="text bt-flex bt-align-items-center bt-justify-content-center">
+        {{ firstCharacter }}
+      </div>
+    </div>
+    <div class="content">
+      <div class="name">
+        {{fullName}}
+      </div>
+      <div class="phone-number bt-flex" *ngIf="phoneNumber">
+        <div class="icon">
+          <i class="fa-solid fa-phone"></i>
+        </div>
+        <div class="text">
+          {{phoneNumber}}
+        </div>
+      </div>
+      <div class="email bt-flex" *ngIf="email">
+        <div class="icon">
+          <i class="fa-solid fa-envelope"></i>
+        </div>
+        <div class="text">
+          {{email}}
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="qrcode-container">
+    <div class="qrcode-title">
+      {{title}}
+    </div>
+    <div class="qrcode">
+      <qrcode
+        [qrdata]="qrdata" [allowEmptyString]="true" [elementType]="'img'" [errorCorrectionLevel]="'M'"
+        [margin]="4" [width]="width"
+      >
+      </qrcode>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,43 @@
+@import "../../../styles.scss";
+@import "../../../icon.scss";
+@import "../../../font.scss";
+@import "../../../color";
+
+:host {
+  .searchbox-container {
+    position: relative;
+    .ic-search-16 {
+      position: absolute;
+      left: 8px;
+      cursor: pointer;
+    }
+  }
+  .textbox-container {
+    .title {
+      .star {
+        color: $fds-red-55;
+        padding-left: 3px;
+      }
+    }
+    &.bt-flex-column {
+      .title {
+        margin-bottom: 8px;
+      }
+    }
+  }
+  .textbox {
+    height: 32px;
+    padding: 4px 12px;
+    outline: none;
+    border: 1px solid $fds-gray-30;
+    border-radius: 4px;
+    font-size: 13px;
+    &.search {
+      border-radius: 20px;
+      padding: 4px 30px;
+    }
+    &:focus {
+      border-color: $default-color-green;
+    }
+  }
+}

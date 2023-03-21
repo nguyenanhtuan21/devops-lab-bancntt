@@ -1,0 +1,18 @@
+<ng-container [ngSwitch]="type">
+  <ng-container *ngSwitchCase="calendarType.MonthLy">
+    <monthly-calendar 
+      [events]="events"
+      (eventClick)="clickEvent($event)"
+    >
+    </monthly-calendar>
+
+  </ng-container>
+  <ng-container *ngSwitchCase="calendarType.WeekLy">
+    <weekly-calendar 
+      [events]="events"
+      (eventClick)="clickEvent($event)"
+    >
+    
+    </weekly-calendar>
+  </ng-container>
+</ng-container>

@@ -1,0 +1,267 @@
+@import "../../../../styles.scss";
+@import "../../../../color.scss";
+@import "../../../../font.scss";
+
+:host {
+  ::ng-deep { 
+    // .ngx-slider {
+    //   .ngx-slider-ceil {
+    //     left: unset !important;
+    //     right: 0 !important;
+    //   }
+    //   .ngx-slider-selection-bar {
+    //     visibility: visible !important;
+    //     .ngx-slider-selection {
+    //       background: $color-green-hover;
+    //     }
+    //   }
+    //   .ngx-slider-pointer {
+    //     width: 28px !important;
+    //     height: 28px !important;
+    //     &::after {
+    //       top: 10px !important;
+    //       left: 10px !important;
+    //     }
+    //   }
+    // }
+    .comment-container {
+      .add-comment {
+        base-textbox {
+          width: 100%;
+          .textbox {
+            border-radius: 12px;
+            padding-right: 40px;
+            font-size: 14px;
+            height: 40px;
+          }
+        }
+      }
+      .edit-comment {
+        base-textbox {
+          width: 75%;
+          .textbox {
+            border-radius: 8px;
+            // padding-right: 40px;
+            font-size: 14px;
+            height: 40px;
+          }
+        }
+      }
+    }
+  }
+  .add-task-container {
+    max-height: 738px;
+    overflow: auto;
+    .header {
+      position: sticky;
+      top: 0;
+      background-color: $color-white;
+      z-index: 5;
+      padding: 24px 24px 21px 24px;
+      .title {
+        width: 100%;
+        font-size: $font-title;
+        font-weight: $font-weight-bold;
+      }
+      .close {
+        position: absolute;
+        top: 16px;
+        right: 16px;
+        i {
+          width: 24px;
+          height: 24px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          cursor: pointer;
+          border-radius: 50%;
+          &:hover {
+            background-color: $color-grey-10;
+          }
+        }
+      }
+      .header-line {
+        height: 1px;
+        background-color: $color-grey-20;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+      }
+    }
+    .content-container {
+      padding: 0 24px;
+    }
+    .comment-container {
+      padding: 0 24px;
+      .comment-content {
+        padding-top: 16px;
+        position: relative;
+        &::before {
+          content: "";
+          height: 1px;
+          width: 100%;
+          position: absolute;
+          top: 0;
+          background-color: $color-grey-20;
+        }
+        .comment-item {
+          padding-bottom: 12px;
+          .avatar {
+            width: 40px;
+            height: 40px;
+            background-color: $default-color-green;
+            border-radius: 50%;
+            cursor: pointer;
+            transition: 0.22s;
+            margin-right: 12px;
+            &:hover {
+              box-shadow: 0 0 5px $color-grey-25;
+            }
+            .text {
+              color: $color-white;
+              font-size: $font-subtitle;
+              width: inherit;
+              height: inherit;
+            }
+          }
+          .main-content {
+            width: fit-content;
+            padding: 12px;
+            border-radius: 4px;
+            margin-bottom: 6px;
+            background-color: $color-grey-50;
+            .name {
+              font-weight: $font-weight-bold;
+            }
+          }
+          .edit-comment {
+            .action-edit {
+              margin-left: 12px;
+              min-width: 28px;
+              min-height: 28px;
+              height: 28px;
+              width: 28px;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              border-radius: 50%;
+              cursor: pointer;
+              align-self: center;
+              transition: 0.22s;
+              &.save {
+                border: 1px solid $default-color-green;
+                color: $default-color-green;
+                &:hover {
+                  box-shadow: 0 0 5px $default-color-green;
+                }
+              }
+              &.cancel {
+                border: 1px solid $color-base-00;
+                color: $color-base-00;
+                &:hover {
+                  box-shadow: 0 0 5px $color-base-00;
+                }
+              }
+            }
+          }
+          .footer {
+            .action {
+              margin-right: 6px;
+              display: flex;
+              .action-item {
+                padding: 4px 6px;
+                width: fit-content;
+                cursor: pointer;
+                &:hover {
+                  &.edit {
+                    color: $color-base-15;
+                  }
+                  &.delete {
+                    color: $color-base-00;
+                  }
+                }
+              }
+            }
+            .date {
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              color: $color-grey-35;
+            }
+          }
+        }
+        .no-comment {
+          font-weight: $font-weight-medium;
+          font-size: $font-body;
+          padding: 8px 0 20px 16px;
+        }
+        .add-comment {
+          margin-top: 8px;
+          margin-bottom: 16px;
+          position: relative;
+          .submit-comment {
+            position: absolute;
+            width: 24px;
+            height: 24px;
+            z-index: 2;
+            top: 8px;
+            right: 14px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: $font-title;
+            i {
+              color: $color-base-15;
+            }
+          }
+        }
+      }
+    }
+    .groupbox-item {
+      padding-top: 8px;
+      .groupbox-title {
+        padding: 12px;
+        position: relative;
+        font-size: $font-subtitle;
+        font-weight: $font-weight-medium;
+        i {
+          color: $color-grey-35;
+        }
+        &::before {
+          display: block;
+          content: "";
+          position: absolute;
+          width: 2px;
+          height: 22px;
+          left: 0;
+          background-color: $default-color-green;
+        }
+      }
+      .field {
+        padding-bottom: 12px;
+        .title {
+          padding-bottom: 12px;
+        }
+        .field-left {
+          margin-right: 50px;
+        }
+        #textarea {
+          outline: none;
+          resize: none;
+          border: 1px solid $fds-gray-30;
+          border-radius: 4px;
+          padding: 8px;
+        }
+      }
+    }
+  }
+  .feature {
+    padding: 12px 24px;
+    background-color: $color-grey-05;
+    .button-seconds {
+      margin-left: 12px;
+    }
+  }
+}

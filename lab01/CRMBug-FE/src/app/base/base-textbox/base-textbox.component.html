@@ -1,0 +1,45 @@
+<ng-container [ngSwitch]="type">
+  <ng-container *ngSwitchCase="typeControl.Textbox">
+    <div
+      class="textbox-container bt-flex bt-flex-row w-full"
+      [ngClass]="{
+        'bt-flex-row': isHorizontal,
+        'bt-flex-column': !isHorizontal,
+        'bt-align-items-center': isHorizontal
+      }"
+    >
+      <div
+        class="title"
+        *ngIf="isLabel"
+        [ngStyle]="{ 'max-width.px': titleWidth, 'min-width.px': titleWidth }"
+      >
+        {{ text }}
+        <span class="star" *ngIf="required">*</span>
+      </div>
+      <input
+        type="text"
+        class="textbox text w-full"
+        placeholder="{{ placeholder }}"
+        [(ngModel)]="value"
+        (input)="onInput()"
+        [required]="required"
+        [maxlength]="maxLength"
+        (keyup.enter)="search()"
+      />
+    </div>
+  </ng-container>
+  <ng-container *ngSwitchCase="typeControl.Search">
+    <div class="searchbox-container bt-flex bt-flex-row bt-align-items-center">
+      <div class="icon ic-search-16" (click)="search()"></div>
+      <input
+        type="text"
+        class="textbox search w-full"
+        placeholder="{{ placeholder }}"
+        [(ngModel)]="value"
+        (keyup.enter)="search()"
+        [maxlength]="maxLength"
+        [ngStyle]="{'border-radius': borderRadius}"
+      />
+    </div>
+  </ng-container>
+</ng-container>

@@ -1,0 +1,58 @@
+<div class="login-container">
+  <div class="form-container">
+    <form #authForm="ngForm" class="form-login">
+      <div id="login-title">
+        <span>Hello</span>
+      </div>
+      <div class="input-box">
+        <i class="bi bi-person"></i>
+        <input
+          class="form-control"
+          name="username"
+          id="username"
+          placeholder="Username"
+          [(ngModel)]="username"
+          required
+        />
+      </div>
+
+      <div class="input-box">
+        <i class="bi bi-key"></i>
+        <input
+          type="password"
+          class="form-control"
+          name="password"
+          id="password"
+          placeholder="Password"
+          [(ngModel)]="password"
+          required
+        />
+      </div>
+
+      <div
+        class="submit w-full bt-flex bt-align-items-center bt-justify-content-center"
+      >
+        <base-button
+          typeButton="primary"
+          text="Login"
+          (btnClick)="submit($event)"
+          [width]="150"
+          [height]="40"
+        >
+        </base-button>
+      </div>
+      <span class="form-warning" id="form-warning">{{ error }}</span>
+    </form>
+    <div class="action bt-flex">
+      <div 
+        class="register"
+        (click)="toRegister($event)"
+      >Register
+      </div>
+      <div class="forgot-password">Forgot Password?</div>
+    </div>
+  </div>
+  <div class="login-preview">
+    <img src="../../../assets/img/login-thumbnail-2.png" alt="not found" />
+  </div>
+</div>

@@ -1,0 +1,94 @@
+@import "../../../../styles.scss";
+@import "../../../../color.scss";
+@import "../../../../font.scss";
+
+:host {
+  ::ng-deep {
+    .ngx-slider {
+      .ngx-slider-ceil {
+        left: unset !important;
+        right: 0;
+      }
+      .ngx-slider-selection-bar {
+        visibility: visible !important;
+        .ngx-slider-selection {
+          background: $color-green-hover;
+        }
+      }
+      .ngx-slider-pointer {
+        width: 28px !important;
+        height: 28px !important;
+        &::after {
+          top: 10px !important;
+          left: 10px !important;
+        }
+      }
+    }
+
+  }
+  .add-issue-container {
+    padding: 24px 24px 24px 24px;
+    .header {
+      height: 40px;
+      .title {
+        width: 100%;
+        font-size: $font-title;
+        font-weight: $font-weight-bold;
+      }
+      .close {
+        i {
+          width: 24px;
+          height: 24px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          cursor: pointer;
+          border-radius: 50%;
+          &:hover {
+            background-color: $color-grey-10;
+          }
+        }
+      }
+    }
+    .groupbox-item {
+      padding-top: 8px;
+      .groupbox-title {
+        padding: 12px;
+        position: relative;
+        font-size: $font-subtitle;
+        font-weight: $font-weight-medium;
+        &::before {
+          display: block;
+          content: "";
+          position: absolute;
+          width: 2px;
+          height: 22px;
+          left: 0;
+          background-color: $default-color-green;
+        }
+      }
+      .field {
+        padding-bottom: 12px;
+        .title {
+          padding-bottom: 12px;
+        }
+        .field-left {
+          margin-right: 50px;
+        }
+        #textarea {
+          outline: none;
+          resize: none;
+          border: 1px solid $fds-gray-30;
+          border-radius: 4px;
+        }
+      }
+    }
+  }
+  .feature {
+    padding: 12px 24px;
+    background-color: $color-grey-05;
+    .button-seconds {
+      margin-left: 12px;
+    }
+  }
+}

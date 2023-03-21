@@ -1,0 +1,112 @@
+@import "../../../styles.scss";
+@import "../../../font.scss";
+
+:host {
+  ::ng-deep {
+    .status-container {
+      .pie-chart {
+        width: 100% !important;
+        height: 310px !important;
+        margin-top: 12px;
+        .highcharts-container {
+          width: 100% !important;
+          height: 100% !important;
+          svg {
+            width: 100% !important;
+            height: 100% !important;
+          }
+        }
+      }
+    }
+  }
+  .home-container {
+    padding: 24px 24px 0 24px;
+    .project-notification {
+      margin-right: 28px;
+      .title-group {
+        padding-bottom: 12px;
+        .title-content {
+          font-size: $font-medium;
+          font-weight: $font-weight-bold;
+        }
+        .sub-title {
+          padding-left: 6px;
+          font-size: $font-middle;
+          font-weight: $font-weight-medium;
+          color: $color-grey-25;
+          i {
+            transform: rotateZ(50deg);
+            padding-left: 6px;
+          }
+        }
+      }
+      .list-notification {
+        width: 100%;
+        border-radius: 4px;
+        border: 1px solid $border-color;
+        .noti-item {
+          width: 100%;
+          height: 120px;
+          padding: 16px 24px;
+          background-color: $color-white;
+          border-radius: 4px;
+          .avatar {
+            width: 50px;
+            height: 50px;
+            img {
+              border-radius: 50%;
+            }
+          }
+          .main-content {
+            padding-left: 12px;
+            .title {
+              height: 40px;
+              .text {
+                font-weight: $font-weight-medium;
+                font-size: $font-body;
+              }
+              .created-date {
+                text-align: right;
+              }
+            }
+            .project-info {
+              height: 32px;
+              .name {
+                font-weight: $font-weight-medium;
+              }
+            }
+          }
+        }
+      }
+    }
+    .sub-summary {
+      .title {
+        height: 32px;
+        font-size: $font-medium;
+        font-weight: $font-weight-bold;
+        padding-bottom: 12px;
+      }
+      .status-container {
+        position: relative;
+        padding: 16px;
+        background-color: $color-white;
+        height: 720px;
+        border-radius: 4px;
+        border: 1px solid $color-grey-20;
+        min-width: 412px;
+        margin-bottom: 16px;
+        .total-record {
+          position: absolute;
+          top: 60px;
+          z-index: 1;
+          font-size: $font-medium;
+          color: $color-black;
+          display: flex;
+          justify-content: center;
+          text-align: center;
+          align-items: center;
+        }
+      }
+    }
+  }
+}

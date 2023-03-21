@@ -1,0 +1,20 @@
+<div 
+  class="bt-combobox bt-flex"  
+  [ngStyle]="{'width': width}"
+  [ngClass]="{'bt-flex-row': isHorizontal, 'bt-flex-column': !isHorizontal, 'bt-align-items-center': isHorizontal}"
+>
+  <div 
+    class="label-combobox" *ngIf="isShowLabel" [ngStyle]="{'max-width.px': labelWidth, 'min-width.px': labelWidth}"
+  >
+    {{labelText}}
+  </div>
+  <mat-form-field appearance="fill" [ngClass]="{'color-disabled': disabled}" [class]="fieldName">
+    <mat-select [(value)]="value" (valueChange)="onChange()" [disabled]="disabled" [multiple]="isMultiple">
+      <mat-option
+        *ngFor="let item of datas" [value]="item.Value"
+      >
+        {{item.Text}}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+</div>

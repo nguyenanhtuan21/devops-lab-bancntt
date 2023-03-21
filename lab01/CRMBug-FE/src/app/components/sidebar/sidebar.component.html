@@ -1,0 +1,65 @@
+<div class="sidebar-container">
+  <div class="sidebar-trigger bt-flex bt-justify-content-end">
+    <div class="trigger-icon">
+      <div class="trigger-icon-line"></div>
+    </div>
+  </div>
+  <div class="sidebar-list w-full">
+    <div class="sidebar-item w-full bt-flex bt-flex-row bt-align-items-center" routerLink="../project/home/{{this.projectID}}" routerLinkActive="actived">
+      <div class="icon">
+        <i class="fa-solid fa-house"></i>
+      </div>
+      <div class="content">
+        Home
+      </div>
+    </div>
+    <div class="sidebar-item w-full bt-flex bt-flex-row bt-align-items-center" routerLink="../project/view-task/{{this.projectID}}" routerLinkActive="actived">
+      <div class="icon">
+        <i class="fa-solid fa-bug"></i>
+      </div>
+      <div class="content">
+        Tasks
+      </div>
+    </div>
+    <div class="sidebar-item w-full bt-flex bt-flex-row bt-align-items-center" routerLink="../project/gantt-chart/{{this.projectID}}" routerLinkActive="actived">
+      <div class="icon">
+        <i class="fa-solid fa-chart-line"></i>
+      </div>
+      <div class="content">
+        Gantt Chart
+      </div>
+    </div>
+    <div class="sidebar-item w-full bt-flex bt-flex-row bt-align-items-center" routerLink="../project/assigned-report/{{this.projectID}}" routerLinkActive="actived">
+      <div class="icon">
+        <i class="fa-solid fa-table"></i>
+      </div>
+      <div class="content">
+        Assigned Report
+      </div>
+    </div>
+    <div class="sidebar-item w-full bt-flex bt-flex-row bt-align-items-center" routerLink="../project/report/{{this.projectID}}" routerLinkActive="actived">
+      <div class="icon">
+        <i class="fa-solid fa-chart-column"></i>
+      </div>
+      <div class="content">
+        Report
+      </div>
+    </div>
+    <div class="sidebar-item w-full bt-flex bt-flex-row bt-align-items-center" routerLink="../project/progress-report/{{this.projectID}}" routerLinkActive="actived">
+      <div class="icon">
+        <i class="fa-solid fa-chart-column"></i>
+      </div>
+      <div class="content">
+        Progress Report
+      </div>
+    </div>
+    <div class="sidebar-item w-full bt-flex bt-flex-row bt-align-items-center" routerLink="../project/settings/{{this.projectID}}" routerLinkActive="actived">
+      <div class="icon">
+        <i class="fa-solid fa-gear"></i>
+      </div>
+      <div class="content">
+        Settings
+      </div>
+    </div>
+  </div>
+</div>

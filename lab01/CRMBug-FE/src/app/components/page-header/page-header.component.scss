@@ -1,0 +1,67 @@
+@import "../../../styles.scss";
+@import "../../../color.scss";
+
+::ng-deep {
+  .cdk-overlay-container {
+    .cdk-overlay-pane {
+      .mat-menu-panel {
+        background-color: $color-white;
+        .mat-menu-content {
+          .btn-primary {
+            color: $color-black;
+            cursor: pointer;
+            transition: 0.22s;
+            &:hover {
+              color: $default-color-green;
+              background-color: $color-green-2;
+            }
+          }
+          .title {
+            padding: 8px 16px;
+            color: $color-grey-35;
+          }
+        }
+      }
+    }
+  }
+}
+
+:host {
+  .page-header {
+    position: fixed;
+    top: 0;
+    background-color: $color-green-1;
+    height: 50px;
+    width: 100%;
+    box-shadow: 2px 2px 2px $fds-dark-mode-gray-35;
+    padding: 0 16px;
+    .nav-link {
+      height: 40px;
+      color: $color-black;
+      transition: 0.3;
+      cursor: pointer;
+      .text {
+        padding: 12px 8px;
+      }
+      &:hover {
+        color: $default-color-green;
+        background-color: $color-green-2;
+      }
+    }
+    .user-info {
+      width: 36px;
+      height: 36px;
+      background-color: $default-color-green;
+      border-radius: 50%;
+      cursor: pointer;
+      transition: 0.22s;
+      &:hover {
+        box-shadow: 0 0 5px $color-grey-25;
+      }
+      .text {
+        color: $color-white;
+        font-size: $font-subtitle;
+      }
+    }
+  }
+}

@@ -1,0 +1,23 @@
+<perfect-scrollbar [ngStyle]="{'height': height}" (psYReachEnd)="scollReachEnd()">
+  <div class="list-notification">
+    <div 
+      *ngFor="let item of data;"
+      class="noti-item bt-flex"
+    >
+      <div class="avatar">
+        <img src="../../../assets/img/tiger.png" alt="avatar" class="w-full h-full">
+      </div>
+      <div class="main-content w-full">
+        <div class="title bt-flex bt-align-items-center w-full">
+          <span class="text w-3/4" [innerHTML]="item.Content">
+            <!-- {{item.Content}} -->
+          </span>
+          <span class="created-date w-1/4">{{item.CreatedDate | date: 'dd/MM/yyyy'}}</span>
+        </div>
+        <div class="sub-title">
+          <span style="font-weight: 500;">{{item.ProjectName}}</span> - <span>{{item.ProjectCode}}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</perfect-scrollbar>

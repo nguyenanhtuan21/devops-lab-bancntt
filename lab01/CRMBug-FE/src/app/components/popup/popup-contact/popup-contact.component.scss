@@ -1,0 +1,91 @@
+@import '../../../../styles.scss';
+@import '../../../../font.scss';
+@import '../../../../color.scss';
+
+:host {
+  ::ng-deep {
+    .contact-container {
+      .qrcode-container {
+        qrcode {
+          .qrcode {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+          }
+        }
+      }
+    }
+  }
+  .contact-container {
+    padding: 16px;
+    position: relative;
+    .close {
+      position: absolute;
+      top: 12px;
+      right: 12px;
+      i {
+        width: 24px;
+        height: 24px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        border-radius: 50%;
+        &:hover {
+          background-color: $color-grey-10;
+        }
+      }
+    }
+    .contact-info {
+      width: 320px;
+      .avatar {
+        width: 40px;
+        height: 40px;
+        background-color: $default-color-green;
+        border-radius: 50%;
+        cursor: pointer;
+        transition: 0.22s;
+        &:hover {
+          box-shadow: 0 0 5px $color-grey-25;
+        }
+        .text {
+          color: $color-white;
+          font-size: $font-subtitle;
+          width: inherit;
+          height: inherit;
+        }
+      }
+      .content {
+        padding-left: 16px;
+        .name {
+          font-size: $font-subtitle;
+          font-weight: $font-weight-medium;
+          padding-bottom: 12px;
+        }
+        .phone-number {
+          padding-bottom: 8px;
+          .icon {
+            padding-right: 8px;
+            color: $color-grey-35;
+          }
+        }
+        .email {
+          .icon {
+            padding-right: 8px;
+            color: $color-grey-35;
+          }
+        }
+      }
+    }
+    .qrcode-container {
+      border-left: 2px solid $color-grey-15;
+      padding-left: 20px;
+      .qrcode {
+        border: 16px solid $color-grey4;
+      }
+      .qrcode-title {
+        margin-bottom: 12px;
+      }
+    }
+  }
+}

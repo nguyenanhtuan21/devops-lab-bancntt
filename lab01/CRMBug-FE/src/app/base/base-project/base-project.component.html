@@ -1,0 +1,55 @@
+<div class="project-list" [hidden]="!isHaveData">
+  <div 
+    class="project-item bt-flex bt-align-items-center"
+    *ngFor="let item of projects"
+  >
+    <div class="avatar bt-flex bt-align-items-center bt-justify-content-center" (click)="openProject(item)">
+      <i class="fa-solid fa-city"></i>
+    </div>
+    <div class="info" (click)="openProject(item)">
+      <div class="name">
+        {{ item.ProjectName }}
+      </div>
+      <div class="key">
+        {{ item.ProjectCode }}
+      </div>
+    </div>
+    <div class="project-settings" 
+      [matTooltip]="'Project settings'"
+      [matTooltipPosition]="'above'"
+      [matTooltipClass]="'mg-top'"
+      [matTooltipClass]="'mg-bottom'"
+      [matMenuTriggerFor]="menuOptions"
+      [matMenuTriggerData]="{project: item}"
+    >
+      <i class="fa-solid fa-gear"></i>
+    </div>
+  </div>
+  
+</div>
+<no-data
+  [hidden]="isHaveData"
+  [height]="heightNoData"
+>
+</no-data>
+
+<mat-menu #menuOptions="matMenu">
+  <ng-template matMenuContent let-project="project">
+    <button mat-menu-item class="btn-secondary bt-flex bt-align-items-center" (click)="openProjectSettings(project)">
+      <div class="icon">
+        <i class="fa-solid fa-gear"></i>
+      </div>
+      <div class="text">
+        General Settings
+      </div>
+    </button>
+    <button mat-menu-item class="btn-delete bt-flex bt-align-items-center" (click)="deleteProject(project)">
+      <div class="icon">
+        <i class="fa-solid fa-xmark"></i>
+      </div>
+      <div class="text">
+        Delete
+      </div>
+    </button>
+  </ng-template>
+</mat-menu>

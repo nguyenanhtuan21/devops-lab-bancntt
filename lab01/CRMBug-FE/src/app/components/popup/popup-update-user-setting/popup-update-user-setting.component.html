@@ -1,0 +1,81 @@
+<div class="update-user-settings-container">
+  <div class="header bt-flex">
+    <div class="title">
+      Personal Settings
+    </div>
+    <div class="close bt-flex bt-justify-self-end">
+      <i class="fa-solid fa-x" (click)="close()"></i>
+    </div>
+  </div>
+  <div class="content-container">
+    <div class="groupbox-item">
+      <div class="field w-full bt-flex bt-flex-row">
+        <div class="w-4/5">
+          <base-textbox
+            text="First Name"
+            [type]="typeControl.Textbox"
+            placeholder=""
+            [isHorizontal]="false"
+            [required]="true"
+            [maxLength]="100"
+            [(value)]="userData.FirstName"
+          >
+          </base-textbox>
+        </div>
+      </div>
+      <div class="field w-full bt-flex bt-flex-row">
+        <div class="w-4/5">
+          <base-textbox
+            text="Last Name"
+            [type]="typeControl.Textbox"
+            placeholder=""
+            [isHorizontal]="false"
+            [required]="true"
+            [maxLength]="100"
+            [(value)]="userData.LastName"
+          >
+          </base-textbox>
+        </div>
+      </div>
+      <div class="field w-full bt-flex bt-flex-row">
+        <div class="w-4/5">
+          <base-textbox
+            text="Email"
+            [type]="typeControl.Textbox"
+            placeholder=""
+            [isHorizontal]="false"
+            [maxLength]="255"
+            [(value)]="userData.Email"
+          >
+          </base-textbox>
+        </div>
+      </div>
+      <div class="groupbox-item">
+        <div class="field w-full bt-flex bt-flex-row">
+          <div class="w-4/5">
+            <base-textbox
+              text="Phone number"
+              [type]="typeControl.Textbox"
+              [required]="false"
+              placeholder=""
+              [isHorizontal]="false"
+              [maxLength]="50"
+              [(value)]="userData.PhoneNumber"
+            >
+            </base-textbox>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="feature bt-flex bt-flex-row w-full bt-justify-content-end">
+  <div class="button-seconds">
+    <base-button
+      typeButton="primary"
+      text="Save"
+      (btnClick)="saveData()"
+    >
+    </base-button>
+  </div>
+</div>

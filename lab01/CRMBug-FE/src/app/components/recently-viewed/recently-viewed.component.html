@@ -1,0 +1,62 @@
+<div class="recently-viewed-container">
+  <div class="header bt-flex">
+    <div class="title">
+      {{ title }}
+    </div>
+    <div class="close">
+      <i class="fa-solid fa-x" (click)="close()"></i>
+    </div>
+  </div>
+  <div 
+    class="list-task" 
+    *ngIf="isHaveData"
+  >
+    <div 
+      class="task-container bt-flex"
+      *ngFor="let item of tasks"
+      (click)="viewTask(item)"
+    >
+      <div class="avatar">
+        <i class="fa-solid fa-list-check"></i>
+      </div>
+      <div class="content w-full">
+        <div class="title">
+          <span class="task-code" [ngStyle]="{'color': '#1877f2', 'font-weight': '500'}">
+            {{ item.TaskCode }}
+          </span> 
+          /
+          <span>
+            {{item.Subject}}
+          </span>
+        </div>
+        <div class="description">
+          <span>
+            {{item.AssignedUserIDText}}
+          </span>
+          -
+          <span [ngStyle]="{'color': item.PriorityColor, 'font-weight': '500'}">
+            {{item.PriorityIDText}}
+          </span>
+          -
+          <span [ngStyle]="{'color': item.StatusColor, 'font-weight': '500'}">
+            {{item.StatusIDText}}
+          </span>
+        </div>
+        <div class="footer">
+          <span>
+            {{item.CreatedBy}}
+          </span>
+          -
+          <span>
+            {{item.CreatedDate | date: 'dd/MM/yyyy'}}
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <no-data 
+    *ngIf="!isHaveData"
+    [height]="'386px'"
+  >
+  </no-data>
+</div>

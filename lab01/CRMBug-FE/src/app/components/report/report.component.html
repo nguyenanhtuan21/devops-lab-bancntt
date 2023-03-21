@@ -1,0 +1,39 @@
+<div class="report">
+  <div class="toolbar bt-flex">
+    <app-daterange
+      (valueChanged)="valueChangeCombo($event)"
+      [ngStyle]="{'padding-right': '16px'}"
+    >
+    </app-daterange>
+    <base-combobox
+      [datas]="employeeCbx"
+      [isShowLabel]="true"
+      labelText="Choose member:"
+      fieldName="EmployeeIDs"
+      [isHorizontal]="true"
+      [value]="param.IDs"
+      (valueChange)="valueChangeCombo($event)"
+      [labelWidth]="120"
+      [isMultiple]="true"
+    >
+    </base-combobox>
+    <base-combobox
+      [datas]="groupByCbx"
+      [isShowLabel]="true"
+      labelText="Group by:"
+      fieldName="GroupBy"
+      [isHorizontal]="true"
+      [value]="param.GroupBy"
+      (valueChange)="valueChangeCombo($event)"
+      [labelWidth]="80"
+    >
+    </base-combobox>
+  </div>
+  <div class="total-record">
+    Total task: <b>{{totalRecord}} </b>
+  </div>
+  <div class="report-container" [id]="container">
+
+  </div>
+</div>
+

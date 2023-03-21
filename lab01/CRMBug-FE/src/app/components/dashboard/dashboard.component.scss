@@ -1,0 +1,205 @@
+@import "../../../styles.scss";
+@import "../../../font.scss";
+@import "../../../color.scss";
+
+::ng-deep {
+  .cdk-overlay-container {
+    .cdk-overlay-pane {
+      .mat-menu-panel {
+        background-color: $color-white;
+        .mat-menu-content {
+          .btn-secondary {
+            cursor: pointer;
+            transition: 0.22s;
+            .icon, .text {
+              color: $color-black;
+            }
+            .icon {
+              width: 24px;
+              height: 24px;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+            }
+            &:hover {
+              background-color: $color-grey-05;
+            }
+          }
+          .btn-delete {
+            cursor: pointer;
+            transition: 0.22s;
+            .icon, .text {
+              color: $status-color-4;
+            }
+            .icon {
+              width: 24px;
+              height: 24px;
+              font-size: 16px;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+            }
+            &:hover {
+              background-color: $color-grey-05;
+            }
+          }
+        }
+      }
+    }
+    .mg-bottom {
+      margin-bottom: 0px !important;
+    }
+  }
+}
+
+:host {
+  .dashboard-container {
+    margin-top: 50px;
+    padding: 0 32px;
+    .header {
+      padding-top: 30px;
+      height: 70px;
+      .icon {
+        width: 40px;
+        height: 40px;
+        display: flex;
+        align-self: center;
+        align-items: center;
+        justify-content: center;
+        margin-right: 12px;
+        font-size: $font-title;
+        border-radius: 50%;
+        color: $color-grey-35;
+        background-color: $color-white;
+        box-shadow: 0 0 2px $color-grey-25;
+      }
+      .title {
+        display: flex;
+        align-items: center;
+        font-size: $font-largetitle;
+        font-weight: $font-weight-medium;
+      }
+    }
+    .main-content {
+      padding: 30px 60px 0 60px;
+      .project-container {
+        margin-right: 36px;
+        .project-header {
+          height: 40px;
+          margin-bottom: 12px;
+          .title {
+            font-size: $font-subtitle;
+            font-weight: $font-weight-bold;
+          }
+          .search {
+            width: 200px;
+          }
+          .add-project {
+            margin-left: 12px;
+            border-radius: 50%;
+            border: 1px solid $border-color;
+            min-width: 36px;
+            min-height: 36px;
+            background-color: $color-white;
+            transition: 0.22s;
+            cursor: pointer;
+            &:hover {
+              background-color: $color-hover-green;
+              i {
+                color: $color-white;
+              }
+            }
+            i {
+              font-size: $font-title;
+              color: $fds-dark-mode-gray-50;
+            }
+          }
+        }
+        .project-list {
+          border: 1px solid $border-color;
+          background-color: $color-white;
+          .project-item {
+            height: 58px;
+            padding: 4px 12px;
+            cursor: pointer;
+            transition: 0.22s;
+            position: relative;
+            &:hover {
+              background-color: $color-hover-green;
+              .info {
+                .name,
+                .key {
+                  color: $color-white;
+                }
+              }
+              .project-settings {
+                display: block;
+              }
+            }
+            &::before {
+              content: "";
+              position: absolute;
+              height: 1px;
+              width: calc(100% - 24px);
+              bottom: 0;
+              background-color: $border-color;
+            }
+            &:nth-last-child(1) {
+              &::before {
+                height: 0;
+              }
+            }
+            .avatar {
+              width: 40px;
+              height: 40px;
+              border-radius: 50%;
+              background-color: $color-white;
+              i {
+                color: $fds-dark-mode-gray-50;
+                font-size: $font-title;
+              }
+            }
+            .info {
+              padding-left: 12px;
+              width: 100%;
+              .name {
+                font-size: $font-body;
+                font-weight: $font-weight-medium;
+                padding-bottom: 2px;
+              }
+              .key {
+                font-size: $font-size-base;
+                color: $fds-dark-mode-gray-50;
+              }
+            }
+            .project-settings {
+              position: absolute;
+              right: 12px;
+              top: 8px;
+              font-size: 16px;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              color: $color-grey-05;
+              display: none;
+              z-index: 10;
+              &:hover {
+                color: $color-white;
+              }
+            }
+          }
+        }
+      }
+      .notification-container {
+        .notification-header {
+          margin-bottom: 12px;
+          .title {
+            height: 40px;
+            font-size: $font-subtitle;
+            font-weight: $font-weight-bold;
+          }
+        }
+      }
+    }
+  }
+}
