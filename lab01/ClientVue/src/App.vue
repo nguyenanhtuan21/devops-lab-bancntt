@@ -10,7 +10,7 @@ export default {
   name: 'App',
   setup(){
     const msg = ref();
-    fetch('https://localhost:44383/WeatherForecast')
+    fetch('http://localhost:8888/WeatherForecast')
     .then((response) => response.json())
     .then((data) => {
       msg.value = data; // data là một object
