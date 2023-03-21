@@ -1,14 +1,11 @@
-C:\Users\hue\Desktop\Devops Training\Lab1\WeatherBE\bin\Debug\net6.0\appsettings.Development.json
-C:\Users\hue\Desktop\Devops Training\Lab1\WeatherBE\bin\Debug\net6.0\appsettings.json
 C:\Users\hue\Desktop\Devops Training\Lab1\WeatherBE\bin\Debug\net6.0\WeatherBE.exe
-C:\Users\hue\Desktop\Devops Training\Lab1\WeatherBE\bin\Debug\net6.0\WeatherBE.deps.json
-C:\Users\hue\Desktop\Devops Training\Lab1\WeatherBE\bin\Debug\net6.0\WeatherBE.runtimeconfig.json
 C:\Users\hue\Desktop\Devops Training\Lab1\WeatherBE\bin\Debug\net6.0\WeatherBE.dll
-C:\Users\hue\Desktop\Devops Training\Lab1\WeatherBE\bin\Debug\net6.0\WeatherBE.pdb
 C:\Users\hue\Desktop\Devops Training\Lab1\WeatherBE\bin\Debug\net6.0\Microsoft.OpenApi.dll
 C:\Users\hue\Desktop\Devops Training\Lab1\WeatherBE\bin\Debug\net6.0\Swashbuckle.AspNetCore.Swagger.dll
 C:\Users\hue\Desktop\Devops Training\Lab1\WeatherBE\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerGen.dll
 C:\Users\hue\Desktop\Devops Training\Lab1\WeatherBE\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\hue\Desktop\Devops Training\Lab1\WeatherBE\bin\Debug\net6.0\appsettings.Development.json
+C:\Users\hue\Desktop\Devops Training\Lab1\WeatherBE\bin\Debug\net6.0\appsettings.json
 C:\Users\hue\Desktop\Devops Training\Lab1\WeatherBE\obj\Debug\net6.0\WeatherBE.csproj.AssemblyReference.cache
 C:\Users\hue\Desktop\Devops Training\Lab1\WeatherBE\obj\Debug\net6.0\WeatherBE.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\hue\Desktop\Devops Training\Lab1\WeatherBE\obj\Debug\net6.0\WeatherBE.AssemblyInfoInputs.cache
@@ -28,5 +25,8 @@ C:\Users\hue\Desktop\Devops Training\Lab1\WeatherBE\obj\Debug\net6.0\WeatherBE.c
 C:\Users\hue\Desktop\Devops Training\Lab1\WeatherBE\obj\Debug\net6.0\WeatherBE.dll
 C:\Users\hue\Desktop\Devops Training\Lab1\WeatherBE\obj\Debug\net6.0\refint\WeatherBE.dll
 C:\Users\hue\Desktop\Devops Training\Lab1\WeatherBE\obj\Debug\net6.0\WeatherBE.pdb
+C:\Users\hue\Desktop\Devops Training\Lab1\WeatherBE\bin\Debug\net6.0\WeatherBE.deps.json
+C:\Users\hue\Desktop\Devops Training\Lab1\WeatherBE\bin\Debug\net6.0\WeatherBE.runtimeconfig.json
+C:\Users\hue\Desktop\Devops Training\Lab1\WeatherBE\bin\Debug\net6.0\WeatherBE.pdb
 C:\Users\hue\Desktop\Devops Training\Lab1\WeatherBE\obj\Debug\net6.0\WeatherBE.genruntimeconfig.cache
 C:\Users\hue\Desktop\Devops Training\Lab1\WeatherBE\obj\Debug\net6.0\ref\WeatherBE.dll
