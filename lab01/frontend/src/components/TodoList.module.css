@@ -1,0 +1,23 @@
+.wrapper {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.inputSearch{
+    padding: 0.5rem 1rem;
+    font-size: 16px;
+    border-radius: 9999px;
+    width: 50vw;
+}
+
+ul,li {
+    list-style: none;
+}
+
+.inputCheckbox{
+    margin: 1rem;
+    margin-left: 0;
+}
