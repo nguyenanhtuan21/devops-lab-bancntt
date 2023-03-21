@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/vumanhcuong/Downloads/ASPNETCoreVueChecklist-master/ASPNETCoreVueChecklist/ASPNETCoreVueChecklist.csproj": {}
+    "/Users/vumanhcuong/Desktop/untitled folder/devops-lab-bancntt/lab01/checklist-server/ASPNETCoreVueChecklist/ASPNETCoreVueChecklist.csproj": {}
   },
   "projects": {
-    "/Users/vumanhcuong/Downloads/ASPNETCoreVueChecklist-master/ASPNETCoreVueChecklist/ASPNETCoreVueChecklist.csproj": {
+    "/Users/vumanhcuong/Desktop/untitled folder/devops-lab-bancntt/lab01/checklist-server/ASPNETCoreVueChecklist/ASPNETCoreVueChecklist.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/vumanhcuong/Downloads/ASPNETCoreVueChecklist-master/ASPNETCoreVueChecklist/ASPNETCoreVueChecklist.csproj",
+        "projectUniqueName": "/Users/vumanhcuong/Desktop/untitled folder/devops-lab-bancntt/lab01/checklist-server/ASPNETCoreVueChecklist/ASPNETCoreVueChecklist.csproj",
         "projectName": "ASPNETCoreVueChecklist",
-        "projectPath": "/Users/vumanhcuong/Downloads/ASPNETCoreVueChecklist-master/ASPNETCoreVueChecklist/ASPNETCoreVueChecklist.csproj",
+        "projectPath": "/Users/vumanhcuong/Desktop/untitled folder/devops-lab-bancntt/lab01/checklist-server/ASPNETCoreVueChecklist/ASPNETCoreVueChecklist.csproj",
         "packagesPath": "/Users/vumanhcuong/.nuget/packages/",
-        "outputPath": "/Users/vumanhcuong/Downloads/ASPNETCoreVueChecklist-master/ASPNETCoreVueChecklist/obj/",
+        "outputPath": "/Users/vumanhcuong/Desktop/untitled folder/devops-lab-bancntt/lab01/checklist-server/ASPNETCoreVueChecklist/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/vumanhcuong/.nuget/NuGet/NuGet.Config"
