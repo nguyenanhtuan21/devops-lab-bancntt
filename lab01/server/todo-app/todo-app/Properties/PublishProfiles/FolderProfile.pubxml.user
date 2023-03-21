@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+https://go.microsoft.com/fwlink/?LinkID=208121.
+-->
+<Project>
+  <PropertyGroup>
+    <_PublishTargetUrl>D:\Build\devops-lab-bancntt\lab01\server\todo-app\todo-app\bin\Release\net6.0\publish\</_PublishTargetUrl>
+    <History>True|2023-03-21T06:23:28.4280288Z;</History>
+    <LastFailureDetails />
+  </PropertyGroup>
+</Project>
