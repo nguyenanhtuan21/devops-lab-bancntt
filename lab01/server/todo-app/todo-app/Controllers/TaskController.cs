@@ -1,5 +1,8 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Dapper;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using MySqlConnector;
+using System.Diagnostics;
 
 namespace todo_app.Controllers
 {
@@ -7,139 +10,182 @@ namespace todo_app.Controllers
     [ApiController]
     public class TaskController : ControllerBase
     {
-        //public List<TaskModel> tasks = new List<TaskModel>();
-
-        //public TaskController()
-        //{
-        //    lock (tasks)
-        //    {
-        //        tasks?.Add(new TaskModel
-        //        {
-        //            Id = Guid.Parse("3b249dfc-8c7f-4c46-8b15-cbdd4b487d80"),
-        //            NameTask = "Nhiệm vụ 1",
-        //            Description = "Nội dung nhiệm vụ",
-        //            IsDone = false,
-        //        });
-        //        tasks?.Add(new TaskModel
-        //        {
-        //            Id = Guid.Parse("c61303cc-2d80-4278-8964-aebb3861ba00"),
-        //            NameTask = "Nhiệm vụ 2",
-        //            Description = "Nội dung nhiệm vụ",
-        //            IsDone = false,
-        //        });
-        //    }
-        //}
-
         [HttpGet]
-        public ResponseResult GetAllTask()
+        public async Task<ResponseResult> GetAllTask()
         {
-            return new ResponseResult
+            try
             {
-                Code = 200,
-                Message = "Get Data Success",
-                Data = TaskList.Tasks,
-            };
-        }
-
-        [HttpPost]
-        public ResponseResult AddTask([FromBody] TaskModel taskModel)
-        {
-            lock (TaskList.Tasks)
+                string getAllQuery = "SELECT * FROM todolist WHERE IsDelete = 0 ORDER BY id DESC";
+                using (var mySqlConnection = new MySqlConnection(DatabaseContext.ConnectionString))
+                {
+                    var records = await mySqlConnection.QueryAsync(getAllQuery);
+                    if (records != null)
+                    {
+                        return new ResponseResult
+                        {
+                            Code = 200,
+                            Message = "Get All Success",
+                            Data = records,
+                        };
+                    }
+                    return new ResponseResult
+                    {
+                        Code = 400,
+                        Message = "Get All Error",
+                        Data = new List<TaskModel>(),
+                    };
+                }
+            }
+            catch (Exception ex)
             {
-                taskModel.Id = Guid.NewGuid();
-                TaskList.Tasks.Add(taskModel);
+                Console.WriteLine(ex.ToString());
                 return new ResponseResult
                 {
-                    Code = 200,
-                    Message = "Add Task Success",
-                    Data = TaskList.Tasks,
+                    Code = 500,
+                    Message = "Exception Error",
+                    Data = new List<TaskModel>(),
                 };
             }
         }
 
-        [HttpPut]
-        public ResponseResult UpdateTask([FromBody] TaskModel taskModel)
+        [HttpPost]
+        public async Task<ResponseResult> AddTask([FromBody] TaskModel taskModel)
         {
-            lock (TaskList.Tasks)
+            try
             {
-                var task = TaskList.Tasks.Find(s => s.Id == taskModel.Id);
-                if (task != null)
+                taskModel.Status = false;
+                taskModel.IsDelete = false;
+                Guid newGuid = Guid.NewGuid();
+
+                string getAllQuery = "SELECT * FROM todolist WHERE IsDelete = 0 ORDER BY id DESC";
+                string addQuery = "INSERT INTO todolist (IDTodo, TodoName, Status, IsDelete)  VALUES (@IDTodo, @TodoName, @Status, @IsDelete);";
+
+                var parameters = new DynamicParameters();
+                parameters.Add("@IDTodo", newGuid);
+                parameters.Add("@TodoName", taskModel.TodoName);
+                parameters.Add("@Status", taskModel.Status);
+                parameters.Add("@IsDelete", taskModel.IsDelete);
+
+                using (var mySqlConnection = new MySqlConnection(DatabaseContext.ConnectionString))
                 {
-                    task.NameTask = taskModel.NameTask;
-                    task.Description = task.Description;
-                    return new ResponseResult
+                    int numberOfAffectedRows = await mySqlConnection.ExecuteAsync(addQuery, parameters);
+                    if (numberOfAffectedRows != 0)
                     {
-                        Code = 200,
-                        Message = "Get Data Success",
-                        Data = TaskList.Tasks,
-                    };
-                }
-                else
-                {
+                        var records = await mySqlConnection.QueryAsync(getAllQuery);
+                        return new ResponseResult
+                        {
+                            Code = 200,
+                            Message = "Add task success",
+                            Data = records,
+                        };
+                    }
                     return new ResponseResult
                     {
                         Code = 400,
-                        Message = "Error",
+                        Message = "Add task error",
                         Data = new List<TaskModel>(),
                     };
                 }
             }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.ToString());
+                return new ResponseResult
+                {
+                    Code = 500,
+                    Message = "Exception Error",
+                    Data = new List<TaskModel>(),
+                };
+            }
         }
+
 
         [HttpPut]
         [Route("UpdateStatus")]
-        public ResponseResult UpdateStatusTask([FromQuery] Guid id)
+        public async Task<ResponseResult> UpdateStatusTask([FromQuery] Guid id)
         {
-            lock (TaskList.Tasks)
+            try
             {
-                var task = TaskList.Tasks.Find(s => s.Id == id);
-                if (task != null)
+                string getAllQuery = "SELECT * FROM todolist WHERE IsDelete = 0 ORDER BY id DESC";
+                string updateQuery = "UPDATE todolist SET Status = 1 WHERE IDTodo = @IDTodo;";
+
+                var parameters = new DynamicParameters();
+                parameters.Add("@IDTodo", id);
+
+                using (var mySqlConnection = new MySqlConnection(DatabaseContext.ConnectionString))
                 {
-                    task.IsDone = true;
-                    return new ResponseResult
+                    int numberOfAffectedRows = await mySqlConnection.ExecuteAsync(updateQuery, parameters);
+                    if (numberOfAffectedRows != 0)
                     {
-                        Code = 200,
-                        Message = "Get Data Success",
-                        Data = TaskList.Tasks,
-                    };
-                }
-                else
-                {
+                        var records = await mySqlConnection.QueryAsync(getAllQuery);
+                        return new ResponseResult
+                        {
+                            Code = 200,
+                            Message = "Get All Success",
+                            Data = records,
+                        };
+                    }
                     return new ResponseResult
                     {
                         Code = 400,
-                        Message = "Error",
+                        Message = "Get All Error",
                         Data = new List<TaskModel>(),
                     };
                 }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.ToString());
+                return new ResponseResult
+                {
+                    Code = 500,
+                    Message = "Exception Error",
+                    Data = new List<TaskModel>(),
+                };
             }
         }
 
         [HttpDelete]
-        public ResponseResult DeleteTask([FromQuery] Guid id)
+        public async Task<ResponseResult> DeleteTask([FromQuery] Guid id)
         {
-            lock (TaskList.Tasks)
+            try
             {
-                var task = TaskList.Tasks.Find(s => s.Id == id);
-                if (task != null)
+                string getAllQuery = "SELECT * FROM todolist WHERE IsDelete = 0 ORDER BY id DESC";
+                string deleteQuery = "DELETE FROM todolist WHERE IDTodo = @IDTodo;";
+
+                var parameters = new DynamicParameters();
+                parameters.Add("@IDTodo", id);
+
+                using (var mySqlConnection = new MySqlConnection(DatabaseContext.ConnectionString))
                 {
-                    TaskList.Tasks.Remove(task);
-                    return new ResponseResult
+                    int numberOfAffectedRows = await mySqlConnection.ExecuteAsync(deleteQuery, parameters);
+                    if (numberOfAffectedRows != 0)
                     {
-                        Code = 200,
-                        Message = "Delte Task Success",
-                        Data = TaskList.Tasks,
-                    };
-                }
-                else
-                {
+                        var records = await mySqlConnection.QueryAsync(getAllQuery);
+                        return new ResponseResult
+                        {
+                            Code = 200,
+                            Message = "Delete task success",
+                            Data = records,
+                        };
+                    }
                     return new ResponseResult
                     {
                         Code = 400,
-                        Message = "Error",
+                        Message = "Delete task error",
                         Data = new List<TaskModel>(),
                     };
                 }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.ToString());
+                return new ResponseResult
+                {
+                    Code = 500,
+                    Message = "Exception Error",
+                    Data = new List<TaskModel>(),
+                };
             }
         }
     }

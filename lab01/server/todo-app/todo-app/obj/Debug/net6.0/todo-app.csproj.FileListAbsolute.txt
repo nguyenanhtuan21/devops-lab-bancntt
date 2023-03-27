@@ -30,3 +30,5 @@ D:\Build\devops-lab-bancntt\lab01\server\todo-app\todo-app\obj\Debug\net6.0\refi
 D:\Build\devops-lab-bancntt\lab01\server\todo-app\todo-app\obj\Debug\net6.0\todo-app.pdb
 D:\Build\devops-lab-bancntt\lab01\server\todo-app\todo-app\obj\Debug\net6.0\todo-app.genruntimeconfig.cache
 D:\Build\devops-lab-bancntt\lab01\server\todo-app\todo-app\obj\Debug\net6.0\ref\todo-app.dll
+D:\Build\devops-lab-bancntt\lab01\server\todo-app\todo-app\bin\Debug\net6.0\Dapper.dll
+D:\Build\devops-lab-bancntt\lab01\server\todo-app\todo-app\bin\Debug\net6.0\MySqlConnector.dll

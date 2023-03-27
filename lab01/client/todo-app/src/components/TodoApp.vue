@@ -8,14 +8,14 @@
             </div>
             <div class="w-500">
                 <ul class="list-task">
-                    <li class="task-item" v-for="task in taskList" :key="task.id">
-                        <span class="text">{{ task.nameTask }}</span>
+                    <li class="task-item" v-for="task in taskList" :key="task.ID">
+                        <span class="text">{{ task.TodoName }}</span>
 
-                        <span class="icon-done" v-if="task.isDone">V</span>
+                        <span class="icon-done" v-if="task.Status">V</span>
 
-                        <span class="delete" @click="deleteData(task.id)">Delete</span>
+                        <span class="delete" @click="deleteData(task.IDTodo)">Delete</span>
 
-                        <span class="done" @click="updateData(task.id)">Done</span>
+                        <span class="done" @click="updateData(task.IDTodo)">Done</span>
                     </li>
                 </ul>
             </div>
@@ -52,10 +52,8 @@ export default {
         async addData() {
             try {
                 var data = {
-                    "id": "3fa85f64-5717-4562-b3fc-2c963f66afa6",
-                    "nameTask": this.taskTodo,
-                    "description": "string",
-                    "isDone": false
+                    "IDTodo": "d680b839-9669-4589-ae32-eeab6675a64f",
+                    "todoName": this.taskTodo,
                 }
                 await axios.post(`${baseUrl}/api/Task`, data).then(res => {
                     this.taskList = res.data.data;

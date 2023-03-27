@@ -1,6 +1,10 @@
+using todo_app;
+
 var builder = WebApplication.CreateBuilder(args);
 
 var MyAllowSpecificOrigins = "_myAllowSpecificOrigins";
+
+DatabaseContext.ConnectionString = builder.Configuration.GetConnectionString("MySQLConnectionString");
 
 // Add services to the container.
 
