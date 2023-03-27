@@ -5,7 +5,9 @@ D:\Build\devops-lab-bancntt\lab01\server\todo-app\todo-app\obj\Release\net6.0\Pu
 D:\Build\devops-lab-bancntt\lab01\server\todo-app\todo-app\obj\Release\net6.0\PubTmp\Out\todo-app.deps.json
 D:\Build\devops-lab-bancntt\lab01\server\todo-app\todo-app\obj\Release\net6.0\PubTmp\Out\todo-app.runtimeconfig.json
 D:\Build\devops-lab-bancntt\lab01\server\todo-app\todo-app\obj\Release\net6.0\PubTmp\Out\todo-app.pdb
+D:\Build\devops-lab-bancntt\lab01\server\todo-app\todo-app\obj\Release\net6.0\PubTmp\Out\Dapper.dll
 D:\Build\devops-lab-bancntt\lab01\server\todo-app\todo-app\obj\Release\net6.0\PubTmp\Out\Microsoft.OpenApi.dll
+D:\Build\devops-lab-bancntt\lab01\server\todo-app\todo-app\obj\Release\net6.0\PubTmp\Out\MySqlConnector.dll
 D:\Build\devops-lab-bancntt\lab01\server\todo-app\todo-app\obj\Release\net6.0\PubTmp\Out\Swashbuckle.AspNetCore.Swagger.dll
 D:\Build\devops-lab-bancntt\lab01\server\todo-app\todo-app\obj\Release\net6.0\PubTmp\Out\Swashbuckle.AspNetCore.SwaggerGen.dll
 D:\Build\devops-lab-bancntt\lab01\server\todo-app\todo-app\obj\Release\net6.0\PubTmp\Out\Swashbuckle.AspNetCore.SwaggerUI.dll
