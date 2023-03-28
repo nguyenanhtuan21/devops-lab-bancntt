@@ -1,0 +1,21 @@
+version: '1'
+services:
+  mongo-db:
+    image: mongo
+    expose:
+      - 27017 
+  server:
+    restart: always
+    build: './Server'
+    expose:
+      - 80
+      - 443
+    ports:
+      - "80:80"
+      - "443:443"
+  client:
+    build: './client'
+    expose:
+      - 8080
+    ports:
+      - "8080:8080"
