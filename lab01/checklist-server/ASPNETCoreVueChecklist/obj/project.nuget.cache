@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "rN20OQV34IzKhvFeIeN+9CkjTrf9cUdMjTPKdzvmHU32H6UwPn2Lv+WHqd6XWEL/WibEyCWmpGmHRAY1c0wfqw==",
+  "dgSpecHash": "2Yq2QnPeUQ86y4/HNLDuBMiWP8GhZFCq4WyXQQTw4bXZhPcN3CHiy+8koiDJAb8fv/s/QSP/KDoJ8Ns8zWYmRQ==",
   "success": true,
   "projectFilePath": "/Users/vumanhcuong/Desktop/untitled folder/devops-lab-bancntt/lab01/checklist-server/ASPNETCoreVueChecklist/ASPNETCoreVueChecklist.csproj",
   "expectedPackageFiles": [
@@ -27,6 +27,7 @@
     "/Users/vumanhcuong/.nuget/packages/microsoft.identitymodel.tokens/6.7.1/microsoft.identitymodel.tokens.6.7.1.nupkg.sha512",
     "/Users/vumanhcuong/.nuget/packages/microsoft.openapi/1.2.3/microsoft.openapi.1.2.3.nupkg.sha512",
     "/Users/vumanhcuong/.nuget/packages/microsoft.visualstudio.azure.containers.tools.targets/1.10.9/microsoft.visualstudio.azure.containers.tools.targets.1.10.9.nupkg.sha512",
+    "/Users/vumanhcuong/.nuget/packages/mysqlconnector/2.2.5/mysqlconnector.2.2.5.nupkg.sha512",
     "/Users/vumanhcuong/.nuget/packages/swashbuckle.aspnetcore/5.6.3/swashbuckle.aspnetcore.5.6.3.nupkg.sha512",
     "/Users/vumanhcuong/.nuget/packages/swashbuckle.aspnetcore.swagger/5.6.3/swashbuckle.aspnetcore.swagger.5.6.3.nupkg.sha512",
     "/Users/vumanhcuong/.nuget/packages/swashbuckle.aspnetcore.swaggergen/5.6.3/swashbuckle.aspnetcore.swaggergen.5.6.3.nupkg.sha512",

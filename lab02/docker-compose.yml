@@ -1,0 +1,41 @@
+version: '3.9'
+services:
+  frontend:
+    build:
+      context: .
+      dockerfile: Dockerfile.vuejs
+    ports:
+      - '8080:8080'
+    networks:
+      - mynetwork
+    depends_on:
+      - api
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile.aspnetcore
+    expose:
+      - 80
+      - 443
+    ports:
+      - "80:80"
+      - "443:443"
+    networks:
+      - mynetwork
+    depends_on:
+      - db
+  db:
+    image: mysql:latest
+    environment:
+      MYSQL_ROOT_PASSWORD: password
+      MYSQL_DATABASE: todolistdb
+      MYSQL_USER: root
+      MYSQL_PASSWORD: password
+    ports:
+      - '3306:3306'
+    volumes:
+      - 'mysql_data:/var/lib/mysql'
+    networks:
+      - mynetwork
+networks:
+  mynetwork:

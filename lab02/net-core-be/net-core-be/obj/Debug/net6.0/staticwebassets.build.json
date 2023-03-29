@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "x/naUFOaEUMax2W3wvpP3QLMqq1Jd/DalmqeVPaMFQY=",
+  "Source": "net-core-be",
+  "BasePath": "_content/net-core-be",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

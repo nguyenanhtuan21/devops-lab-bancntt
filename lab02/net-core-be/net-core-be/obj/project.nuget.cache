@@ -1,0 +1,17 @@
+{
+  "version": 2,
+  "dgSpecHash": "up01PlgHl8fzGU0hRBYhCqYACJW8MpZzR/7BhR1HzrOYofPd62VUl+FkfWsj/u9k3OKRxwmnDWH+2oYpWE5W4Q==",
+  "success": true,
+  "projectFilePath": "/Users/vumanhcuong/Desktop/net-core-be/net-core-be/net-core-be.csproj",
+  "expectedPackageFiles": [
+    "/Users/vumanhcuong/.nuget/packages/dapper/2.0.123/dapper.2.0.123.nupkg.sha512",
+    "/Users/vumanhcuong/.nuget/packages/microsoft.extensions.apidescription.server/3.0.0/microsoft.extensions.apidescription.server.3.0.0.nupkg.sha512",
+    "/Users/vumanhcuong/.nuget/packages/microsoft.openapi/1.2.3/microsoft.openapi.1.2.3.nupkg.sha512",
+    "/Users/vumanhcuong/.nuget/packages/mysqlconnector/2.2.5/mysqlconnector.2.2.5.nupkg.sha512",
+    "/Users/vumanhcuong/.nuget/packages/swashbuckle.aspnetcore/6.2.3/swashbuckle.aspnetcore.6.2.3.nupkg.sha512",
+    "/Users/vumanhcuong/.nuget/packages/swashbuckle.aspnetcore.swagger/6.2.3/swashbuckle.aspnetcore.swagger.6.2.3.nupkg.sha512",
+    "/Users/vumanhcuong/.nuget/packages/swashbuckle.aspnetcore.swaggergen/6.2.3/swashbuckle.aspnetcore.swaggergen.6.2.3.nupkg.sha512",
+    "/Users/vumanhcuong/.nuget/packages/swashbuckle.aspnetcore.swaggerui/6.2.3/swashbuckle.aspnetcore.swaggerui.6.2.3.nupkg.sha512"
+  ],
+  "logs": []
+}

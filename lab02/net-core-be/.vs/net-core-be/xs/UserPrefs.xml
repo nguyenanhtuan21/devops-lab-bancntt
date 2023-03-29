@@ -1,0 +1,38 @@
+﻿<Properties StartupConfiguration="{F2392FF0-455C-4A0D-A300-B88A906D9863}|Default">
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.ItemProperties.net-core-be PreferredExecutionTarget="/Applications/Google Chrome.app" />
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.Workbench ActiveDocument="net-core-be/Program.cs">
+    <Files>
+      <File FileName="net-core-be/Models/TodoItem.cs" Line="6" Column="25" />
+      <File FileName="net-core-be/Controllers/TodoListController.cs" Line="109" Column="53" />
+      <File FileName="net-core-be/appsettings.json" />
+      <File FileName="net-core-be/WeatherForecast.cs" />
+      <File FileName="net-core-be/Program.cs" Line="21" Column="4" />
+      <File FileName="net-core-be/Models/TodoDBContext.cs" />
+      <File FileName="net-core-be/Models/ResponseResult.cs" />
+      <File FileName="net-core-be/Controllers/WeatherForecastController.cs" />
+      <File FileName="net-core-be/appsettings.Development.json" />
+      <File FileName="net-core-be/Properties/launchSettings.json" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="net-core-be" expanded="True">
+            <Node name="net-core-be" expanded="True">
+              <Node name="Dependencies" expanded="True" />
+              <Node name="Controllers" expanded="True" />
+              <Node name="Models" expanded="True" />
+              <Node name="Properties" expanded="True" />
+              <Node name="appsettings.json" expanded="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>

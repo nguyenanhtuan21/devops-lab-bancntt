@@ -52,7 +52,7 @@ namespace ASPNETCoreVueChecklist
                     .AllowAnyMethod()
                     .AllowAnyHeader();
             });
-
+            
             app.UseRouting();
 
             app.UseAuthorization();
