@@ -1,0 +1,43 @@
+/* ------------------
+----css input search----------
+----author: TVLOI ----------
+----29/07/2022    ----------
+ */
+
+.input-search {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    position: relative;
+}
+
+ .input-search input{
+    font-size: 13px;
+    padding-left: 10px;
+    position: relative;
+    padding-right:calc(2.75rem - 12px) ;
+    border: 1px solid #babec5;
+    height: 32px;
+    border-radius: 2px;
+    outline: none;
+    width: 230px;
+
+ }
+ .input-search input:focus{
+    border: 1px solid #2ca01c;
+ }
+
+
+ .input-search input::placeholder{
+    font-family: Misa Fonts italic;
+    font-size: 12px;
+ }
+
+ .input-icon {
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    right: 12px;
+    padding-right: epx;
+    cursor: pointer;
+ }

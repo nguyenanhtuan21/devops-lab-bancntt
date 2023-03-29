@@ -1,0 +1,44 @@
+/* ------------------
+----file css chính----------
+----author: TVLOI ----------
+----29/07/2022    ----------
+ */
+
+ @import url(./main/header.css);
+ @import url(./main/content.css);
+ 
+ .main {
+     background-color: #ECEEF1;
+     height: 100vh;
+     display: flex;
+     flex-direction: column;
+     padding: 0;
+     width: calc(100% - 178px);
+ }
+ 
+ .change-width-main {
+   width: calc(100% - 52px);
+ }
+ 
+ .loader {
+     z-index: 10;
+     border: 8px solid #f3f3f3;
+     border-radius: 50%;
+     border-top: 8px solid #3498db;
+     width: 50px;
+     height: 50px;
+     -webkit-animation: spin 2s linear infinite; /* Safari */
+     animation: spin 1s linear infinite;
+   }
+   
+   /* Safari */
+   @-webkit-keyframes spin {
+     0% { -webkit-transform: rotate(0deg); }
+     100% { -webkit-transform: rotate(360deg); }
+   }
+   
+   @keyframes spin {
+     0% { transform: rotate(0deg); }
+     100% { transform: rotate(360deg); }
+   }
+ 

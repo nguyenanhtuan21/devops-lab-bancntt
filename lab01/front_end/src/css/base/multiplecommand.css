@@ -1,0 +1,56 @@
+/* ------------------
+----file css chính----------
+----author: TVLOI ----------
+----29/07/2022    ----------
+ */
+
+ .mc-multiple-command {
+    font-size: 13px;
+    font-family: Misa Fonts semibold;
+    border: none;
+    background-color: #fff;
+    position: relative;
+ }
+ .mc-main:hover {
+    background-color: #D2D3D6!important;
+ }
+ .mc-multiple-command:focus .mc-main{
+    box-shadow: 0 0 0 2px #babec5;
+ }
+
+ .mc-main {
+    background-color: #fff;
+    border: 2px solid #3b3c3f;
+    border-radius: 30px;
+    padding: 0 16px;
+    height: 36px;
+    font-size: 13px;
+    font-family: Misa Fonts semibold;
+    cursor: pointer;
+ }
+
+.mc-main span {
+    margin-right: 4px;
+    color: #111111;
+}
+
+.mc-component {
+    position: absolute;
+    right: 10px;
+    background-color: #fff;
+    border-radius: 2px;
+    border: 1px solid #babec5;
+    padding: 2px 1px;
+    z-index: 6;
+    width: 100px;
+    font-family: Misa Fonts Regular;
+    text-align: start;
+    padding: 6px 0 6px 10px;
+    cursor: pointer;
+}
+
+.mc-component:hover {
+    background-color: #E8E9EC!important;
+    color: #08BF82;
+}
+

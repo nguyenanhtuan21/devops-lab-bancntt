@@ -1,0 +1,150 @@
+/* ------------------
+----css input----------
+----author: TVLOI ----------
+----01/08/2022    ----------
+ */
+.tl-input {
+   display: flex;
+   flex-direction: column;
+   font-family: Misa Fonts semibold;
+   padding-bottom: 10px;
+}
+
+.input-thin {
+   font-size: 13px;
+   padding-left: 10px;
+   position: relative;
+   border: 1px solid #babec5;
+   height: 32px;
+   border-radius: 2px;
+   outline: none;
+   width: 168px;
+}
+
+.input-fat {
+   font-size: 13px;
+   padding-left: 10px;
+   position: relative;
+   border: 1px solid #babec5;
+   height: 32px;
+   border-radius: 2px;
+   outline: none;
+   width: calc(468px - 168px - 2px);
+}
+
+.input-full {
+   font-size: 13px;
+   padding-left: 10px;
+   position: relative;
+   border: 1px solid #babec5;
+   height: 32px;
+   border-radius: 2px;
+   outline: none;
+   width: 100%;
+   box-sizing: border-box;
+}
+
+.tl-input>input:focus {
+   border: 1px solid #2ca01c;
+}
+
+.tl-input>input {
+   margin-top: 4px;
+}
+
+.tl-input label span {
+   color: red;
+}
+
+
+.tl-input input::placeholder {
+   font-family: Misa Fonts italic;
+   font-size: 12px;
+}
+
+/* radio */
+.group-radio {
+   display: flex;
+   align-items: center;
+   margin-top: 4px;
+   width: calc(468px - 168px - 2px);
+   height: 32px;
+}
+
+.group-radio input {
+   width: 20px;
+   height: 20px;
+   margin: 0 10px;
+}
+
+.group-radio input:focus {
+   box-shadow: 0 0 1px 1px #2E73BC;
+}
+
+.group-radio input:checked {
+   color: #2ca01c;
+}
+
+.group-radio label {
+   margin-right: 10px;
+}
+
+
+.tl-input .input-date {
+   padding-right: 10px;
+}
+
+.tl-input .input-date::-webkit-input-placeholder {
+   font-size: Misa Fonts Regular;
+}
+.tl-input input::-webkit-input-placeholder  {
+   /* font-size: Misa Fonts Regular; */
+   font-size: Misa Fonts Italic;
+}
+
+
+
+
+.tl-input input::-webkit-input-placeholder {
+   font-family: Misa Fonts Italic!important;
+   font-size: 12px;
+   color: #A8ABB9;
+}
+
+.el-date-picker {
+   margin-top: 4px;
+   /* max-width: 178px; */
+   /* width: none!important; */
+   /* width: 178px!important; */
+   font-size: 13px;
+   font-family: Misa Fonts Regular;
+}
+
+.el-date-picker .el-date-editor {
+   --el-datepicker-text-color: auto !important;
+}
+
+.el-date-editor.el-input, .el-date-editor.el-input__wrapper {
+   width: auto!important;
+}
+
+.el-date-picker .el-input__wrapper {
+   box-shadow: none;
+   border: 1px solid #BBBBBB;
+   border-radius: 2px;
+   margin-right: 0px!important;
+}
+
+.el-date-picker .el-input__wrapper.is-focus {
+   box-shadow: none;
+   border: 1px solid #2ca01c;
+}
+
+.el-date-picker input::-webkit-input-placeholder {
+   font-size: 13px;
+   font-family: Misa Fonts Regular;
+}
+
+.el-date-picker-popper {
+   width: 322px;
+}

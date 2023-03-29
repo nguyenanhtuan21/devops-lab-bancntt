@@ -1,0 +1,47 @@
+.box-navbar .right button:first-child{
+    margin-right: 10px;
+}
+.box-navbar {
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid #BBBBBB;
+    padding: 20px 0 0 0;
+}
+.flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.modal {
+    z-index: 10;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+.message-box {
+    width: 450px;
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 4px;
+    border: 1px solid #BBBBBB;
+}
+
+.message-box button {
+    height: 36px;
+    min-width: 60px;
+}
+
+.message-box .message {
+    display: flex;
+    padding: 10px 0 30px 0;
+    font-family: Misa Fonts Regular;
+    color: #8C8C8C;
+    font-size: 13px;
+}
+.message-box .message span{
+    display: flex;
+    align-items: center;
+}
+.message-box .message div {
+    margin-right: 20px;
+}
