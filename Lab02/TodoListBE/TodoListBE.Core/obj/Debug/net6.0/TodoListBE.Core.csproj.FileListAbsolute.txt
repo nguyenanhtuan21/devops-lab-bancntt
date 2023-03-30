@@ -1,0 +1,12 @@
+C:\Users\hue\Desktop\Devops Training\Lesson1\TodoListBE\TodoListBE.Core\bin\Debug\net6.0\TodoListBE.Core.deps.json
+C:\Users\hue\Desktop\Devops Training\Lesson1\TodoListBE\TodoListBE.Core\bin\Debug\net6.0\TodoListBE.Core.dll
+C:\Users\hue\Desktop\Devops Training\Lesson1\TodoListBE\TodoListBE.Core\bin\Debug\net6.0\TodoListBE.Core.pdb
+C:\Users\hue\Desktop\Devops Training\Lesson1\TodoListBE\TodoListBE.Core\obj\Debug\net6.0\TodoListBE.Core.csproj.AssemblyReference.cache
+C:\Users\hue\Desktop\Devops Training\Lesson1\TodoListBE\TodoListBE.Core\obj\Debug\net6.0\TodoListBE.Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\hue\Desktop\Devops Training\Lesson1\TodoListBE\TodoListBE.Core\obj\Debug\net6.0\TodoListBE.Core.AssemblyInfoInputs.cache
+C:\Users\hue\Desktop\Devops Training\Lesson1\TodoListBE\TodoListBE.Core\obj\Debug\net6.0\TodoListBE.Core.AssemblyInfo.cs
+C:\Users\hue\Desktop\Devops Training\Lesson1\TodoListBE\TodoListBE.Core\obj\Debug\net6.0\TodoListBE.Core.csproj.CoreCompileInputs.cache
+C:\Users\hue\Desktop\Devops Training\Lesson1\TodoListBE\TodoListBE.Core\obj\Debug\net6.0\TodoListBE.Core.dll
+C:\Users\hue\Desktop\Devops Training\Lesson1\TodoListBE\TodoListBE.Core\obj\Debug\net6.0\refint\TodoListBE.Core.dll
+C:\Users\hue\Desktop\Devops Training\Lesson1\TodoListBE\TodoListBE.Core\obj\Debug\net6.0\TodoListBE.Core.pdb
+C:\Users\hue\Desktop\Devops Training\Lesson1\TodoListBE\TodoListBE.Core\obj\Debug\net6.0\ref\TodoListBE.Core.dll

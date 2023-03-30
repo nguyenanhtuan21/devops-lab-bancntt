@@ -1,0 +1,17 @@
+C:\Users\hue\Desktop\Devops Training\Lesson1\TodoListBE\TodoListBE.BL\bin\Debug\net6.0\TodoListBE.BL.deps.json
+C:\Users\hue\Desktop\Devops Training\Lesson1\TodoListBE\TodoListBE.BL\bin\Debug\net6.0\TodoListBE.BL.dll
+C:\Users\hue\Desktop\Devops Training\Lesson1\TodoListBE\TodoListBE.BL\bin\Debug\net6.0\TodoListBE.BL.pdb
+C:\Users\hue\Desktop\Devops Training\Lesson1\TodoListBE\TodoListBE.BL\bin\Debug\net6.0\TodoListBE.Core.dll
+C:\Users\hue\Desktop\Devops Training\Lesson1\TodoListBE\TodoListBE.BL\bin\Debug\net6.0\TodoListBE.Infrastructure.dll
+C:\Users\hue\Desktop\Devops Training\Lesson1\TodoListBE\TodoListBE.BL\bin\Debug\net6.0\TodoListBE.Core.pdb
+C:\Users\hue\Desktop\Devops Training\Lesson1\TodoListBE\TodoListBE.BL\bin\Debug\net6.0\TodoListBE.Infrastructure.pdb
+C:\Users\hue\Desktop\Devops Training\Lesson1\TodoListBE\TodoListBE.BL\obj\Debug\net6.0\TodoListBE.BL.csproj.AssemblyReference.cache
+C:\Users\hue\Desktop\Devops Training\Lesson1\TodoListBE\TodoListBE.BL\obj\Debug\net6.0\TodoListBE.BL.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\hue\Desktop\Devops Training\Lesson1\TodoListBE\TodoListBE.BL\obj\Debug\net6.0\TodoListBE.BL.AssemblyInfoInputs.cache
+C:\Users\hue\Desktop\Devops Training\Lesson1\TodoListBE\TodoListBE.BL\obj\Debug\net6.0\TodoListBE.BL.AssemblyInfo.cs
+C:\Users\hue\Desktop\Devops Training\Lesson1\TodoListBE\TodoListBE.BL\obj\Debug\net6.0\TodoListBE.BL.csproj.CoreCompileInputs.cache
+C:\Users\hue\Desktop\Devops Training\Lesson1\TodoListBE\TodoListBE.BL\obj\Debug\net6.0\TodoListBE.BL.csproj.CopyComplete
+C:\Users\hue\Desktop\Devops Training\Lesson1\TodoListBE\TodoListBE.BL\obj\Debug\net6.0\TodoListBE.BL.dll
+C:\Users\hue\Desktop\Devops Training\Lesson1\TodoListBE\TodoListBE.BL\obj\Debug\net6.0\refint\TodoListBE.BL.dll
+C:\Users\hue\Desktop\Devops Training\Lesson1\TodoListBE\TodoListBE.BL\obj\Debug\net6.0\TodoListBE.BL.pdb
+C:\Users\hue\Desktop\Devops Training\Lesson1\TodoListBE\TodoListBE.BL\obj\Debug\net6.0\ref\TodoListBE.BL.dll

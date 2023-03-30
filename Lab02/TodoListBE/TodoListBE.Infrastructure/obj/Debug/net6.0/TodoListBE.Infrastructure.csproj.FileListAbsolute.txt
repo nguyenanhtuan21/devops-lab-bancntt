@@ -1,0 +1,15 @@
+C:\Users\hue\Desktop\Devops Training\Lesson1\TodoListBE\TodoListBE.Infrastructure\bin\Debug\net6.0\TodoListBE.Infrastructure.deps.json
+C:\Users\hue\Desktop\Devops Training\Lesson1\TodoListBE\TodoListBE.Infrastructure\bin\Debug\net6.0\TodoListBE.Infrastructure.dll
+C:\Users\hue\Desktop\Devops Training\Lesson1\TodoListBE\TodoListBE.Infrastructure\bin\Debug\net6.0\TodoListBE.Infrastructure.pdb
+C:\Users\hue\Desktop\Devops Training\Lesson1\TodoListBE\TodoListBE.Infrastructure\bin\Debug\net6.0\TodoListBE.Core.dll
+C:\Users\hue\Desktop\Devops Training\Lesson1\TodoListBE\TodoListBE.Infrastructure\bin\Debug\net6.0\TodoListBE.Core.pdb
+C:\Users\hue\Desktop\Devops Training\Lesson1\TodoListBE\TodoListBE.Infrastructure\obj\Debug\net6.0\TodoListBE.Infrastructure.csproj.AssemblyReference.cache
+C:\Users\hue\Desktop\Devops Training\Lesson1\TodoListBE\TodoListBE.Infrastructure\obj\Debug\net6.0\TodoListBE.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\hue\Desktop\Devops Training\Lesson1\TodoListBE\TodoListBE.Infrastructure\obj\Debug\net6.0\TodoListBE.Infrastructure.AssemblyInfoInputs.cache
+C:\Users\hue\Desktop\Devops Training\Lesson1\TodoListBE\TodoListBE.Infrastructure\obj\Debug\net6.0\TodoListBE.Infrastructure.AssemblyInfo.cs
+C:\Users\hue\Desktop\Devops Training\Lesson1\TodoListBE\TodoListBE.Infrastructure\obj\Debug\net6.0\TodoListBE.Infrastructure.csproj.CoreCompileInputs.cache
+C:\Users\hue\Desktop\Devops Training\Lesson1\TodoListBE\TodoListBE.Infrastructure\obj\Debug\net6.0\TodoListBE.Infrastructure.csproj.CopyComplete
+C:\Users\hue\Desktop\Devops Training\Lesson1\TodoListBE\TodoListBE.Infrastructure\obj\Debug\net6.0\TodoListBE.Infrastructure.dll
+C:\Users\hue\Desktop\Devops Training\Lesson1\TodoListBE\TodoListBE.Infrastructure\obj\Debug\net6.0\refint\TodoListBE.Infrastructure.dll
+C:\Users\hue\Desktop\Devops Training\Lesson1\TodoListBE\TodoListBE.Infrastructure\obj\Debug\net6.0\TodoListBE.Infrastructure.pdb
+C:\Users\hue\Desktop\Devops Training\Lesson1\TodoListBE\TodoListBE.Infrastructure\obj\Debug\net6.0\ref\TodoListBE.Infrastructure.dll

@@ -1,0 +1,35 @@
+version: '1.0'
+
+services:
+  db:
+    image: mysql:8.0
+    environment:
+      MYSQL_RANDOM_ROOT_PASSWORD: 1
+      MYSQL_DATABASE: tododb
+      MYSQL_USER: root
+      MYSQL_PASSWORD: Jigsaw12345678
+    volumes:
+      - dbdata:/var/lib/mysql
+      - ./_MySQL_Init_Script:/docker-entrypoint-initdb.d
+    restart: always
+
+  todoListBE:
+    depends_on:
+      - db
+    image: todolistbe:runtime
+    build: './TodoListBE/TodoListBE'
+    expose:
+      - 44378
+    ports:
+      - "44378:3000"
+
+  todoListFE:
+    image: todolistfe:runtime
+    build: './todo-list-ui'
+    expose:
+      - 8080
+    ports:
+      - "8080:8080"
+
+volumes:
+  dbdata:
