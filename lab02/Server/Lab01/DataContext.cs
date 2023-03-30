@@ -19,7 +19,7 @@ namespace Lab01
         {
             if (!optionsBuilder.IsConfigured)
             {
-                optionsBuilder.UseMySQL("server=127.0.0.1;port=3306;database=DevOps;userid=root;password=password");
+                optionsBuilder.UseMySQL("server=mysqlserver;port=3306;database=DevOps;userid=root;password=password");
             }
         }
 
