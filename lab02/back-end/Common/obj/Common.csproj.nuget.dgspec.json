@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Workspace\\DevOps Training\\devops-lab-bancntt\\lab01\\back-end\\Back-end\\back-end.csproj": {}
+    "D:\\Workspace\\DevOps Training\\devops-lab-bancntt\\lab02\\back-end\\Common\\Common.csproj": {}
   },
   "projects": {
-    "D:\\Workspace\\DevOps Training\\devops-lab-bancntt\\lab01\\back-end\\Back-end\\back-end.csproj": {
+    "D:\\Workspace\\DevOps Training\\devops-lab-bancntt\\lab02\\back-end\\Common\\Common.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Workspace\\DevOps Training\\devops-lab-bancntt\\lab01\\back-end\\Back-end\\back-end.csproj",
-        "projectName": "back-end",
-        "projectPath": "D:\\Workspace\\DevOps Training\\devops-lab-bancntt\\lab01\\back-end\\Back-end\\back-end.csproj",
+        "projectUniqueName": "D:\\Workspace\\DevOps Training\\devops-lab-bancntt\\lab02\\back-end\\Common\\Common.csproj",
+        "projectName": "Common",
+        "projectPath": "D:\\Workspace\\DevOps Training\\devops-lab-bancntt\\lab02\\back-end\\Common\\Common.csproj",
         "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-        "outputPath": "D:\\Workspace\\DevOps Training\\devops-lab-bancntt\\lab01\\back-end\\Back-end\\obj\\",
+        "outputPath": "D:\\Workspace\\DevOps Training\\devops-lab-bancntt\\lab02\\back-end\\Common\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -39,16 +39,6 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
-          "dependencies": {
-            "Microsoft.VisualStudio.Azure.Containers.Tools.Targets": {
-              "target": "Package",
-              "version": "[1.17.2, )"
-            },
-            "Swashbuckle.AspNetCore": {
-              "target": "Package",
-              "version": "[6.2.3, )"
-            }
-          },
           "imports": [
             "net461",
             "net462",
@@ -61,9 +51,6 @@
           "assetTargetFallback": true,
           "warn": true,
           "frameworkReferences": {
-            "Microsoft.AspNetCore.App": {
-              "privateAssets": "none"
-            },
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }

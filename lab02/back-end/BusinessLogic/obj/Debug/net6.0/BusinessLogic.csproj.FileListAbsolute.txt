@@ -1,0 +1,17 @@
+D:\Workspace\DevOps Training\devops-lab-bancntt\lab02\back-end\BusinessLogic\obj\Debug\net6.0\BusinessLogic.csproj.AssemblyReference.cache
+D:\Workspace\DevOps Training\devops-lab-bancntt\lab02\back-end\BusinessLogic\obj\Debug\net6.0\BusinessLogic.GeneratedMSBuildEditorConfig.editorconfig
+D:\Workspace\DevOps Training\devops-lab-bancntt\lab02\back-end\BusinessLogic\obj\Debug\net6.0\BusinessLogic.AssemblyInfoInputs.cache
+D:\Workspace\DevOps Training\devops-lab-bancntt\lab02\back-end\BusinessLogic\obj\Debug\net6.0\BusinessLogic.AssemblyInfo.cs
+D:\Workspace\DevOps Training\devops-lab-bancntt\lab02\back-end\BusinessLogic\obj\Debug\net6.0\BusinessLogic.csproj.CoreCompileInputs.cache
+D:\Workspace\DevOps Training\devops-lab-bancntt\lab02\back-end\BusinessLogic\bin\Debug\net6.0\BusinessLogic.deps.json
+D:\Workspace\DevOps Training\devops-lab-bancntt\lab02\back-end\BusinessLogic\bin\Debug\net6.0\BusinessLogic.dll
+D:\Workspace\DevOps Training\devops-lab-bancntt\lab02\back-end\BusinessLogic\bin\Debug\net6.0\BusinessLogic.pdb
+D:\Workspace\DevOps Training\devops-lab-bancntt\lab02\back-end\BusinessLogic\bin\Debug\net6.0\Common.dll
+D:\Workspace\DevOps Training\devops-lab-bancntt\lab02\back-end\BusinessLogic\bin\Debug\net6.0\DataLayer.dll
+D:\Workspace\DevOps Training\devops-lab-bancntt\lab02\back-end\BusinessLogic\bin\Debug\net6.0\Common.pdb
+D:\Workspace\DevOps Training\devops-lab-bancntt\lab02\back-end\BusinessLogic\bin\Debug\net6.0\DataLayer.pdb
+D:\Workspace\DevOps Training\devops-lab-bancntt\lab02\back-end\BusinessLogic\obj\Debug\net6.0\BusinessLogic.csproj.CopyComplete
+D:\Workspace\DevOps Training\devops-lab-bancntt\lab02\back-end\BusinessLogic\obj\Debug\net6.0\BusinessLogic.dll
+D:\Workspace\DevOps Training\devops-lab-bancntt\lab02\back-end\BusinessLogic\obj\Debug\net6.0\refint\BusinessLogic.dll
+D:\Workspace\DevOps Training\devops-lab-bancntt\lab02\back-end\BusinessLogic\obj\Debug\net6.0\BusinessLogic.pdb
+D:\Workspace\DevOps Training\devops-lab-bancntt\lab02\back-end\BusinessLogic\obj\Debug\net6.0\ref\BusinessLogic.dll

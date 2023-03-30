@@ -1,0 +1,15 @@
+D:\Workspace\DevOps Training\devops-lab-bancntt\lab02\back-end\DataLayer\bin\Debug\net6.0\DataLayer.deps.json
+D:\Workspace\DevOps Training\devops-lab-bancntt\lab02\back-end\DataLayer\bin\Debug\net6.0\DataLayer.dll
+D:\Workspace\DevOps Training\devops-lab-bancntt\lab02\back-end\DataLayer\bin\Debug\net6.0\DataLayer.pdb
+D:\Workspace\DevOps Training\devops-lab-bancntt\lab02\back-end\DataLayer\obj\Debug\net6.0\DataLayer.csproj.AssemblyReference.cache
+D:\Workspace\DevOps Training\devops-lab-bancntt\lab02\back-end\DataLayer\obj\Debug\net6.0\DataLayer.GeneratedMSBuildEditorConfig.editorconfig
+D:\Workspace\DevOps Training\devops-lab-bancntt\lab02\back-end\DataLayer\obj\Debug\net6.0\DataLayer.AssemblyInfoInputs.cache
+D:\Workspace\DevOps Training\devops-lab-bancntt\lab02\back-end\DataLayer\obj\Debug\net6.0\DataLayer.AssemblyInfo.cs
+D:\Workspace\DevOps Training\devops-lab-bancntt\lab02\back-end\DataLayer\obj\Debug\net6.0\DataLayer.csproj.CoreCompileInputs.cache
+D:\Workspace\DevOps Training\devops-lab-bancntt\lab02\back-end\DataLayer\obj\Debug\net6.0\DataLayer.csproj.CopyComplete
+D:\Workspace\DevOps Training\devops-lab-bancntt\lab02\back-end\DataLayer\obj\Debug\net6.0\DataLayer.dll
+D:\Workspace\DevOps Training\devops-lab-bancntt\lab02\back-end\DataLayer\obj\Debug\net6.0\refint\DataLayer.dll
+D:\Workspace\DevOps Training\devops-lab-bancntt\lab02\back-end\DataLayer\obj\Debug\net6.0\DataLayer.pdb
+D:\Workspace\DevOps Training\devops-lab-bancntt\lab02\back-end\DataLayer\obj\Debug\net6.0\ref\DataLayer.dll
+D:\Workspace\DevOps Training\devops-lab-bancntt\lab02\back-end\DataLayer\bin\Debug\net6.0\Common.dll
+D:\Workspace\DevOps Training\devops-lab-bancntt\lab02\back-end\DataLayer\bin\Debug\net6.0\Common.pdb

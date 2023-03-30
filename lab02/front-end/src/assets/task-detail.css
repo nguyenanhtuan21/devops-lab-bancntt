@@ -1,0 +1,50 @@
+html{
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+  }
+  body{
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    font-family: 'Apercu', sans-serif;
+    font-weight: 400;
+    font-feature-settings: "ss01" on;
+    line-height: 1.5;
+    margin: 0;
+    touch-action: manipulation;
+  }
+
+
+  h1{
+    color: black;
+    font-weight: bold;
+  }
+
+  .tool-bar{
+    padding: 50px 320px 50px 50px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .task-detail{
+    padding: 0 50px;
+  }
+
+  button{
+    font-weight: bold;
+    padding: 8px 14px;
+    background: #fff;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+  button:hover{
+    background-color: aquamarine;
+    color: #5c5a0c;
+  }
+
+  .back{
+    color: black;
+  }

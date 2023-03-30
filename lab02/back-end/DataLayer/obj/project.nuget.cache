@@ -1,0 +1,14 @@
+{
+  "version": 2,
+  "dgSpecHash": "3iv8V8mle63NeFBmqCxPALUM7bSIncVNXN7eqcWztGS8BTGsFpAR7omc/AFYQxwUNVv0t8sNmaUsavcPIQ8V0g==",
+  "success": true,
+  "projectFilePath": "D:\\Workspace\\DevOps Training\\devops-lab-bancntt\\lab02\\back-end\\DataLayer\\DataLayer.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Admin\\.nuget\\packages\\dapper\\2.0.123\\dapper.2.0.123.nupkg.sha512",
+    "C:\\Users\\Admin\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\7.0.0\\microsoft.extensions.configuration.abstractions.7.0.0.nupkg.sha512",
+    "C:\\Users\\Admin\\.nuget\\packages\\microsoft.extensions.primitives\\7.0.0\\microsoft.extensions.primitives.7.0.0.nupkg.sha512",
+    "C:\\Users\\Admin\\.nuget\\packages\\mysqlconnector\\2.2.5\\mysqlconnector.2.2.5.nupkg.sha512",
+    "C:\\Users\\Admin\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}
