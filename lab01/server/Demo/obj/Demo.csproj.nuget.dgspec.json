@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Admin\\source\\repos\\DevOps_BanCNTT\\Demo\\Demo\\Demo.csproj": {}
+    "C:\\Users\\Admin\\Desktop\\Lab01\\devops-lab-bancntt\\lab01\\server\\Demo\\Demo.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Admin\\source\\repos\\DevOps_BanCNTT\\Demo\\Demo\\Demo.csproj": {
+    "C:\\Users\\Admin\\Desktop\\Lab01\\devops-lab-bancntt\\lab01\\server\\Demo\\Demo.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Admin\\source\\repos\\DevOps_BanCNTT\\Demo\\Demo\\Demo.csproj",
+        "projectUniqueName": "C:\\Users\\Admin\\Desktop\\Lab01\\devops-lab-bancntt\\lab01\\server\\Demo\\Demo.csproj",
         "projectName": "Demo",
-        "projectPath": "C:\\Users\\Admin\\source\\repos\\DevOps_BanCNTT\\Demo\\Demo\\Demo.csproj",
+        "projectPath": "C:\\Users\\Admin\\Desktop\\Lab01\\devops-lab-bancntt\\lab01\\server\\Demo\\Demo.csproj",
         "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Admin\\source\\repos\\DevOps_BanCNTT\\Demo\\Demo\\obj\\",
+        "outputPath": "C:\\Users\\Admin\\Desktop\\Lab01\\devops-lab-bancntt\\lab01\\server\\Demo\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -40,9 +40,25 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
+            "Dapper": {
+              "target": "Package",
+              "version": "[2.0.123, )"
+            },
+            "Json.Net": {
+              "target": "Package",
+              "version": "[1.0.33, )"
+            },
+            "MySQLConnection": {
+              "target": "Package",
+              "version": "[1.0.1, )"
+            },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
               "version": "[6.2.3, )"
+            },
+            "System.Security.Permissions": {
+              "target": "Package",
+              "version": "[7.0.0, )"
             }
           },
           "imports": [
