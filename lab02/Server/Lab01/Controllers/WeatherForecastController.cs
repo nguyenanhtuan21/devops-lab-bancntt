@@ -18,9 +18,18 @@ namespace Lab01.Controllers
         [HttpGet(Name = "GetWeatherForecast")]
         public IActionResult Get()
         {
-            var test = new DataContext();
-            
-            return Ok(test.Users.ToList());
+            var dataContext = new DataContext();
+            var data = dataContext.Users.ToList();
+            return Ok(data);
+        }
+        [HttpPost]
+        public IActionResult Add([FromBody]User user)
+        {
+            var dataContext = new DataContext();
+            dataContext.Users.Add(user);
+            dataContext.SaveChanges();
+            var data = dataContext.Users.ToList();
+            return Ok(data);
         }
     }
 }
