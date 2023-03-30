@@ -1,6 +1,6 @@
 FROM node:latest as base
 WORKDIR /app
 COPY package*.json ./
-RUN yarn install
+RUN yarn add ...
 COPY ./ .
 CMD [ "yarn", "start"]
