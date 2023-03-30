@@ -4,7 +4,6 @@ services:
 
   mongo:
     image: mongo
-    restart: always
     environment:
       MONGO_INITDB_ROOT_USERNAME: root
       MONGO_INITDB_ROOT_PASSWORD: 123
@@ -13,7 +12,6 @@ services:
 
   mongo-express:
     image: mongo-express
-    restart: always
     ports:
       - 8081:8081
     environment:
@@ -24,7 +22,6 @@ services:
 
   todo-server:
     build: ./server
-    restart: always
     ports:
       - 5000:80
     environment:
@@ -34,6 +31,5 @@ services:
 
   todo-client:
     build: ./client
-    restart: always
     ports:
       - 3000:3000
