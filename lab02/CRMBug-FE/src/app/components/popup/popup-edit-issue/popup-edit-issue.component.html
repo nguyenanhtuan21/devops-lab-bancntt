@@ -1,0 +1,136 @@
+<div class="add-issue-container">
+  <div class="header bt-flex">
+    <div class="title">
+      {{ title }}
+    </div>
+    <div class="close bt-flex bt-justify-self-end">
+      <i class="fa-solid fa-x" (click)="close()"></i>
+    </div>
+  </div>
+  <div class="content-container">
+    <div class="groupbox-item">
+      <div class="groupbox-title">Completed Progess</div>
+      <div class="w-full bt-flex bt-flex-row">
+        <ngx-slider
+          [(value)]="dataSave.CompletedProgress"
+          [options]="sliderOptions"
+        ></ngx-slider>
+      </div>
+      <div class="groupbox-item">
+        <div class="groupbox-title">Details</div>
+        <div class="field w-full bt-flex bt-flex-row">
+          <div class="field-left w-full" style="margin: 0">
+            <base-textbox
+              text="Subject"
+              [titleWidth]="120"
+              [type]="typeControl.Textbox"
+              [required]="true"
+              placeholder=""
+              [(value)]="dataSave.Subject"
+            >
+            </base-textbox>
+          </div>
+        </div>
+        <div class="field w-full bt-flex bt-flex-row">
+          <div class="field-left w-1/2 bt-flex">
+            <base-combobox
+              [datas]="issuePriority"
+              [value]="dataSave.PriorityID"
+              [isShowLabel]="true"
+              labelText="Priority"
+              (valueChange)="valueChangeCombo($event)"
+              fieldName="PriorityID"
+            ></base-combobox>
+          </div>
+          <div class="field-right w-1/2">
+            <!-- <base-combobox
+            [datas]="issuePriority"
+            [value]="dataSave.PriorityID"
+            [isShowLabel]="true"
+            labelText="Priority"
+            (valueChange)="valueChangeCombo($event)"
+            fieldName="PriorityID"
+          ></base-combobox> -->
+          </div>
+        </div>
+        <div class="field w-full bt-flex bt-flex-column">
+          <div class="title">Description</div>
+          <textarea
+            name="name"
+            id="textarea"
+            class="w-full"
+            cols="30"
+            rows="10"
+          ></textarea>
+        </div>
+      </div>
+
+      <div class="groupbox-item">
+        <div class="groupbox-title">Assignee</div>
+        <div class="field w-full bt-flex bt-flex-row">
+          <div class="field-left w-1/2">
+            <base-combobox
+              [datas]="employees"
+              [value]="dataSave.AssignedUserID"
+              [isShowLabel]="true"
+              labelText="Assigned to"
+              (valueChange)="valueChangeCombo($event)"
+              fieldName="AssignedUserID"
+            ></base-combobox>
+          </div>
+          <div class="field-right w-1/2">
+            <base-combobox
+              [datas]="employees"
+              [value]="dataSave.RelatedUserID"
+              [isShowLabel]="true"
+              labelText="Related to"
+              (valueChange)="valueChangeCombo($event)"
+              fieldName="RelatedUserID"
+            ></base-combobox>
+          </div>
+        </div>
+      </div>
+      <div class="groupbox-item">
+        <div class="groupbox-title">Deadline</div>
+        <div class="field w-full bt-flex bt-flex-row">
+          <div class="field-left w-1/2">
+            <base-datetimepicker
+              [isShowLabel]="true"
+              [label]="'Due Date'"
+              [labelWidth]="120"
+              [value]="dataSave.DueDate"
+              [label]="'Due Date'"
+              (valueChange)="valueChangeCombo($event)"
+            >
+            </base-datetimepicker>
+          </div>
+          <div class="field-right w-1/2">
+            <!-- <base-textbox
+            text="Intergrated in build"
+            [titleWidth]="120"
+            [type]="typeControl.Textbox"
+            placeholder=""
+          >
+          </base-textbox> -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="feature bt-flex bt-flex-row w-full bt-justify-content-end">
+  <div class="button-first">
+    <base-button
+      typeButton="secondary"
+      text="Save and Add"
+      [width]="120"
+      (btnClick)="saveAndAddData()"
+    >
+    </base-button>
+  </div>
+  <div class="button-seconds">
+    <base-button typeButton="primary" text="Save" (btnClick)="saveData()">
+    </base-button>
+  </div>
+</div>

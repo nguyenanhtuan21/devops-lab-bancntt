@@ -1,0 +1,47 @@
+version: '3.4'
+
+services:
+  bugtrackingui:
+    image: bugtrackingui
+    container_name: bugtrackingui
+    build:
+      context: ../CRMBug-FE
+      dockerfile: DockerFile
+    ports:
+      - "9090:80"
+    #networks:
+    #  - my-ingress
+  bugtrackingapi:
+    image: bugtrackingapi
+    container_name: bugtrackingserver
+    build:
+      context: .
+      dockerfile: BugTracking/Dockerfile
+    ports:
+      - "44378:80"
+    command: --link bugtrackingserver:mysqlserver
+    #networks:
+    #  - my-ingress
+  databasemysql:
+    image: mysqldb
+    container_name: mysqlserver
+    build:
+      context: ../DataBase
+      dockerfile: DockerFile
+    volumes:
+      - mysqlvolume:/var/lib/mysql
+    environment:
+      MYSQL_HOST: localhost
+      MYSQL_USER: admin
+      MYSQL_PASSWORD: 12345678@Abc
+      MYSQL_ROOT_PASSWORD: 12345678@Abc
+    ports:
+      - "3306:3306"
+#    networks:
+#      - my-ingress
+#networks:
+#  my-ingress:
+#    attachable: true
+#    external: true
+volumes:
+  mysqlvolume:

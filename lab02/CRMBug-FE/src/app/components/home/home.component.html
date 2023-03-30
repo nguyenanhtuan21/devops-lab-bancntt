@@ -1,0 +1,52 @@
+<div class="home-container bt-flex">
+  <div class="project-notification w-3/5">
+    <div class="title-group bt-flex bt-align-items-center">
+      <div class="title-content">
+        Project Home 
+      </div>
+      <span class="sub-title">
+        : Recent Updates 
+        <i class="fa-solid fa-wifi"></i>
+      </span>
+    </div>
+    <base-notification
+      [height]="'calc(100vh - 156px)'"
+      [projectID]="projectID"
+      [userID]="userID"
+    >
+    </base-notification>
+  </div>
+  <div class="sub-summary w-2/5">
+    <div class="title">
+      Summary
+    </div>
+    <div  class="status-container w-full">
+      <app-daterange
+        (valueChanged)="valueChangeCombo($event)"
+        [ngStyle]="{'padding-right': '16px'}"
+      >
+      </app-daterange>
+      <div class="total-record">
+        Total: {{totalRecord}}
+      </div>
+      <pie-chart
+        [series]="seriesStatus"
+        [title]="titleStatus"
+        [hidden]="(totalRecord == 0)"
+      >
+      </pie-chart>
+      <pie-chart
+        [series]="seriesPriority"
+        [title]="titlePriority"
+        [hidden]="(totalRecord == 0)"
+      >
+      </pie-chart>
+      <no-data
+        [hidden]="!(totalRecord == 0)"
+        [height]="'calc(100vh - 400px)'"
+      >
+
+      </no-data>
+    </div> 
+  </div>
+</div>

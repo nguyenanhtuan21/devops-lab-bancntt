@@ -1,0 +1,298 @@
+@import "../../../styles.scss";
+@import "../../../font.scss";
+@import "../../../color.scss";
+
+::ng-deep {
+  .cdk-overlay-container {
+    .cdk-overlay-pane {
+      .mat-menu-panel {
+        background-color: $color-white;
+        .mat-menu-content {
+          .btn-secondary {
+            cursor: pointer;
+            transition: 0.22s;
+            .icon, .text {
+              color: $color-black;
+            }
+            .icon {
+              width: 24px;
+              height: 24px;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+            }
+            &:hover {
+              background-color: $color-grey-05;
+            }
+          }
+          .btn-delete {
+            cursor: pointer;
+            transition: 0.22s;
+            .icon, .text {
+              color: $status-color-4;
+            }
+            .icon {
+              width: 24px;
+              height: 24px;
+              font-size: 16px;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+            }
+            &:hover {
+              background-color: $color-grey-05;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+:host {
+  ::ng-deep {
+    .tasks-container {
+      .toolbar {
+        .left {
+          .left-item {
+            margin-right: 12px;
+            base-combobox {
+              .mat-form-field {
+                .mat-form-field-wrapper {
+                  width: 150px;
+                }
+              }
+            }
+          }
+        }
+        .right {
+          .fa-rotate-right {
+            font-size: $font-subtitle;
+          }
+        }
+      }
+    }
+  }
+  .back-ground {
+    width: 100%;
+    height: calc(100vh - 100px);
+    background-color: $color-white;
+  }
+  .tasks-container {
+    padding: 16px 16px 0 16px;
+    .toolbar {
+      height: 44px;
+      margin-bottom: 12px;
+      .right {
+        .right-item {
+          padding-left: 16px;
+          .switch-view {
+            background-color: $color-grey-05;
+            padding: 0 8px;
+            height: 40px;
+            border-radius: 8px;
+            .btn:nth-child(1) {
+              margin-right: 6px;
+            }
+            .btn {
+              border-radius: 4px;
+              background: none;
+              padding: 6px;
+              width: 30px;
+              i {
+                color: $color-grey-35;
+                font-size: $font-medium;
+              }
+              &.actived {
+                background-color: $color-white;
+                i {
+                  color:  $default-color-green;
+                }
+              }
+            }
+          }
+          .switch-type {
+            background-color: $color-grey-05;
+            padding: 0 8px;
+            height: 40px;
+            border-radius: 8px;
+            .btn:nth-child(1) {
+              margin-right: 6px;
+            }
+            .btn {
+              border-radius: 4px;
+              background: none;
+              padding: 6px;
+              color: $color-grey-35;
+              font-size: $font-size-base;
+              font-weight: $font-weight-bold;
+              &.actived {
+                background-color: $color-white;
+                color:  $default-color-green;
+              }
+            }
+          }
+        }
+      }
+    }
+    .content {
+      width: 100%;
+      height: calc(100vh - 288px);
+      overflow: auto;
+    }
+  }
+  .table-fixed-header {
+    overflow: auto;
+    border-collapse: collapse;
+    position: relative;
+    width: 100%;
+    
+    thead {
+      th {
+        position: sticky;
+        top: 0;
+        background-color: #fff;
+        border-bottom: 1px solid $fds-gray-30;
+        z-index: 1;
+        // &.action {
+        //   min-width: 60px;
+        //   right: 0;
+        //   background: none;
+        // }
+      }
+    }
+    th,
+    td {
+      text-align: center;
+      border-bottom: 1px solid $fds-gray-30;
+      padding: 4px 12px;
+      min-height: 50px;
+      height: 40px;
+      // min-width: 200px;
+      // max-width: 200px;
+    }
+    tbody {
+      transition: 0.22s;
+      tr {
+        position: relative;
+        td {
+          cursor: pointer;
+          .priority {
+            display: inline-block;
+            height: 26px;
+            min-width: 100px;
+            max-width: 100px;
+            border-radius: 20px;
+            color: #fff;
+            span {
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              width: 100%;
+              height: 100%;
+            }
+          }
+          .task-status {
+            min-width: 120px;
+            display: inline-block;
+            text-align: left;
+           .icon {
+              display: inline-block;
+              width: 10px;
+              height: 10px;
+              background-color: #bbbb;
+              border-radius: 50%;
+              margin-right: 8px;
+            }
+            .text {
+              display: inline-block;
+            }
+          }
+        }
+        .action {
+          position: absolute;
+          right: 12px;
+          top: 50%;
+          transform: translateY(-50%);
+          cursor: pointer;
+          .more {
+            display: none;
+            background-color: $color-white;
+            width: 30px;
+            height: 24px;
+            border-radius: 50%;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 0 10px $fds-gray-25;
+          }
+          &:hover {
+            .more {
+              background-color: $fds-gray-05;
+            }
+          }
+        }
+        &:hover {
+          background-color: $dataviz-primary-2 !important;
+          .action { 
+            .more {
+              display: flex;
+            }
+          }
+        }
+        &:nth-child(even) {
+          background-color: $fds-gray-05;
+        }
+      }
+    }
+  }
+  .header {
+    padding: 20px 16px 0 20px;
+    .title {
+      font-size: $font-subtitle;
+      font-weight: $font-weight-medium;
+    }
+  }
+  .pagination {
+    height: 60px;
+    padding: 0 16px;
+    .total-record {
+      font-size: $font-body;
+      padding-left: 12px;
+      .number {
+        padding-left: 6px;
+        font-weight: $font-weight-medium;
+      }
+    }
+    .pager {
+      padding-right: 16px;
+      .page-size {
+        padding-right: 16px;
+      }
+      .prev-to-first, .prev-one, .next-to-last, .next-one {
+        width: 26px;
+        height: 26px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        border-radius: 50%;
+        transition: 0.22s;
+        &:hover {
+          background-color: $color-grey-hover;
+        }
+        &.disable {
+          opacity: 0.3;
+          &:hover {
+            background: none;
+          }
+        }
+      }
+      .page-info {
+        padding: 0 4px;
+        .text {
+          padding: 0 6px;
+        }
+      }
+    }
+  }
+}

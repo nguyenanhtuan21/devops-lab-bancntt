@@ -1,0 +1,141 @@
+<div class="project-settings bt-flex">
+  <div class="action bt-flex bt-flex-column">
+    <div class="title bt-flex bt-flex-row">
+      <div class="icon">
+        <i class="fa-solid fa-gear"></i>
+      </div>
+      <div class="text">
+        Project Settings
+      </div>
+    </div>
+    <div class="tab active" (click)="switchTab($event, 1)" [ngClass]="{'active': tabIndex === 1}">
+      General
+    </div>
+    <div class="tab" (click)="switchTab($event, 2)" [ngClass]="{'active': tabIndex === 2}">
+      Members
+    </div>
+  </div>
+  <div class="content"[ngSwitch]="tabIndex">
+    <div class="general" *ngSwitchCase="1">
+      <div class="title">
+        General
+      </div>
+      <div class="form-setting">
+        <div class="groupbox-item">
+          <div class="field w-full bt-flex bt-flex-row">
+            <div class="w-full">
+              <base-textbox
+                text="Project Name"
+                [titleWidth]="120"
+                [type]="typeControl.Textbox"
+                [required]="true"
+                placeholder=""
+                [isHorizontal]="false"
+                [maxLength]="255"
+                [(value)]="projectInfo.ProjectName"
+              >
+              </base-textbox>
+            </div>
+          </div>
+        </div>
+        <div class="groupbox-item">
+          <div class="field w-full bt-flex bt-flex-row">
+            <div class="w-full">
+              <base-textbox
+                text="Project Code"
+                [titleWidth]="120"
+                [type]="typeControl.Textbox"
+                [required]="true"
+                placeholder=""
+                [isHorizontal]="false"
+                [(value)]="projectInfo.ProjectCode"
+              >
+              </base-textbox>
+            </div>
+          </div>
+        </div>
+        <div class="recommendation">
+          <div>The project code is a unique identifier for a project. A short, concise key is recommended.</div>
+          <div>(e.g. Project name Bug Tracking System has project key BLG_2) Uppercase letters (A-Z), numbers (0-9) and underscore (_) can be used.</div>
+        </div>
+      </div>
+      <div class="footer bt-flex bt-align-items-center bt-justify-content-center">
+        <base-button
+          typeButton="primary"
+          text="Save"
+          (btnClick)="saveData($event)"
+          iconCSS="fas fa-save"
+          [height]="36"
+          [iconMargin]="6"
+        >
+        </base-button>
+      </div>
+    </div>
+    <div class="member" *ngSwitchCase="2">
+      <div class="title">
+        Project Members ( {{projectMember.length}} members)
+      </div>
+      <div class="content">
+        <table class="table-fixed-header">
+          <thead>
+            <th *ngFor="let field of fieldDisplay;">
+              {{ field.displayText }}
+            </th>
+          </thead>
+          <tbody>
+            <tr *ngFor="let item of projectMember;">
+              <td *ngFor="let field of fieldDisplay;">
+                <ng-container [ngSwitch]="field.typeControl">
+                  <span *ngSwitchCase="typeControl.DateTime">
+                    {{ item[field.fieldName] | date: 'dd/MM/yyyy'}}
+                  </span>
+                  <span *ngSwitchDefault>
+                    {{ item[field.fieldName]}}
+                  </span>
+                </ng-container>
+              </td>
+              <div class="action-table">
+                <div 
+                  class="more" 
+                  [matMenuTriggerFor]="menuOptions"
+                  [matMenuTriggerData]="{member: item}"
+                >
+                  <i class="fa-solid fa-ellipsis"></i>
+                </div>
+              </div>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+
+<mat-menu #menuOptions="matMenu" xPosition="before">
+  <ng-template matMenuContent let-member="member">
+    <button mat-menu-item class="btn-secondary bt-flex bt-align-items-center" (click)="scanToCall(member)">
+      <div class="icon">
+        <i class="fa-solid fa-phone"></i>
+      </div>
+      <div class="text">
+        Call
+      </div>
+    </button>
+    <button mat-menu-item class="btn-secondary bt-flex bt-align-items-center" (click)="scanToSaveContact(member)">
+      <div class="icon">
+        <i class="fa-solid fa-qrcode"></i>
+      </div>
+      <div class="text">
+        QR Code
+      </div>
+    </button>
+    <button mat-menu-item class="btn-delete bt-flex bt-align-items-center" (click)="removeMember(member)">
+      <div class="icon">
+        <i class="fa-solid fa-xmark"></i>
+      </div>
+      <div class="text">
+        Remove
+      </div>
+    </button>
+  </ng-template>
+</mat-menu>

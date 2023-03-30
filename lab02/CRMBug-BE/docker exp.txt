@@ -1,0 +1,8 @@
+dotnet publish -c Release -o ./../publish/
+docker build -f ./${apps[i]}/Dockerfile -t registry-harbor.misa.local/autosale/${images[i]}:${version} ./publish/${apps[i]}/.
+FROM /microsoft/dotnet/core/aspnet:6.0 AS runtime
+ENV TZ="Asia/Ho_Chi_Minh"
+RUN date
+WORKDIR /app
+COPY . .
+ENTRYPOINT ["dotnet", "MISA.AppApi.dll"]

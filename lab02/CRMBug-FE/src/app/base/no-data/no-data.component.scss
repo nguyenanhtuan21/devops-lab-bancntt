@@ -1,0 +1,30 @@
+@import "../../../color";
+@import "../../../font";
+
+:host {
+  .wrapper {
+    position: relative;
+    .no-data-containter {
+      position: absolute;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      width: fit-content;
+      height: fit-content;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      img {
+        width: 100px;
+        height: 100px;
+      }
+      .text {
+        margin-top: 12px;
+        font-size: $font-medium;
+        font-weight: $font-medium;
+        white-space: nowrap;
+      }
+    }
+  }
+}

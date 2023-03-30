@@ -1,0 +1,48 @@
+@import "../../../../styles.scss";
+@import "../../../../color.scss";
+@import "../../../../font.scss";
+@import "../../../../icon.scss";
+
+:host {
+  ::ng-deep {
+    .popup-list-project {
+      .content-container {
+        .project-list {
+          border: none !important;
+          border-top-left-radius: 0;
+          border-top-right-radius: 0;
+          .project-item {
+            &:nth-child(1) {
+              border-top-left-radius: 0;
+              border-top-right-radius: 0;
+            }
+          }
+        }
+      }
+      .search {
+        .searchbox-container {
+          .search {
+            border: none;
+            border-bottom: 1px solid $fds-gray-30;
+            height: 40px;
+            font-size: $font-body;
+            &:focus {
+              transition: 0.22s;
+              border-color: $default-color-green;
+            }
+          }
+        }
+      }
+    }
+  }
+  .popup-list-project {
+    .header {
+      background-color: $default-color-green;
+      padding: 12px 20px;
+      .text {
+        color: $color-white;
+        font-weight: $font-weight-medium;
+      }
+    }
+  }
+}

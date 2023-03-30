@@ -1,0 +1,101 @@
+@import "../../../styles.scss";
+@import "../../../font.scss";
+@import "../../../color.scss";
+@import "../../../icon.scss";
+
+:host {
+  ::ng-deep {
+    .mat-form-field {
+      .mat-form-field-wrapper {
+        .mat-form-field-flex {
+          padding: 0.75em 0 0 0;
+        }
+        .mat-form-field-label-wrapper {
+          mat-label {
+            .star {
+              color: $color-base-00;
+            }
+            color: $color-grey-35;
+          }
+        }
+        .mat-form-field-underline {
+          &::before {
+            background-color: $color-grey-35;
+          }
+          .mat-form-field-ripple {
+            background-color: $default-color-green;
+          }
+        }
+      }
+      &.mat-focused {
+        .mat-form-field-wrapper {
+          .mat-form-field-label-wrapper {
+            mat-label {
+              color: $default-color-green;
+            }
+          }
+        }
+        .mat-form-field-underline {
+          .mat-form-field-ripple {
+            background-color: $default-color-green;
+          }
+        }
+      }
+    }
+  }
+  position: static;
+  .register-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 1200px;
+    height: 580px;
+    background-color: antiquewhite;
+    border-radius: 8px;
+    box-shadow: 5px 5px 5px $color-grey-20;
+    .info {
+      padding: 0 20px;
+      background-color: $color-white;
+      .title {
+        height: 56px;
+        font-size: $font-bigtitle;
+        margin: 32px 0 20px;
+      }
+      .form-row {
+        .form-field {
+          &:nth-child(1) {
+            padding-right: 12px;
+            ~ .error-msg {
+              padding-right: 12px;
+            }
+          }
+        }
+        .error-msg {
+          color: $notification-badge;
+        }
+      }
+      .action {
+        margin-top: 30px;
+      }
+      .back-login {
+        margin-top: 30px;
+        display: flex;
+        justify-content: flex-end;
+        font-size: $font-medium;
+        font-weight: $font-weight-medium;
+        color: $color-base-15;
+        cursor: pointer;
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+    .image {
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+}

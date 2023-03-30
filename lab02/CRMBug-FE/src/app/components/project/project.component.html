@@ -1,0 +1,26 @@
+<div class="project-container">
+	<app-sidebar></app-sidebar>
+	<div class="content-container">
+		<div class="project-header bt-flex">
+			<div class="header-title bt-flex bt-align-items-center w-1/2">
+				<div class="icon">
+					<i class="fa-solid fa-city"></i>
+				</div>
+				<div class="project-name">{{projectName}}</div>
+				<span class="project-key">{{projectCode}}</span>
+			</div>
+			<div class="header-action bt-flex bt-align-items-center bt-justify-content-end w-1/2">
+				<base-button 
+					typeButton="primary" 
+					text="Invite Users" 
+					[height]="36" 
+					[width]="120"
+					(btnClick)="inviteMember($event)"
+				>
+				</base-button>
+
+			</div>
+		</div>
+		<router-outlet></router-outlet>
+	</div>
+</div>

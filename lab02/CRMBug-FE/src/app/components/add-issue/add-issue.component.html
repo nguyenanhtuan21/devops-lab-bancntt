@@ -1,0 +1,146 @@
+<div class="add-issue-container">
+  <div class="header">
+    Add Issue
+  </div>
+  <div class="feature bt-flex bt-flex-row w-full bt-justify-content-end">
+    <div class="button-first">
+      <base-button
+        typeButton="secondary"
+        text="Save and Add"
+        [width]="120"
+      >
+      </base-button>
+    </div>
+    <div class="button-seconds">
+      <base-button
+        typeButton="primary"
+        text="Save"
+      >
+      </base-button>
+    </div>
+  </div>
+  <div class="content-container">
+    <div class="groupbox-item">
+      <div class="groupbox-title">
+        Details
+      </div>
+      <div class="field w-full bt-flex bt-flex-row w-4/5">
+        <div class="field-left w-1/2">
+          <base-textbox
+            text="Type"
+            [type]="typeControl.Textbox"
+            placeholder=""
+          >
+          </base-textbox>
+        </div>
+        <div class="field-right w-1/2">
+          <base-textbox
+            text="Subject"
+            [type]="typeControl.Textbox"
+            placeholder=""
+          >
+          </base-textbox>
+        </div>
+      </div>
+      <div class="field w-full bt-flex bt-flex-row w-4/5">
+        <div class="field-left w-1/2">
+          <base-textbox
+            text="Priority"
+            [type]="typeControl.Textbox"
+            placeholder=""
+          >
+          </base-textbox>
+        </div>
+        <div class="field-right w-1/2">
+          <base-textbox
+            text="Caused from"
+            [type]="typeControl.Textbox"
+            placeholder=""
+          >
+          </base-textbox>
+        </div>
+      </div>
+      <div class="field w-full bt-flex bt-flex-column w-4/5">
+        <div class="title">
+          Description
+        </div>
+        <textarea name="name" id="textarea" class="w-full" cols="30" rows="10"></textarea>
+      </div>
+    </div>
+    <div class="groupbox-item">
+      <div class="groupbox-title">
+        Status
+      </div>
+      <div class="field w-full bt-flex bt-flex-row w-4/5">
+        <div class="field-left w-1/2">
+          <base-textbox
+            text="Status"
+            [type]="typeControl.Textbox"
+            placeholder=""
+          >
+          </base-textbox>
+        </div>
+        <div class="field-right w-1/2">
+          <base-textbox
+            text="Assigned to"
+            [type]="typeControl.Textbox"
+            placeholder=""
+          >
+          </base-textbox>
+        </div>
+      </div>
+      <div class="field w-full bt-flex bt-flex-row w-4/5">
+        <div class="field-left w-1/2">
+          <base-textbox
+            text="Solution Approved"
+            [type]="typeControl.Textbox"
+            placeholder=""
+          >
+          </base-textbox>
+        </div>
+        <div class="field-right w-1/2">
+        </div>
+      </div>
+    </div>
+    <div class="groupbox-item">
+      <div class="groupbox-title">
+        Build
+      </div>
+      <div class="field w-full bt-flex bt-flex-row w-4/5">
+        <div class="field-left w-1/2">
+          <base-textbox
+            text="Found in build"
+            [type]="typeControl.Textbox"
+            placeholder=""
+          >
+          </base-textbox>
+        </div>
+        <div class="field-right w-1/2">
+          <base-textbox
+            text="Intergrated in build"
+            [type]="typeControl.Textbox"
+            placeholder=""
+          >
+          </base-textbox>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="feature bt-flex bt-flex-row w-full bt-justify-content-end">
+    <div class="button-first">
+      <base-button
+        typeButton="secondary"
+        text="Save and Add"
+        [width]="120"
+      >
+      </base-button>
+    </div>
+    <div class="button-seconds">
+      <base-button
+        typeButton="primary"
+        text="Save"
+      >
+      </base-button>
+    </div>
+  </div>
+</div>

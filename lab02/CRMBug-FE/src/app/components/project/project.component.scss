@@ -1,0 +1,36 @@
+@import "../../../styles.scss";
+@import "../../../font.scss";
+@import "../../../color.scss";
+@import "../../../icon.scss";
+
+:host {
+  .project-container {
+    position: relative;
+    top: 50px;
+    .content-container {
+      position: absolute;
+      left: 200px;
+      width: calc(100% - 200px);
+      height: calc(100vh - 50px);
+      .project-header {
+        height: 50px;
+        padding: 0 20px;
+        background-color: $fds-gray-05;
+        border-top: 1px solid $fds-gray-25;
+        border-bottom: 1px solid $fds-gray-25;
+        .header-title {
+          .icon {
+            margin-right: 8px;
+          }
+          .project-name {
+            font-size: $font-title;
+            font-weight: $font-weight-bold;
+          }
+          .project-key {
+            padding-left: 12px;
+          }
+        }
+      }
+    }
+  }
+}

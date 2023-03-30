@@ -1,0 +1,52 @@
+@import "../../../styles.scss";
+@import "../../../font.scss";
+@import "../../../color.scss";
+
+:host {
+  ::ng-deep {
+    .app-no-data {
+      max-height: calc(100vh - 173px);
+    }
+    .toolbar {
+      base-combobox {
+        margin-right: 16px;
+        .GroupBy {
+          width: 120px;
+        }
+      }
+    }
+  }
+  .assigned-report {
+    height: calc(100vh - 100px);
+    background-color: $color-white;
+    padding: 16px 16px 0 16px;
+    .toolbar {
+      padding-bottom: 24px;
+    }
+    .content {
+      max-height: calc(100vh - 173px);
+      .table-fixed-header {
+        overflow: auto;
+        border-collapse: collapse;
+        width: 100%;
+        th,
+        td {
+          text-align: center;
+          border-bottom: 1px solid $fds-gray-30;
+          padding: 4px 12px;
+          min-height: 50px;
+          height: 40px;
+        }
+        td {
+          cursor: pointer;
+        }
+        tr:nth-child(even) {
+          background-color: $fds-gray-05;
+        }
+      }
+      .total-record {
+        margin-top: 16px;
+      }
+    }
+  }
+}

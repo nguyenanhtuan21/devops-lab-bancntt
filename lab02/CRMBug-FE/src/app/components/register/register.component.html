@@ -1,0 +1,95 @@
+<div class="register-container bt-flex">
+  <div class="info w-2/5 h-full">
+    <form>
+      <div class="title bt-flex bt-align-items-center bt-justify-content-center">
+        Register
+      </div>
+      <div class="form-row bt-flex w-full">
+        <div class="w-1/2">
+          <mat-form-field class="form-field w-full" appearance="fill">
+            <mat-label>Username <span class="star">&#42;</span></mat-label>
+            <input matInput [(ngModel)]="dataSave.Username" [ngModelOptions]="{standalone: true}">
+          </mat-form-field>
+          <div class="error-msg">
+            {{errorList.Username}}
+          </div>
+        </div>
+        <div class="w-1/2">
+          <mat-form-field class="form-field w-full" appearance="fill">
+            <mat-label>Password <span class="star">&#42;</span></mat-label>
+            <input matInput type="password" [(ngModel)]="dataSave.Password" [ngModelOptions]="{standalone: true}">
+          </mat-form-field>
+          <div class="error-msg">
+            {{errorList.Password}}
+          </div>
+        </div>
+      </div>
+      <div class="form-row bt-flex w-full">
+        <div class="w-1/2">
+          <mat-form-field class="form-field w-full" appearance="fill">
+            <mat-label>Retype Password <span class="star">&#42;</span></mat-label>
+            <input matInput type="password" [(ngModel)]="passwordReEnter" [ngModelOptions]="{standalone: true}">
+          </mat-form-field>
+          <div class="error-msg">
+            {{errorList.PasswordReEnter}}
+          </div>
+        </div>
+        <div class="w-1/2">
+          <mat-form-field class="form-field w-full" appearance="fill">
+            <mat-label>First Name <span class="star">&#42;</span></mat-label>
+            <input matInput [(ngModel)]="dataSave.FirstName" [ngModelOptions]="{standalone: true}">
+          </mat-form-field>
+          <div class="error-msg">
+            {{errorList.FirstName}}
+          </div>
+        </div>
+      </div>
+      <div class="form-row bt-flex w-full">
+        <div class="w-1/2">
+          <mat-form-field class="form-field w-full" appearance="fill">
+            <mat-label>Last Name <span class="star">&#42;</span></mat-label>
+            <input matInput [(ngModel)]="dataSave.LastName" [ngModelOptions]="{standalone: true}">
+          </mat-form-field>
+          <div class="error-msg">
+            {{errorList.LastName}}
+          </div>
+        </div>
+        <div class="w-1/2">
+          <mat-form-field class="form-field w-full" appearance="fill">
+            <mat-label>Email <span class="star">&#42;</span></mat-label>
+            <input matInput [(ngModel)]="dataSave.Email" [ngModelOptions]="{standalone: true}">
+          </mat-form-field>
+          <div class="error-msg">
+            {{errorList.Email}}
+          </div>
+        </div>
+      </div>
+      <div class="form-row bt-flex w-full">
+        <div class="w-1/2">
+          <mat-form-field class="form-field w-full" appearance="fill">
+            <mat-label>Phone Number</mat-label>
+            <input matInput [(ngModel)]="dataSave.PhoneNumber" [ngModelOptions]="{standalone: true}">
+          </mat-form-field>
+        </div>
+      </div>
+    </form>
+    <div class="action w-full bt-flex bt-justify-content-center">
+      <base-button
+        typeButton="primary"
+        text="Register"
+        (btnClick)="register($event)"
+      >
+
+      </base-button>
+    </div>
+    <div 
+      class="back-login"
+      (click)="backToLogin($event)"
+    >
+      Back to Login?
+    </div>
+  </div>
+  <div class="image w-3/5 h-full">
+    <img src="../../../assets/img/login-thumbnail-2.png" alt="not found" />
+  </div>
+</div>

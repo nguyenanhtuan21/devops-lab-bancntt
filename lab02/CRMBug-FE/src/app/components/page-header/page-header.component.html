@@ -1,0 +1,36 @@
+<div class="page-header bt-flex bt-justify-content-between">
+  <div class="bt-flex bt-align-items-center">
+    <div class="nav-link bt-flex bt-align-items-center" routerLink="/dashboard">
+      <div class="text">DashBoard</div>
+    </div>
+    <div class="nav-link bt-flex bt-align-items-center" (click)="openPopupListProject()">
+      <div class="text">Project</div>
+    </div>
+    <div class="nav-link bt-flex bt-align-items-center" (click)="openRecentlyViewed()">
+      <div class="text">Recently Viewed</div>
+    </div>
+  </div>
+  <!-- <div class="bt-flex bt-align-items-center">
+    <base-textbox></base-textbox>  
+  </div> -->
+  <div class="bt-flex bt-align-items-center">
+    <div class="norify-container">
+
+    </div>
+    <div 
+      class="user-info bt-flex bt-align-items-center bt-justify-content-center w-full h-full"
+      [matMenuTriggerFor]="moreInfos"
+    >
+      <div class="text">
+        {{ firstCharacter }}
+      </div>
+    </div>
+  </div>
+</div>
+
+<mat-menu #moreInfos="matMenu">
+  <div class="title">Hello, {{ fullName }}</div>
+  <button mat-menu-item class="btn-primary" (click)="updateUserSetting()">Personal Settings</button>
+  <button mat-menu-item class="btn-primary">Reset Password</button>
+  <button mat-menu-item class="btn-primary" (click)="logout()">Logout</button>
+</mat-menu>

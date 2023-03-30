@@ -1,0 +1,22 @@
+<div class="popup-list-project">
+  <div class="header">
+    <span class="text"> Projecs </span>
+  </div>
+  <div class="search">
+    <base-textbox
+      [placeholder]="'Search projects'"
+      [type]="typeControl.Search"
+      (searchEvent)="searchProject($event)"
+      [borderRadius]="'0'"
+    >
+    </base-textbox>
+  </div>
+  <div class="content-container">
+    <base-project
+      #projectComponent
+      [heightNoData]="'400px'"
+      (openProjectEvent)="close()"
+    > 
+    </base-project>
+  </div>
+</div>

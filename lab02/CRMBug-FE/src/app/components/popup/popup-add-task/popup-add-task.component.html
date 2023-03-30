@@ -1,0 +1,217 @@
+<div class="add-task-container" id="add-task-container">
+  <div class="header bt-flex">
+    <div class="title">
+      {{ title }}
+    </div>
+    <div class="close bt-flex bt-justify-self-end">
+      <i class="fa-solid fa-x" (click)="close()"></i>
+    </div>
+    <div class="header-line">
+
+    </div>
+  </div>
+  <div class="content-container">
+    <div class="groupbox-item">
+      <div class="groupbox-title">Completed Progess</div>
+      <div class="w-full bt-flex bt-flex-row">
+        <ngx-slider
+          [(value)]="dataSave.CompletedProgress"
+          [options]="sliderOptions"
+        ></ngx-slider>
+      </div>
+      <div class="groupbox-item">
+        <div class="groupbox-title">Details</div>
+        <div class="field w-full bt-flex bt-flex-row">
+          <div class="field-left w-full" style="margin: 0">
+            <base-textbox
+              text="Subject"
+              [titleWidth]="120"
+              [type]="typeControl.Textbox"
+              [required]="true"
+              placeholder=""
+              [(value)]="dataSave.Subject"
+            >
+            </base-textbox>
+          </div>
+        </div>
+        <div class="field w-full bt-flex bt-flex-row">
+          <div class="field-left w-1/2 bt-flex">
+            <base-combobox
+              [datas]="taskPriority"
+              [value]="dataSave.PriorityID"
+              [isShowLabel]="true"
+              labelText="Priority"
+              (valueChange)="valueChangeCombo($event)"
+              fieldName="PriorityID"
+            ></base-combobox>
+          </div>
+          <div class="field-right w-1/2">
+            <!-- <base-combobox
+            [datas]="issuePriority"
+            [value]="dataSave.PriorityID"
+            [isShowLabel]="true"
+            labelText="Priority"
+            (valueChange)="valueChangeCombo($event)"
+            fieldName="PriorityID"
+          ></base-combobox> -->
+          </div>
+        </div>
+        <div class="field w-full bt-flex bt-flex-column">
+          <div class="title">Description</div>
+          <textarea
+            name="name"
+            id="textarea"
+            class="textarea w-full"
+            cols="30"
+            rows="10"
+            [(ngModel)]="dataSave.Description"
+          ></textarea>
+        </div>
+      </div>
+
+      <div class="groupbox-item">
+        <div class="groupbox-title">Assignee</div>
+        <div class="field w-full bt-flex bt-flex-row">
+          <div class="field-left w-1/2">
+            <base-combobox
+              [datas]="employees"
+              [value]="dataSave.AssignedUserID"
+              [isShowLabel]="true"
+              labelText="Assigned to"
+              (valueChange)="valueChangeCombo($event)"
+              fieldName="AssignedUserID"
+              [disabled]="isDisabled"
+            ></base-combobox>
+          </div>
+          <div class="field-right w-1/2">
+            <base-combobox
+              [datas]="employees"
+              [value]="dataSave.RelatedUserID"
+              [isShowLabel]="true"
+              labelText="Related to"
+              (valueChange)="valueChangeCombo($event)"
+              fieldName="RelatedUserID"
+            ></base-combobox>
+          </div>
+        </div>
+      </div>
+      <div class="groupbox-item">
+        <div class="groupbox-title">Deadline</div>
+        <div class="field w-full bt-flex bt-flex-row">
+          <div class="field-left w-1/2">
+            <base-datetimepicker
+              [isShowLabel]="true"
+              [label]="'Due Date'"
+              [labelWidth]="120"
+              [value]="dataSave.DueDate"
+              [label]="'Due Date'"
+              [fieldName]="'DueDate'"
+              (valueChange)="valueChangeCombo($event)"
+              [disabled]="isDisabled"
+            >
+            </base-datetimepicker>
+          </div>
+          <div class="field-right w-1/2">
+            <!-- <base-textbox
+            text="Intergrated in build"
+            [titleWidth]="120"
+            [type]="typeControl.Textbox"
+            placeholder=""
+          >
+          </base-textbox> -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div *ngIf="dataSave.EntityState == entityState.Edit" class="comment-container">
+    <div class="groupbox-item">
+      <div class="groupbox-title">
+        <i class="fa-solid fa-comments"></i>
+        Comment
+      </div>
+    </div>
+    <div class="comment-content">
+      <div class="add-comment bt-flex w-full">
+        <base-textbox
+          [isLabel]="false"
+          [type]="typeControl.Textbox"
+          placeholder=""
+          [isHorizontal]="false"
+          [maxLength]="2000"
+          [(value)]="commentValue"
+          (searchEvent)="addComment($event)"
+        >
+        </base-textbox>
+        <div class="submit-comment" (click)="addComment(commentValue)">
+          <i class="fa-solid fa-paper-plane"></i>
+        </div>
+      </div>
+      <div class="comment-item" *ngFor="let item of comments">
+        <div class="bt-flex w-full">
+          <div class="avatar">
+            <div class="text bt-flex bt-align-items-center bt-justify-content-center">
+              {{ item.FirstCharacter }}
+            </div>
+          </div>
+          <div class="wrap-content w-full">
+            <div *ngIf="item.EntityState == entityState.View" class="main-content">
+              <div class="name">
+               {{ item.FullName }}
+              </div>
+              <div class="content">
+                {{item.Content}}
+              </div>
+            </div>
+            <div *ngIf="item.EntityState == entityState.Edit" class="edit-comment bt-flex w-full">
+              <base-textbox
+                [isLabel]="false"
+                [type]="typeControl.Textbox"
+                placeholder=""
+                [isHorizontal]="false"
+                [maxLength]="2000"
+                [(value)]="item.Content"
+                (searchEvent)="editComment($event)"
+              >
+              </base-textbox>
+              <div class="action-edit save" (click)="editComment($event)">
+                <i class="fa-solid fa-check"></i>
+              </div>
+              <div class="action-edit cancel" (click)="changeCommentMode(entityState.View, item)">
+                <i class="fa-solid fa-xmark"></i>
+              </div>
+            </div>
+            <div class="footer bt-flex">
+              <div class="action">
+                <div class="action-item edit" (click)="changeCommentMode(entityState.Edit, item)">Edit</div>
+                <div class="action-item delete" (click)="deleteComment(item)">Delete</div>
+              </div>
+              <div class="date">
+                {{ item.CreatedDate | date: 'dd/MM/yyyy hh:mm:ss' }}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div *ngIf="!isHaveComment" class="no-comment">
+        No comment to display!
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="feature bt-flex bt-flex-row w-full bt-justify-content-end">
+  <div class="button-first">
+    <!-- <base-button
+      typeButton="secondary"
+      text="Save and Add"
+      [width]="120"
+      (btnClick)="saveAndAddData()"
+    >
+    </base-button> -->
+  </div>
+  <div class="button-seconds">
+    <base-button typeButton="primary" text="Save" (btnClick)="saveData()">
+    </base-button>
+  </div>
+</div>

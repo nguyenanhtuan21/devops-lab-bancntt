@@ -1,0 +1,9 @@
+<app-page-header
+ *ngIf="isLogin"
+></app-page-header>
+<app-loading
+  [hidden]="!isLoading"
+>
+
+</app-loading>
+<router-outlet></router-outlet>

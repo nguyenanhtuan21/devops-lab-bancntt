@@ -1,0 +1,30 @@
+@import "../../../color";
+
+.lds-ring {
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  background: rgba(0,0,0,0.2);
+  z-index: 1000;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  .spinner {
+    width: 48px;
+    height: 48px;
+    border: 6px solid white;
+    border-radius: 50%;
+    animation: lds-ring 1.2s infinite;
+    border-color: $default-color-green transparent $default-color-green transparent;
+  }
+}
+
+@keyframes lds-ring {
+  0% {
+      transform: rotate(0deg);
+  }
+  100% {
+      transform: rotate(360deg);
+  }
+}

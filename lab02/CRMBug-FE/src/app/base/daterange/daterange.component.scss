@@ -1,0 +1,97 @@
+@import '../../../color.scss';
+@import '../../../styles.scss';
+@import '../../../font.scss';
+
+:host {
+  ::ng-deep {
+    .md-drppicker {
+      &.double {
+        width: 680px !important;
+      }
+      td.active {
+        background-color: $color-blue-notify !important;
+        &:hover {
+          background-color: $color-blue-notify !important;
+          color: $color-white !important;
+          opacity: 1;
+        }
+      }
+      td.start-date {
+        border-radius: 6px 0 0 6px;
+      }
+      td.end-date {
+        border-radius: 0 6px 6px 0;
+      }
+      td.in-range {
+        background-color: $color-grey4;
+      }
+      td, td.available {
+        &:hover {
+          background-color: $bg-btn-secondary3-hover;
+          color: $color-dark-blue;
+          border-radius: 0;
+        }
+      }
+      th {
+        color: $color-grey9;
+      }
+      .buttons {
+        margin: 0 15px 5px 0;
+      }
+      .btn.btn-default {
+        background-color: $color-grey4;
+      }
+      .btn {
+        background-color: $color-blue-notify;
+        border-radius: 4px;
+        margin-left: 12px;
+        min-width: 72px;
+        box-shadow: none;
+        text-transform: none;
+        font-weight: 500;
+      }
+      .ranges {
+        min-width: 150px;
+        max-width: 150px;
+        min-height: 300px;
+        max-height: 300px;
+        overflow: auto;
+        ul {
+          margin: 4px 0 0 0;
+          li {
+            font-size: $font-body;
+            button.active {
+              background-color: $bg-btn-secondary3-hover;
+              color: $color-blue-notify;
+              font-weight: 500;
+              top: 80px;
+              border-radius: 4px;
+            }
+            button {
+              &:focus {
+                outline: none;
+              }
+            }
+          }
+        }
+      }
+      .dropdowns{
+        padding: 0 10px;
+      }
+    }
+  }
+  .datepicker-container {
+    .btn-datepicker {
+      background: none;
+      outline: none;
+      padding: 8px 40px;
+      border: 1px solid $default-color-green;
+      cursor: pointer;
+      transition: 0.22s;
+      border-radius: 4px;
+      &:hover {
+        background-color: $color-grey-05;
+      }
+    }
+  }
+}

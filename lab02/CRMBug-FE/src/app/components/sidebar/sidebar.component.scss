@@ -1,0 +1,97 @@
+@import "../../../styles.scss";
+@import "../../../color.scss";
+@import "../../../font.scss";
+@import "../../../icon.scss";
+
+:host {
+  .sidebar-container {
+    position: fixed;
+    top: 50px;
+    left: 0;
+    width: 200px;
+    height: calc(100vh - 50px);
+    background-color: $color-green-0;
+    .sidebar-trigger {
+      cursor: pointer;
+      padding: 15px 20px;
+      .trigger-icon {
+        height: 20px;
+        width: 20px;
+        position: relative;
+        .trigger-icon-line {
+          display: block;
+          position: absolute;
+          left: 0;
+          right: 0;
+          top: 9px;
+          background-color: $fds-gray-05;
+          height: 2px;
+          opacity: 1;
+          width: 20px;
+        }
+        &::before {
+          content: "";
+          display: block;
+          background-color: $fds-gray-05;
+          height: 2px;
+          width: 20px;
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          transition-duration: 0.15s;
+        }
+        &::after {
+          content: "";
+          display: block;
+          position: absolute;
+          background-color: $fds-gray-05;
+          height: 2px;
+          width: 20px;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          transition-duration: 0.15s;
+        }
+      }
+      &:hover {
+        .trigger-icon {
+          .trigger-icon-line { 
+            top: 8px;
+          }
+          &::before {
+            width: 16px;
+            transform: translateY(13px) translateX(-4px) rotate(45deg);
+          }
+          &::after {
+            width: 16px;
+            transform: translateY(-15px) translateX(-4px) rotate(-45deg);
+          }
+        }
+      }
+    }
+    .sidebar-list {
+      .sidebar-item {
+        height: 50px;
+        color: $color-white;
+        cursor: pointer;
+        transition: 0.22s;
+        .icon {
+          margin-left: 12px;
+        }
+        .content {
+          margin-left: 12px;
+          font-weight: $font-weight-medium;
+        }
+        &:hover {
+          background-color: $fds-gray-00;
+          color: $color-green-0;
+        }
+        &.actived {
+          background-color: $fds-gray-00;
+          color: $color-green-0;
+        }
+      }
+    }
+  }
+}

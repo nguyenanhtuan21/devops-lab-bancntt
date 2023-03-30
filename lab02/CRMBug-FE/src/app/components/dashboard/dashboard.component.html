@@ -1,0 +1,52 @@
+<div class="dashboard-container">
+  <div class="header bt-flex bt-justify-content-center">
+    <div class="icon">
+      <i class="fa-solid fa-list-check"></i>
+    </div>
+    <div class="title">Task Management System</div>
+  </div>
+  <div class="main-content bt-flex">
+    <div class="project-container w-1/2">
+      <div class="project-header bt-flex">
+        <div class="title w-2/5">
+          Projects
+        </div>
+        <div class="action w-3/5 bt-flex bt-justify-content-end bt-align-items-center">
+          <div class="search">
+            <base-textbox
+              [placeholder]="'Search projects'"
+              [type]="typeControl.Search"
+              (searchEvent)="searchProject($event)"
+            >
+            </base-textbox>
+          </div>
+          <div 
+            class="add-project bt-flex bt-align-items-center bt-justify-content-center"
+            matTooltip="Add Project"
+            [matTooltipPosition]="'above'"
+            [matTooltipClass]="'mg-bottom'"
+            (click)="addProject()"
+          >
+            <i class="fa-solid fa-plus"></i>
+          </div>
+        </div>
+      </div>
+      <base-project
+        #projectComponent
+      >
+      </base-project>
+    </div>
+    <div class="notification-container w-1/2">
+      <div class="notification-header">
+        <div class="title">
+          Recent Updates
+        </div>
+      </div>
+      <base-notification
+        [height]="'calc(100vh - 202px)'"
+        [userID]="userID"
+      >
+      </base-notification>
+    </div>
+  </div>
+</div>

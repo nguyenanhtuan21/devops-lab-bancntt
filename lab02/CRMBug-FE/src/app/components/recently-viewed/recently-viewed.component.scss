@@ -1,0 +1,74 @@
+@import '../../../color.scss';
+@import '../../../font.scss';
+
+
+
+:host {
+  .recently-viewed-container {
+    .header {
+      height: 64px;
+      padding: 24px 24px 0 24px;
+      position: sticky;
+      top: 0;
+      background-color: $color-white;
+      .title {
+        width: 100%;
+        font-size: $font-title;
+        font-weight: $font-weight-bold;
+      }
+      .close {
+        i {
+          width: 24px;
+          height: 24px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          position: absolute;
+          right: 16px;
+          top: 20px;
+          cursor: pointer;
+          border-radius: 50%;
+          &:hover {
+            background-color: $color-grey-10;
+          }
+        }
+      }
+    }
+    .list-task {
+      padding-bottom: 16px;
+      .task-container {
+        cursor: pointer;
+        padding: 8px 24px 8px 24px;
+        transition: 0.22s;
+        &:hover {
+          background-color: $color-grey-10;
+        }
+        .avatar {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          padding-right: 12px;
+          i {
+            width: 40px;
+            height: 40px;
+            font-size: $font-subtitle;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            color: $default-color-green;
+            background-color: $color-white;
+          }
+        }
+        .content {
+          .title {
+            max-width: 380px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+          }
+        }
+      }
+    }
+  }
+}

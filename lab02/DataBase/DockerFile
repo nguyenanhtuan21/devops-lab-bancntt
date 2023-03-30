@@ -1,0 +1,7 @@
+# Base image
+FROM mysql:latest
+
+# ENV MYSQL_ROOT_PASSWORD=12345678@Abc
+# Copy changelog
+COPY ./changelog.sql /docker-entrypoint-initdb.d/
+
