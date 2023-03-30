@@ -1,0 +1,58 @@
+{
+  "name": "front_end",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "lint": "vue-cli-service lint"
+  },
+  "dependencies": {
+    "core-js": "^3.8.3",
+    "vue": "^3.2.13",
+    "axios": "^0.27.2",
+    "bootstrap": "^5.2.0",
+    "bootstrap-vue": "^2.22.0",
+    "click-outside-vue3": "^4.0.1",
+    "element-plus": "^2.2.13",
+    "exceljs": "^4.3.0",
+    "jquery": "^3.6.0",
+    "save-file": "^2.3.1",
+    "v-click-outside": "^3.2.0",
+    "v-tooltip": "^2.1.3",
+    "vue-axios": "^3.4.1",
+    "vue-router": "^4.1.3"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.12.16",
+    "@babel/eslint-parser": "^7.12.16",
+    "@vue/cli-plugin-babel": "~5.0.0",
+    "@vue/cli-plugin-eslint": "~5.0.0",
+    "@vue/cli-service": "~5.0.0",
+    "eslint": "^7.32.0",
+    "eslint-plugin-vue": "^8.0.3"
+  },
+  "eslintConfig": {
+    "root": true,
+    "env": {
+      "node": true
+    },
+    "extends": [
+      "plugin:vue/vue3-essential",
+      "eslint:recommended"
+    ],
+    "parserOptions": {
+      "parser": "@babel/eslint-parser"
+    },
+    "rules": {
+      "no-unused-vars": "off",
+      "no-debugger": "off"
+    }
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead",
+    "not ie 11"
+  ]
+}

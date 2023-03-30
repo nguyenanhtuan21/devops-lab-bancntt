@@ -1,0 +1,149 @@
+/* ------------------
+----Thư viện icon----------
+----author: TVLOI ----------
+----29/07/2022    ----------
+ */
+
+/* tạo class các background icon */
+.icon-overview {
+    background: url('./../../assets/img/Sprites.64af8f61.svg') no-repeat -30px -1628px;
+}
+.icon-cash {
+    background: url('./../../assets/img/Sprites.64af8f61.svg') no-repeat -73px -1628px;
+}
+.icon-deposits {
+    background: url('./../../assets/img/Sprites.64af8f61.svg') no-repeat -117px -1628px;
+}
+.icon-Purchase {
+    background: url('./../../assets/img/Sprites.64af8f61.svg') no-repeat -161px -1628px;
+}
+.icon-sell {
+    background: url('./../../assets/img/Sprites.64af8f61.svg') no-repeat -204px -1628px;
+}
+.icon-Receipt {
+    background: url('./../../assets/img/Sprites.64af8f61.svg') no-repeat -249px -1628px;
+}
+.icon-warehouse {
+    background: url('./../../assets/img/Sprites.64af8f61.svg') no-repeat -291px -1628px;
+}
+.icon-tool {
+    background: url('./../../assets/img/Sprites.64af8f61.svg') no-repeat -336px -1628px;
+}
+.icon-asset {
+    background: url('./../../assets/img/Sprites.64af8f61.svg') no-repeat -378px -1630px;
+}
+/*  */
+.icon-tax {
+    background: url('./../../assets/img/Sprites.64af8f61.svg') no-repeat -423px -1630px;
+}
+.icon-price {
+    background: url('./../../assets/img/Sprites.64af8f61.svg') no-repeat -467px -1628px;
+}
+.icon-synthetic {
+    background: url('./../../assets/img/Sprites.64af8f61.svg') no-repeat -510px -1628px;
+}
+.icon-budget {
+    background: url('./../../assets/img/Sprites.64af8f61.svg') no-repeat -378px -1659px;
+}
+.icon-report {
+    background: url('./../../assets/img/Sprites.64af8f61.svg') no-repeat -547px -1628px;
+}
+.icon-analysis {
+    background: url('./../../assets/img/Sprites.64af8f61.svg') no-repeat -204px -1664px;
+}
+
+/* --------------------------------------------------------------------- */
+
+.icon-menu {
+    background: url('./../../assets/img/Sprites.64af8f61.svg') no-repeat -843px -30px;
+}
+
+.icon-menu-light {
+    background: url('./../../assets/img/Sprites.64af8f61.svg') no-repeat -312px -32px;
+}
+
+.icon-angle {
+    background: url('./../../assets/img/Sprites.64af8f61.svg') no-repeat -80px -360px;
+}
+
+.icon-angle-small {
+    background: url('./../../assets/img/Sprites.64af8f61.svg') no-repeat -1076px -32px;
+
+}
+
+.icon-notification {
+    background: url('./../../assets/img/Sprites.64af8f61.svg') no-repeat -788px -30px;
+    
+}
+
+.icon-avatar {
+    background: url('./../../assets/img/Sprites.64af8f61.svg') no-repeat -352px -894px;
+    
+}
+
+.icon-search {
+    background: url('./../../assets/img/Sprites.64af8f61.svg') no-repeat -992px -360px;
+    
+}
+
+.icon-refesh {
+    background: url('./../../assets/img/Sprites.64af8f61.svg') no-repeat -423px -201px;
+    border: none;
+
+}
+.icon-angle-green {
+    background: url('./../../assets/img/Sprites.64af8f61.svg') no-repeat -896px -359px;
+
+}
+.icon-done {
+    background: url('./../../assets/img/Sprites.64af8f61.svg') no-repeat -1224px -360px;
+
+}
+.icon-question {
+    background: url('./../../assets/img/Sprites.64af8f61.svg') no-repeat -89px -144px;
+
+}
+.icon-close {
+    background: url('./../../assets/img/Sprites.64af8f61.svg') no-repeat -144px -144px;
+
+}
+.icon-arrow-down {
+    background: url('./../../assets/img/Sprites.64af8f61.svg') no-repeat -560px -359px;
+
+}
+
+.icon-loading {
+    width: 32px;
+    height: 32px;
+    background: url('./../../assets/loading.svg') no-repeat 0 0;
+}
+.icon-warning {
+	width: 36px;
+    min-width: 36px;
+	height: 37px;
+    background: url('./../../assets/img/Sprites.64af8f61.svg') no-repeat -598px -463px;
+}
+.icon-warning-question {
+	width: 36px;
+    min-width: 36px;
+	height: 36px;
+    background: url('./../../assets/img/Sprites.64af8f61.svg') no-repeat -832px -462px;
+}
+.icon-warning-exclamation {
+	width: 36px;
+    min-width: 36px;
+	height: 36px;
+    background: url('./../../assets/img/Sprites.64af8f61.svg') no-repeat -752px -462px;
+}
+.icon-export {
+	width: 24px;
+    min-width: 24px;
+	height: 24px;
+    background: url('./../../assets/img/Sprites.64af8f61.svg') no-repeat -704px -200px;
+}
+.icon-arrow-down-fat {
+	width: 16px;
+    min-width: 16px;
+	height: 16px;
+    background: url('./../../assets/img/Sprites.64af8f61.svg') no-repeat -560px -359px;
+}

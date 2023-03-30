@@ -1,0 +1,40 @@
+
+
+version: '3'
+
+services:
+  frontend:
+    build: ./font_end
+    ports:
+      - "8080:8080"
+    networks:
+      - mynetwork
+
+  backend:
+    build: ./back_end
+    ports:
+      - "5000:5000"
+    depends_on:
+      - database
+    environment:
+      - ConnectionStrings:DefaultConnection=mysql://root:29092001@database/misa.web07.cntt2.loi
+    networks:
+      - mynetwork
+
+  database:
+    image: mysql
+    restart: always
+    environment:
+      - MYSQL_DATABASE=misa.web07.cntt2.loi
+      - MYSQL_USER=root
+      - MYSQL_PASSWORD=29092001
+      - MYSQL_ROOT_PASSWORD=29092001
+    ports:
+      - "3309:3309"
+    networks:
+      - mynetwork
+
+networks:
+  mynetwork:
+
+

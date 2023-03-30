@@ -1,0 +1,16 @@
+@font-face {
+    font-family: Misa Fonts bold;
+    src: url(./../../assets/fonts/notosans-bold.3ede5aff.woff2);
+}
+@font-face {
+    font-family: Misa Fonts italic;
+    src: url(./../../assets/fonts/notosans-italic.1c1aaac9.woff2);
+}
+@font-face {
+    font-family: Misa Fonts regular;
+    src: url(./../../assets/fonts/notosans-regular.2cb88a13.woff2);
+}
+@font-face {
+    font-family: Misa Fonts semibold;
+    src: url(./../../assets/fonts/notosans-semibold.df3e6dc4.woff2);
+}

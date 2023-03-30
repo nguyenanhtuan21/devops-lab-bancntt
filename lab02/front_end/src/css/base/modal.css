@@ -1,0 +1,167 @@
+/* ------------------
+----css modal popup----------
+----author: TVLOI ----------
+----01/08/2022    ----------
+ */
+.display-none {
+    visibility: hidden;
+}
+
+.modal {
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+    z-index: 6;
+    /* background-color: rgba(0, 0, 0, 0.4); */
+    background-color: rgba(51, 51, 51, 0.497);
+} 
+
+.modal-content {
+    /* border-radius: 4px; */
+    /* width: 50%;
+    min-width: 1024px; */
+    position: absolute;
+}
+
+.popup {
+    position: relative;
+    background-color: #ffffff;
+    border-radius: 4px;
+    width: 50%;
+    min-width: 1024px;
+    padding: 10px;
+    border: 1px solid #BBBBBB;
+    border-radius: 4px;
+    font-size: 13px;
+    font-family: Misa Fonts regular;
+    flex-direction: column;
+}
+
+.p-header {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.p-header .p-title{
+    font-family: Misa Fonts semibold;
+    font-size: 24px;
+    padding: 5px 10px 5px 15px;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.p-header .check-box {
+    padding: 5px;
+    font-size: 14px;
+    height: 65%;
+    align-items: flex-end;
+}
+
+.check-box label {
+    margin-right: 20px;
+    margin-left: 5px;
+}
+.check-box input {
+    background-color: aquamarine;
+    width: 16px;
+    height: 16px;
+}
+
+.p-header .header-button {
+    display: flex;
+    justify-content: end;
+}
+
+.p-header .header-button div:hover {
+    background-color: #CCCCCC;
+}
+
+
+.header-button .btn:first-child {
+    margin-right: 10px;
+}
+
+/* content popup */
+.p-content {
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+
+.double-block {
+    width: 100%;
+}
+
+.left-block {
+    padding: 0 10px 0 15px;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+
+.right-block {
+    padding: 0 15px 0 10px;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+
+.double-block .block-row {
+    display: flex;
+    width: 100%;
+    /* margin-bottom: 10px; */
+}
+.double-block .block-row div:first-child{
+    margin-right: 10px;
+}
+
+.single-block {
+    padding: 30px 15px 0 15px;
+}
+
+.group-input {
+    padding-top: 10px;
+    display: flex;
+    margin: 0 15px;
+}
+
+.group-input .tl-input input{
+    width: 235px;
+    margin-right: 10px;
+}
+
+/* footer popup: button cất, hủy */
+.p-footer{
+    width: 100%;
+    padding: 0 10px 10px 15px;
+}
+
+.p-footer>div {
+    justify-content: space-between;
+    width: 100%;
+    padding-top: 20px;
+    border-top: 1px solid #BBBBBB;
+}
+
+.p-footer div button:first-child{
+    margin-right: 10px;
+}
+
+.combobox {
+    margin-top: 4px;
+}
+
+.border-red {
+    border: 1px solid #d24d4d!important;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    /* display: none; <- Crashes Chrome on hover */
+    -webkit-appearance: none;
+    margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+}

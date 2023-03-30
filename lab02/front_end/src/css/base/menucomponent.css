@@ -1,0 +1,40 @@
+/* ------------------
+----đối tượng xử lý tạo bảng----------
+----author: TVLOI ----------
+----02/08/2022    ----------
+ */
+
+ .lt-component {
+    position: fixed;
+    z-index: 999;
+    top:0;
+    left:0;
+ }
+
+ .dropdown-menu {
+    z-index: 1000;
+    width: 120px;
+    background-color: #fff;
+    display: flex;
+    padding: 1px;
+    flex-direction: column;
+    position: absolute;
+    left: 1300px;
+    top: 300px;
+    font-family: Misa Fonts regular;
+    font-size: 13px;
+    border: 1px solid #babec5;
+ }
+ .dropdown-menu div{
+    width: 100%;
+    padding: 5px;
+    padding-left: 10px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    cursor: pointer;
+ }
+ .dropdown-menu div:hover{
+    background-color: #E8E9EC;
+    color: #08BF82;
+ }

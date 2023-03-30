@@ -1,0 +1,41 @@
+/* ------------------
+----css dropdown thêm sửa xóa row----------
+----author: TVLOI ----------
+----30/07/2022    ----------
+*/
+
+.dropdown-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.dropdown-row .icon-dropdown {
+    width: 16px;
+    height: 16px;
+}
+
+.dropdown-row button {
+    border: none;
+    cursor: pointer;
+    background-color: transparent;
+}
+.dropdown-row button:first-child {
+    color: #0075c0;
+    font-family: Misa Fonts semibold;
+    font-size: 13px;
+    background-color: transparent;
+}
+.dropdown-row button:last-child {
+    padding: 8px 10px;
+}
+.dropdown-row button:last-child>div {
+    padding: 0 5px;
+    border: 1px solid transparent;
+    box-sizing: border-box;
+}
+
+.border-blue {
+    border: 1px solid #0075c0!important;
+}
+

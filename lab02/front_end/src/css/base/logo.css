@@ -1,0 +1,24 @@
+/* ------------------
+----logo----------
+----author: TVLOI ----------
+----29/07/2022    ----------
+ */
+
+/* logo và tên ứng dụng */
+.logo {
+    height: 32px;
+    width: 96px;
+    cursor: pointer;
+}
+
+/* các thuộc tính background img */
+.logo-image {
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+
+/* class từng img riêng */
+.logo-amis {
+    background-image: url('./../../assets/img/Logo_Module_TiengViet_White.66947422.svg');
+}

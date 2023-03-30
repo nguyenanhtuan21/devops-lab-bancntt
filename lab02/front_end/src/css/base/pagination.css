@@ -1,0 +1,153 @@
+/* ------------------
+----css phân trang----------
+----author: TVLOI ----------
+----01/08/2022    ----------
+ */
+
+ .pagination {
+    display: flex;
+    align-items: center;
+ }
+ .pagination button{
+   outline: none;
+   border: none;
+   font-family: Misa Fonts Regular;
+   font-size: 13px;
+ }
+
+ .pagination .btn-num{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #111111;
+ }
+
+
+
+.btn-page{
+    box-sizing: border-box;
+    text-align: center;
+    line-height: 20px;
+    align-items: center;
+    color: #111111;
+    /* width: 22px; */
+    padding: 0 5px;
+    min-width: 22px;
+    height: 20px;
+    cursor: pointer;
+    font-family: Misa Fonts regular;
+    font-size: 13px;
+ }
+.btn-page.active{
+    border: 1px solid #e0e0e0;
+    line-height: 19px;
+    font-family: Misa Fonts semibold;
+ }
+
+ .btn-i-left {
+    /* margin-right: 13px; */
+    cursor: pointer;
+    background-color: #fff;
+}
+ .btn-i-left:first-child {
+    margin-right: 13px;
+}
+.btn-i-right {
+    /* margin-left: 13px; */
+    cursor: pointer;
+    background-color: #fff;
+}
+.btn-i-right:last-child {
+    margin-left: 13px;
+}
+
+.btn-dropdown-up>div.active {
+   transform: rotate(-180deg);
+   transition: all 0.3s linear;
+}
+
+/* dropdow popup  */
+.combobox-up {
+   position: relative;
+   box-sizing: border-box;
+   background-color: aquamarine;
+   margin-right: 10px;
+}
+.combobox-up input{
+   box-sizing: border-box;
+   height: 32px;
+   outline: none;
+   border: 1px solid #BBBBBB;
+   padding-left: 10px;
+   /* border-right: none; */
+   padding-right: 32px;
+   cursor: pointer;
+   border-radius: 2px;
+}
+
+.combobox-up.active input{
+   border: 1px solid #4D9C2E!important;
+   /* border-right: none; */
+}
+.combobox-up.active button{
+   border: 1px solid #4D9C2E;
+   border-left: none;
+}
+
+.combobox-up button {
+   box-sizing: border-box;
+   border: 1px;
+}
+
+.combobox-up .btn-dropdown-up {
+   box-sizing: border-box;
+   width: 32px;
+   height: 32px;
+   position: absolute;
+   outline: none;
+   border: 1px solid #BBBBBB;
+   border-left: none;
+   right: 0px;
+   background-color: transparent;
+   cursor: pointer;
+   border-bottom-right-radius: 2px;
+   border-top-right-radius: 2px;
+}
+.combobox-up .btn-dropdown-up:hover {
+   background-color: #E0E0E0;
+}
+.combobox-up .btn-dropdown-up>div{
+   width: 16px;
+   height: 16px;
+   margin-left: 8px;
+}
+.combobox-up .dropdown-popup {
+   top: -170px;
+   z-index: 999;
+   background-color: #fff;
+   width: 100%;
+   position: absolute;
+   padding: 5px;
+   display: flex;
+   flex-direction: column;
+   padding: 2px 0;
+   border: 1px solid #BBBBBB;
+   border-radius: 2px;
+   transition: opacity .1s,transform .1s,width .2s ease;
+}
+.combobox-up .dropdown-popup div{
+   white-space: nowrap;
+   height: 32px;
+   line-height: 32px;
+   padding-left: 10px;
+}
+.combobox-up .dropdown-popup div:hover{
+   background-color: #E3E5E8;
+   cursor: pointer;
+   color: #44A637;
+}
+.combobox-up .dropdown-popup div.active{
+   background-color: #4D9C2E;
+   cursor: pointer;
+   color: #fff;
+}

@@ -1,0 +1,235 @@
+/* ------------------
+----css table----------
+----author: TVLOI ----------
+----30/07/2022    ----------
+*/
+.content-grid {
+    overflow: auto;
+    height: 100%;
+}
+
+table {
+    display: table;
+    border-spacing: 0;
+    border-collapse: separate;
+    width: 100%;
+    text-indent: initial;
+    height: max-content;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    font-size: 12px;
+    font-family: Misa Fonts regular;
+}
+
+
+table thead tr th {
+    border-right: 1px solid #c7c7c7;
+    border-bottom: 1px solid #c7c7c7;
+    background-color: #e5e8ec;
+    vertical-align: middle;
+    white-space: nowrap;
+    position: sticky;
+    top: 0;
+    padding: 10px;
+    z-index: 2;
+    text-align: left;
+}
+
+tbody tr:hover {
+    background-color: #f2f9ff;
+}
+tbody tr:hover .select-col, tbody tr:hover .function-col{
+    background-color: #f2f9ff;
+}
+tbody tr.active {
+    background-color: #f2f9ff;
+}
+tbody tr.active .select-col, tbody tr.active .function-col{
+    background-color: #f2f9ff;
+}
+/* tbody tr:nth-child(odd) ,tbody tr:nth-child(odd) .select-col, tbody tr:nth-child(odd) .function-col{
+    background-color: #efecec;
+} */
+
+thead tr .select-col {
+    padding: 0 10px;
+    height: 40px;
+    width: 40px;
+}
+tbody tr .select-col {
+    padding: 0 10px;
+    height: 40px;
+    width: 40px;
+    position: sticky;
+    z-index: 4;
+    left: 0;
+    background-color: #FFFFFF;
+}
+thead tr .function-col {
+    border-right: none;
+    position: sticky;
+    z-index: 4;
+    right: 0px;
+    /* min-width: 110px; */
+    border-left: 1px solid #c7c7c7;
+}
+
+/* cố định cột 2 */
+thead th:nth-child(2) {
+    z-index: 5;
+    left: 0;
+    background-color: #e5e8ec;
+}
+
+
+/* tbody */
+tbody tr td {
+    padding: 0 10px;
+    height: 44px;
+    border-bottom: 1px solid #c7c7c7;
+    border-right: 1px dotted #c7c7c7;
+    display: table-cell;
+    vertical-align: inherit;
+    overflow: hidden;
+    max-width: 50px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+tbody tr .function-col {
+    border-right: none;
+    position: sticky;
+    z-index: 3;
+    right: 0px;
+    vertical-align: middle;
+    background-color: #FFFFFF;
+    border-left: 1px dotted #c7c7c7;
+}
+
+/* checkbox */
+tr .checkbox-row {
+    transition: all .2s ease;
+    height: 18px;
+    width: 18px;
+    background-color: #ffffff;
+    cursor: pointer;
+    transition: all .2s ease;
+    transform: rotate(-90deg);
+    border-radius: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #c7c7c7;
+}
+
+.checkbox-input {
+    width: 10%;
+    height: inherit;
+    cursor: pointer;
+    opacity: 0;
+    position: relative;
+}
+
+.icon-done {
+    width: 16px;
+    height: 16px;
+    position: absolute;
+}
+
+.checkbox-row.border-active {
+    border: 1px solid #14a200;
+    transform: rotate(0deg);
+}
+
+/* th tr white space */
+thead th:first-child{
+    width: 20px;
+    min-width: 20px;
+    border: none;
+    background-color: #FFFFFF;
+    position: sticky;
+}
+thead th:last-child{
+    width: 30px;
+    min-width: 30px;
+    position: sticky;
+    z-index: 3;
+    right: 0;
+    border: none;
+    background-color: #FFFFFF;
+}
+
+
+tbody tr td:first-child{
+    width: 20px;
+    border: none;
+    background-color: #FFFFFF;
+    position: sticky;
+    right: 0;
+}
+tbody tr td:last-child{
+    width: 30px;
+    border: none;
+    background-color: #FFFFFF;
+    position: sticky;
+    z-index: 2;
+    right: 0;
+}
+
+
+/* phần phân trang */
+.grid-pagination {
+    margin: 0 16px;
+    padding: 12px;
+    background-color: #FFFFFF;
+    position: sticky;
+    z-index: 4;
+    bottom: 0px;
+}
+
+thead tr th:nth-child(6) {
+    text-align: center;
+}
+
+thead tr th:nth-child(3) {
+    min-width: 141px;
+    max-width: 141px;
+}
+thead tr th:nth-child(4) {
+    max-width: 155px;
+    min-width: 155px;
+}
+thead tr th:nth-child(5) {
+    min-width: 126px;
+    max-width: 126px;
+}
+thead tr th:nth-child(6) {
+    min-width: 151px;
+    max-width: 151px;
+}
+tbody tr td:nth-child(6) {
+    text-align: center;
+}
+thead tr th:nth-child(7) {
+    min-width: 150px;
+    max-width: 150px;
+}
+thead tr th:nth-child(8) {
+    min-width: 150px;
+    max-width: 150px;
+}
+thead tr th:nth-child(9) {
+    min-width: 144px;
+    max-width: 144px;
+}
+thead tr th:nth-child(10) {
+    min-width: 181px;
+    max-width: 181px;
+}
+thead tr th:nth-child(11) {
+    min-width: 181px;
+    max-width: 181px;
+}
+thead tr th:nth-child(12) {
+    min-width: 181px;
+    max-width: 181px;
+}

@@ -1,0 +1,92 @@
+/* ------------------
+----css phần sidebar----------
+----author: TVLOI ----------
+----29/07/2022    ----------
+ */
+
+/* css khối cha sidebar */
+.sidebar {
+    background-color: #393a3d;
+    height: 100vh;
+    width: auto;
+    font-size: 13px;
+    transition: all .2s ease;
+    box-sizing: border-box;
+}
+
+
+
+/* phần head của siderbar gồm button option và icon logo */
+.sidebar .header {
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* menu gồm các item sidebar */
+.menu {
+    height: calc(100vh - 48px);
+    padding-top: 14px;
+    width: 178px;
+    overflow: auto;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+}
+
+.menu a {
+    height: 42px;
+    padding-left: 6px;
+    display: flex;
+    color: #fff;
+    text-decoration: none;
+    font-family: Misa Fonts Regular;
+}
+
+.menu a.active {
+    background-color: #2ca01c!important;
+}
+.menu a.active .menu-item{
+    background-color: #58595D;
+}
+.menu a.active .menu-item-icon{
+    filter: brightness(1.75);
+}
+
+.menu a .menu-item {
+    display: flex;
+    align-items: center;
+    background-color: #393a3d;
+    padding-left: 8px;
+    width: 100%;
+}
+
+/* icon */
+.menu-item-icon {
+    line-height: 24px;
+    margin-right: 8px;
+    height: 24px;
+    width: 24px;
+    background-size: contain;
+}
+
+/* text */
+.menu-item-title {
+    line-height: 24px;
+    height: 24px;
+}
+
+/* hover menu item */
+.menu a:hover, a:hover .menu-item{
+    background-color: #58595D;
+}
+.menu a:hover .menu-item-icon{
+    filter: brightness(1.75);
+}
+
+
+/* css sự kiện thu gọn sidebar */
+.thin-width {
+    width: 52px;
+}

@@ -1,0 +1,160 @@
+/* ------------------
+----file css chính----------
+----author: TVLOI ----------
+----29/07/2022    ----------
+ */
+
+ .content {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    position: relative;
+    height: 100%;
+    max-height: calc(100vh - 48px);
+    display: flex;
+    flex-direction: column;
+ }
+
+.content .content-header {
+    padding: 24px 16px 11px 0;
+    transition: top .25s;
+    display: flex;
+}
+
+.main-content {
+    box-sizing: border-box;
+    /* overflow: auto; */
+    scroll-behavior: smooth;
+    /* height: 100%; */
+    /* background-color: blue; */
+    height: inherit;
+    margin-bottom: 16px;
+    max-height: calc(100% - 68px - 16px);
+    /* background-color: blue; */
+    /* flex: 1; */
+}
+
+
+.content-header .grid-title {
+    margin-left: 16px;
+    font-size: 24px;
+    font-weight: 700;
+    color: #212121;
+    font-family: Misa Fonts bold;
+    flex: 1;
+    white-space: nowrap;
+}
+
+/* header table */
+.grid-header {
+    margin: 9px 16px 0 16px;
+    background-color: #FFFFFF;
+    padding: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap;
+    box-sizing: border-box;
+}
+.grid-header-left {
+    margin-left: 4px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-wrap: nowrap;
+    box-sizing: border-box;
+}
+.grid-header-right {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    flex-wrap: nowrap;
+    box-sizing: border-box;
+}
+.grid-header-right .btn:focus{
+    filter: brightness(0.75);
+}
+
+.input-search {
+    margin-right: 5px;
+    overflow: hidden;
+}
+.input-search .input-icon:hover{
+    filter: brightness(0.75);
+}
+
+.grid-header .btn {
+    margin: 0 6px;
+    overflow: hidden;
+}
+.grid-header .btn:hover {
+    filter: brightness(0.75);
+}
+
+/* content-grid */
+.content-grid {
+    position: relative;
+    margin: 0 16px;
+    background-color: #FFFFFF;
+    transition: all .2s ease;
+    max-height: calc(100% - 120px);
+    /* overflow: auto; */
+}
+
+/* paging */
+.main-content .grid-pagination {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.total-row span {
+    font-family: Misa Fonts semibold;
+}
+
+.grid-pagination .pagination-right {
+    display: flex;
+    align-items: center;
+    padding-right: 30px;
+}
+.grid-pagination .pagination-left {
+    padding-left: 10px;
+}
+
+/* .combobox-up {
+    position: relative;
+    box-sizing: border-box;
+    margin-right: 10px;
+}
+.combobox-up input{
+    height: 32px;
+    outline: none;
+    border: 1px solid #BBBBBB;
+    padding-left: 10px;
+    border-right: none;
+    padding-right: 32px;
+    cursor: pointer;
+    border-radius: 2px;
+}
+
+.combobox-up .btn-dropdown-up {
+    box-sizing: border-box;
+    width: 32px;
+    height: 32px;
+    position: absolute;
+    outline: none;
+    border: 1px solid #BBBBBB;
+    border-left: none;
+    right: 0px;
+    background-color: transparent;
+    cursor: pointer;
+    border-bottom-right-radius: 2px;
+    border-top-right-radius: 2px;
+}
+.combobox-up .btn-dropdown-up:hover {
+    background-color: #E0E0E0;
+}
+.combobox-up .btn-dropdown-up>div{
+    width: 16px;
+    height: 16px;
+    margin-left: 8px;
+} */
