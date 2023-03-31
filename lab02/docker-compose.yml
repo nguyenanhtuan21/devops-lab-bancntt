@@ -26,19 +26,19 @@ services:
             - mysqlserver
         networks:
             - mynetwork
-    # client:
-    #     image: client
-    #     ports:
-    #         - 8080:8080
-    #     build:
-    #         context: ./ClientVue
-    #         dockerfile: Dockerfile
-    #     links:
-    #         - server
-    #     depends_on:
-    #         - server
-    #     networks:
-    #         - mynetwork
+    client:
+        image: client
+        ports:
+            - 8080:8080
+        build:
+            context: ./ClientVue
+            dockerfile: Dockerfile
+        links:
+            - server
+        depends_on:
+            - server
+        networks:
+            - mynetwork
 networks:
     mynetwork:
         driver: bridge
