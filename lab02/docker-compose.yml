@@ -1,0 +1,28 @@
+
+services:
+  db:
+    container_name: testdb_container_name
+    image: mysql:latest
+    command: --default-authentication-plugin-mysql_native_password
+    environment:
+      MYSQL_USER: root
+      MYSQL_ROOT_PASSWORD: 123456789@Abc
+      MYSQL_PASSWORD: 123456789@Abc
+      MYSQL_DATABASE: new_tasks_schema
+    ports:
+      - "3307:3306"
+  server:
+    container_name: testdbserver_container_name
+    build: './server/TestDBApplication/TestDBApplication'
+    expose:
+      - 3308
+    ports:
+      - "3308:3308"
+  client:
+    container_name: testdbclient_container_name
+    build: './client/test-app'
+    expose: 
+      - 442
+    ports: 
+      - "442:8080"
+    
